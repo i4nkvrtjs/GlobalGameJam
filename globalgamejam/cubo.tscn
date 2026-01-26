@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw0jx341ff6sg"]
+
+[ext_resource type="Script" uid="uid://p5dodnkyobtg" path="res://cubo.gd" id="1_vveh1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xvd08"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_smx6m"]
+
+[node name="Cubo" type="RigidBody3D"]
+script = ExtResource("1_vveh1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xvd08")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_smx6m")
