@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://r3e1gimtxubc"]
 
-[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://player.tscn" id="1_3rlxx"]
-[ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://cubo.tscn" id="2_2a1lc"]
-[ext_resource type="PackedScene" uid="uid://d2uqswbpw1wse" path="res://objeto_interactuable.tscn" id="2_xliyy"]
-[ext_resource type="PackedScene" uid="uid://b63eesdar05cm" path="res://door.tscn" id="3_4iw1c"]
-[ext_resource type="PackedScene" uid="uid://ds3fqqidy4atk" path="res://plataforma.tscn" id="4_hx1ia"]
-[ext_resource type="PackedScene" uid="uid://dbr1ggrnyfjph" path="res://plataformaFinal.tscn" id="6_f2dqo"]
-[ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://color_puzzle.tscn" id="7_f2dqo"]
+[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_3rlxx"]
+[ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://scenes/cubo.tscn" id="2_2a1lc"]
+[ext_resource type="PackedScene" uid="uid://d2uqswbpw1wse" path="res://scenes/objeto_interactuable.tscn" id="2_xliyy"]
+[ext_resource type="PackedScene" uid="uid://b63eesdar05cm" path="res://scenes/door.tscn" id="3_4iw1c"]
+[ext_resource type="PackedScene" uid="uid://ds3fqqidy4atk" path="res://scenes/plataforma.tscn" id="4_hx1ia"]
+[ext_resource type="PackedScene" uid="uid://dbr1ggrnyfjph" path="res://scenes/plataformaFinal.tscn" id="6_f2dqo"]
+[ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="7_f2dqo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)

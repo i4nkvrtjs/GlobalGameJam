@@ -42,20 +42,17 @@ func check_solution():
 
 func _solve():
 	solved = true
-	print("✅ PUZZLE RESUELTO")
-
+	print("PUZZLE RESUELTO")
+	
+	for cube in get_tree().get_nodes_in_group("floating_cubes"):
+		print("Activando cubo:", cube.name)
+		cube.activate()
+	
 	if auto_resolve:
 		for b in buttons:
 			if b.has_method("lock"):
 				b.lock()
 
-	# Acá podés:
-	# - abrir una puerta
-	# - activar plataforma
-	# - reproducir sonido
-	# - emitir señal
-
 
 func _fail(index: int):
-	print("❌ Puzzle incorrecto en botón:", index)
-	# feedback visual / sonido si querés
+	print("Puzzle incorrecto en botón:", index)

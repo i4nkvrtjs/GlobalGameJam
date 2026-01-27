@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://be2u13dmp3ous"]
 
-[ext_resource type="Script" uid="uid://cbtsyj7swjw1p" path="res://color_puzzle_controller.gd" id="1_wwo8b"]
-[ext_resource type="PackedScene" uid="uid://d1icgun38b2e" path="res://color_square.tscn" id="2_0r5a7"]
-[ext_resource type="Script" uid="uid://qseoo56qv5eq" path="res://check_button.gd" id="3_a0qdc"]
+[ext_resource type="Script" uid="uid://cbtsyj7swjw1p" path="res://scripts/color_puzzle_controller.gd" id="1_wwo8b"]
+[ext_resource type="PackedScene" uid="uid://d1icgun38b2e" path="res://scenes/color_square.tscn" id="2_0r5a7"]
+[ext_resource type="Script" uid="uid://qseoo56qv5eq" path="res://scripts/check_button.gd" id="3_a0qdc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwo8b"]
 albedo_color = Color(0.313726, 1, 0.784314, 1)
