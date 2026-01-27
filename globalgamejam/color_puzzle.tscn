@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://be2u13dmp3ous"]
+
+[ext_resource type="Script" uid="uid://cbtsyj7swjw1p" path="res://color_puzzle_controller.gd" id="1_wwo8b"]
+[ext_resource type="PackedScene" uid="uid://d1icgun38b2e" path="res://color_square.tscn" id="2_0r5a7"]
+[ext_resource type="Script" uid="uid://qseoo56qv5eq" path="res://check_button.gd" id="3_a0qdc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwo8b"]
+albedo_color = Color(0.313726, 1, 0.784314, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lkl0f"]
+material = SubResource("StandardMaterial3D_wwo8b")
+size = Vector3(0.1, 0.01, 0.2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wwo8b"]
+data = PackedVector3Array(-0.15, 0.005, 0.2, 0.15, 0.005, 0.2, -0.15, -0.005, 0.2, 0.15, 0.005, 0.2, 0.15, -0.005, 0.2, -0.15, -0.005, 0.2, 0.15, 0.005, -0.2, -0.15, 0.005, -0.2, 0.15, -0.005, -0.2, -0.15, 0.005, -0.2, -0.15, -0.005, -0.2, 0.15, -0.005, -0.2, 0.15, 0.005, 0.2, 0.15, 0.005, -0.2, 0.15, -0.005, 0.2, 0.15, 0.005, -0.2, 0.15, -0.005, -0.2, 0.15, -0.005, 0.2, -0.15, 0.005, -0.2, -0.15, 0.005, 0.2, -0.15, -0.005, -0.2, -0.15, 0.005, 0.2, -0.15, -0.005, 0.2, -0.15, -0.005, -0.2, 0.15, 0.005, 0.2, -0.15, 0.005, 0.2, 0.15, 0.005, -0.2, -0.15, 0.005, 0.2, -0.15, 0.005, -0.2, 0.15, 0.005, -0.2, -0.15, -0.005, 0.2, 0.15, -0.005, 0.2, -0.15, -0.005, -0.2, 0.15, -0.005, 0.2, 0.15, -0.005, -0.2, -0.15, -0.005, -0.2)
+
+[node name="ColorPuzzle" type="Node3D" node_paths=PackedStringArray("buttons")]
+script = ExtResource("1_wwo8b")
+buttons = [NodePath("ColorSquare0"), NodePath("ColorSquare1"), NodePath("ColorSquare2"), NodePath("ColorSquare3"), NodePath("ColorSquare4"), NodePath("ColorSquare5"), NodePath("ColorSquare6"), NodePath("ColorSquare7"), NodePath("ColorSquare8"), NodePath("ColorSquare9"), NodePath("ColorSquare10"), NodePath("ColorSquare11")]
+
+[node name="ColorSquare0" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.190595, 0, 0.456951)
+
+[node name="ColorSquare1" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.190595, 0, 0.287257)
+puzzle_index = 1
+
+[node name="ColorSquare2" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.190595, 0, 0.134657)
+puzzle_index = 2
+
+[node name="ColorSquare3" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.190595, 0, -0.183563)
+puzzle_index = 3
+
+[node name="ColorSquare4" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(0.999959, -0.00905813, 0, 0.00905813, 0.999959, 0, 0, 0, 1, -0.190595, 0, -0.328562)
+puzzle_index = 4
+
+[node name="ColorSquare5" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.190595, 0, -0.494035)
+puzzle_index = 5
+
+[node name="ColorSquare6" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.456951)
+puzzle_index = 6
+
+[node name="ColorSquare7" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.305545)
+puzzle_index = 7
+
+[node name="ColorSquare8" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.144895)
+puzzle_index = 8
+
+[node name="ColorSquare9" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.171435)
+puzzle_index = 9
+
+[node name="ColorSquare10" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.316434)
+puzzle_index = 10
+
+[node name="ColorSquare11" parent="." instance=ExtResource("2_0r5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.481907)
+puzzle_index = 11
+
+[node name="CheckButton" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120298, 0, 0)
+script = ExtResource("3_a0qdc")
+puzzle_path = NodePath("..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CheckButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28858, 0, 0)
+mesh = SubResource("BoxMesh_lkl0f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CheckButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28858, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_wwo8b")

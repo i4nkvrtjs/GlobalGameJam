@@ -1,10 +1,10 @@
 extends StaticBody3D
 class_name ColorSquare
 
-signal color_changed
+@export var puzzle_index : int = 0 
 
 var colors := [
-	Color.WHITE,
+	Color.GRAY,
 	Color.GREEN,
 	Color.YELLOW,
 	Color.ORANGE
@@ -21,7 +21,6 @@ func _ready():
 func interact(_interactor):
 	color_index = (color_index + 1) % colors.size()
 	_update_color()
-	emit_signal("color_changed")
 
 func _update_color():
 	current_color = colors[color_index]
