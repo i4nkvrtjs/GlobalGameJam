@@ -7,10 +7,8 @@ func _on_area_3d_body_entered(body):
 	if activated:
 		return
 
-	# Sabemos que esto es un objeto interactuable
 	if body.current_color == required_color:
 		_activate()
-
 
 func _activate():
 	activated = true

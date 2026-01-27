@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://r3e1gimtxubc"]
+[gd_scene load_steps=15 format=3 uid="uid://r3e1gimtxubc"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://player.tscn" id="1_3rlxx"]
 [ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://cubo.tscn" id="2_2a1lc"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b63eesdar05cm" path="res://door.tscn" id="3_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://ds3fqqidy4atk" path="res://plataforma.tscn" id="4_hx1ia"]
 [ext_resource type="PackedScene" uid="uid://dbr1ggrnyfjph" path="res://plataformaFinal.tscn" id="6_f2dqo"]
+[ext_resource type="PackedScene" uid="uid://d1icgun38b2e" path="res://color_square.tscn" id="7_f2dqo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)
@@ -23,6 +24,9 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hx1ia"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2a1lc"]
+size = Vector3(1, 0.5, 1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -123,3 +127,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18257, 0.524199, 0.833195)
 
 [node name="Cubo5" parent="." instance=ExtResource("2_2a1lc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43424, 0.524199, 2.11208)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27098, 0.00720263, 0)
+mesh = SubResource("BoxMesh_2a1lc")
+
+[node name="ColorSquare" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9488, 0.26236, -0.32391)
+
+[node name="ColorSquare2" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08374, 0.26236, -0.32391)
+
+[node name="ColorSquare3" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08374, 0.26236, -0.183161)
+
+[node name="ColorSquare4" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94705, 0.26236, -0.183161)
+
+[node name="ColorSquare5" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94705, 0.26236, -0.0366454)
+
+[node name="ColorSquare6" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0781, 0.26236, -0.0366454)
+
+[node name="ColorSquare7" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0781, 0.26236, 0.131805)
+
+[node name="ColorSquare8" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94142, 0.26236, 0.138239)
+
+[node name="ColorSquare9" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94142, 0.26236, 0.26508)
+
+[node name="ColorSquare10" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08115, 0.26236, 0.264608)
+
+[node name="ColorSquare11" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08115, 0.26236, 0.381271)
+
+[node name="ColorSquare12" parent="." instance=ExtResource("7_f2dqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93643, 0.26236, 0.381271)

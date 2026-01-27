@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var float_height := 4.0
-@export var float_time := 3.0
+@export var float_time := 7.0
 
 var start_pos : Vector3
 

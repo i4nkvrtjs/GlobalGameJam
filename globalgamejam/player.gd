@@ -9,6 +9,8 @@ extends CharacterBody3D
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var raycast: RayCast3D = $Head/Camera3D/RayCast3D
+@onready var dot: ColorRect = $CanvasLayer/Control/ColorRect
+
 
 var held_object: Node3D = null
 var hold_distance := 0.5	
@@ -26,6 +28,19 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interact"):
 		_handle_interact()
 
+func _process(_delta):
+	if raycast.is_colliding():
+		var collider = raycast.get_collider()
+		var distance = raycast.global_transform.origin.distance_to(
+			raycast.get_collision_point()
+		)
+
+		if distance <= interact_distance and collider.has_method("interact"):
+			dot.color = Color.GREEN
+			return
+
+	dot.color = Color.WHITE
+	
 func _physics_process(delta):
 	# Gravedad
 	if not is_on_floor():
