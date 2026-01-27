@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://r3e1gimtxubc"]
+[gd_scene load_steps=19 format=3 uid="uid://r3e1gimtxubc"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_3rlxx"]
 [ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://scenes/cubo.tscn" id="2_2a1lc"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="7_f2dqo"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://button_puzzle_controller.tscn" id="8_s5vkl"]
 [ext_resource type="PackedScene" uid="uid://xy4p3bkc4m7k" path="res://presesure_button.tscn" id="9_d474t"]
+[ext_resource type="PackedScene" uid="uid://dh1txo5aly446" path="res://hidden_object.tscn" id="10_4nwc7"]
+[ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://mask_manager.tscn" id="11_h8j34"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)
@@ -33,8 +35,9 @@ size = Vector3(1, 0.5, 1)
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.14838)
 
-[node name="Player" parent="." instance=ExtResource("1_3rlxx")]
+[node name="Player" parent="." node_paths=PackedStringArray("maskManager") instance=ExtResource("1_3rlxx")]
 transform = Transform3D(-0.641356, 0, 0.767244, 0, 1, 0, -0.767244, 0, -0.641356, 0, 0.0507947, 0)
+maskManager = NodePath("../MaskManager")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 6.46186, 0)
@@ -155,3 +158,8 @@ transform = Transform3D(-0.999377, 0, -0.0353007, 0, 1, 0, 0.0353007, 0, -0.9993
 
 [node name="ButtonPuzzleController" parent="." node_paths=PackedStringArray("buttons") instance=ExtResource("8_s5vkl")]
 buttons = [NodePath("../Cubo/presesureButton"), NodePath("../Cubo2/presesureButton"), NodePath("../Cubo3/presesureButton"), NodePath("../Cubo4/presesureButton"), NodePath("../Cubo5/presesureButton")]
+
+[node name="HiddenObject" parent="." instance=ExtResource("10_4nwc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26227, 0.516886, 1.86144)
+
+[node name="MaskManager" parent="." instance=ExtResource("11_h8j34")]

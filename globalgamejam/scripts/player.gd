@@ -11,6 +11,7 @@ extends CharacterBody3D
 @onready var raycast: RayCast3D = $Head/Camera3D/RayCast3D
 @onready var dot: ColorRect = $CanvasLayer/Control/ColorRect
 
+@export var maskManager : Node 
 
 var held_object: Node3D = null
 var hold_distance := 0.5	
@@ -28,6 +29,7 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interact"):
 		_handle_interact()
 
+	
 func _process(_delta):
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()

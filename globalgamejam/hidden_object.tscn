@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh1txo5aly446"]
+
+[ext_resource type="Script" uid="uid://d0xurb0vcqstj" path="res://hidden_object.gd" id="1_wnypq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubmeq"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_otu4s"]
+material = SubResource("StandardMaterial3D_ubmeq")
+
+[node name="HiddenObject" type="Node3D" groups=["hidden"]]
+script = ExtResource("1_wnypq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PrismMesh_otu4s")
