@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://xy4p3bkc4m7k"]
+
+[ext_resource type="Script" uid="uid://c8pvx61qr84nv" path="res://presesure_button.gd" id="1_5fwba"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_818gb"]
+albedo_color = Color(0.470588, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5fwba"]
+material = SubResource("StandardMaterial3D_818gb")
+size = Vector3(0.1, 0.1, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntiiy"]
+size = Vector3(0.1, 0.1, 0.05)
+
+[node name="presesureButton" type="StaticBody3D"]
+script = ExtResource("1_5fwba")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_5fwba")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ntiiy")

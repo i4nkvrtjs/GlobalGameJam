@@ -31,3 +31,18 @@ func _update_color():
 		mesh.set_surface_override_material(0, mat)
 
 	mat.albedo_color = current_color
+
+
+func show_temp_color(color: Color, duration := 1.0):
+	var tween = create_tween()
+	tween.tween_interval(duration)
+	tween.tween_callback(func(): reset())
+	var mat = mesh.get_active_material(0)
+	if mat == null:
+		mat = StandardMaterial3D.new()
+		mesh.set_surface_override_material(0, mat)
+
+	mat.albedo_color = color
+func reset():
+	color_index = 0
+	_update_color()

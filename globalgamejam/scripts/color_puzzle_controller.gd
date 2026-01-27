@@ -44,6 +44,10 @@ func _solve():
 	solved = true
 	print("PUZZLE RESUELTO")
 	
+	for button in buttons:
+		if button.has_method("show_temp_color"):
+			button.show_temp_color(Color.GREEN, 1.0)
+		
 	for cube in get_tree().get_nodes_in_group("floating_cubes"):
 		print("Activando cubo:", cube.name)
 		cube.activate()
@@ -56,3 +60,6 @@ func _solve():
 
 func _fail(index: int):
 	print("Puzzle incorrecto en botón:", index)
+	for button in buttons:
+		if button.has_method("show_temp_color"):
+			button.show_temp_color(Color.RED, 1.0)
