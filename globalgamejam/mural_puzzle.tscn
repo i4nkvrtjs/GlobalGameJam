@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhvkerbrigteu"]
+[gd_scene load_steps=100 format=3 uid="uid://bhvkerbrigteu"]
 
 [ext_resource type="Script" uid="uid://dh4itfa6mnrih" path="res://mural_puzzle.gd" id="1_i3tn2"]
 [ext_resource type="Script" uid="uid://c7gfl3kq33vln" path="res://mural_tile.gd" id="2_00qhs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3tn2"]
-albedo_color = Color(0.079607, 0.0758226, 0.535497, 1)
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_844di"]
+[sub_resource type="BoxMesh" id="BoxMesh_00qhs"]
 material = SubResource("StandardMaterial3D_i3tn2")
 size = Vector3(1, 1, 0.1)
 
@@ -20,10 +20,322 @@ albedo_color = Color(0.079607, 0.0758226, 0.535497, 1)
 material = SubResource("StandardMaterial3D_00qhs")
 size = Vector3(1, 1, 0.1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jes6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtcg5"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0htci"]
-material = SubResource("StandardMaterial3D_2jes6")
+[sub_resource type="BoxMesh" id="BoxMesh_2jes6"]
+material = SubResource("StandardMaterial3D_wtcg5")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0htci"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oald3"]
+material = SubResource("StandardMaterial3D_0htci")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_appb8"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p7y66"]
+material = SubResource("StandardMaterial3D_appb8")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54whj"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uan53"]
+material = SubResource("StandardMaterial3D_54whj")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mlwe"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fdqq5"]
+material = SubResource("StandardMaterial3D_7mlwe")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3dje"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3yopf"]
+material = SubResource("StandardMaterial3D_k3dje")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7ft5"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n2xug"]
+material = SubResource("StandardMaterial3D_k7ft5")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0h5nl"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wvjjy"]
+material = SubResource("StandardMaterial3D_0h5nl")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32yvm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mj1qj"]
+material = SubResource("StandardMaterial3D_32yvm")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enxyh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ojpbg"]
+material = SubResource("StandardMaterial3D_enxyh")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxh1x"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y1b8a"]
+material = SubResource("StandardMaterial3D_dxh1x")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8h0ya"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p58tj"]
+material = SubResource("StandardMaterial3D_8h0ya")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0wkd"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cxbii"]
+material = SubResource("StandardMaterial3D_k0wkd")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ybl5v"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4i2f0"]
+material = SubResource("StandardMaterial3D_ybl5v")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcb7i"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ooc17"]
+material = SubResource("StandardMaterial3D_rcb7i")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0p4k"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vfec3"]
+material = SubResource("StandardMaterial3D_w0p4k")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wm306"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jccmx"]
+material = SubResource("StandardMaterial3D_wm306")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3u3k"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f82vl"]
+material = SubResource("StandardMaterial3D_p3u3k")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grknh"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sirri"]
+material = SubResource("StandardMaterial3D_grknh")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rkgf"]
+albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_654lc"]
+material = SubResource("StandardMaterial3D_3rkgf")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvf0b"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rpe32"]
+material = SubResource("StandardMaterial3D_yvf0b")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuwtk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vmvt2"]
+material = SubResource("StandardMaterial3D_nuwtk")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2hfe3"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wjxug"]
+material = SubResource("StandardMaterial3D_2hfe3")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bywqs"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_14ysu"]
+material = SubResource("StandardMaterial3D_bywqs")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rm7n"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ty2a"]
+material = SubResource("StandardMaterial3D_7rm7n")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7u42k"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yd3ic"]
+material = SubResource("StandardMaterial3D_7u42k")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qftmt"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pm1pr"]
+material = SubResource("StandardMaterial3D_qftmt")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6iwd"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n2n4u"]
+material = SubResource("StandardMaterial3D_g6iwd")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4wsp"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hiht7"]
+material = SubResource("StandardMaterial3D_k4wsp")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pk2ec"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_57foy"]
+material = SubResource("StandardMaterial3D_pk2ec")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nry68"]
+albedo_color = Color(0.662745, 0.662745, 0.662745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oh7kj"]
+material = SubResource("StandardMaterial3D_nry68")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e3x4"]
+albedo_color = Color(0.662745, 0.662745, 0.662745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rn13w"]
+material = SubResource("StandardMaterial3D_4e3x4")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf8vw"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vcdea"]
+material = SubResource("StandardMaterial3D_uf8vw")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1ftu"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8dt1j"]
+material = SubResource("StandardMaterial3D_g1ftu")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eser"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_avsum"]
+material = SubResource("StandardMaterial3D_8eser")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2p26"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_78ky1"]
+material = SubResource("StandardMaterial3D_o2p26")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_it61h"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0t7fk"]
+material = SubResource("StandardMaterial3D_it61h")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_875wv"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r51tu"]
+material = SubResource("StandardMaterial3D_875wv")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihn7a"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7num"]
+material = SubResource("StandardMaterial3D_ihn7a")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_higrf"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_soaj4"]
+material = SubResource("StandardMaterial3D_higrf")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iykb7"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5huky"]
+material = SubResource("StandardMaterial3D_iykb7")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vf7vs"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pobe5"]
+material = SubResource("StandardMaterial3D_vf7vs")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srth3"]
+albedo_color = Color(0.662745, 0.662745, 0.662745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1a5sk"]
+material = SubResource("StandardMaterial3D_srth3")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ygbw"]
+albedo_color = Color(0.662745, 0.662745, 0.662745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vlalc"]
+material = SubResource("StandardMaterial3D_1ygbw")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6a3r"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x3suy"]
+material = SubResource("StandardMaterial3D_g6a3r")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivy1x"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lctye"]
+material = SubResource("StandardMaterial3D_ivy1x")
 size = Vector3(1, 1, 0.1)
 
 [node name="MuralPuzzle" type="Node3D"]
@@ -34,7 +346,7 @@ transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -1.31484
 script = ExtResource("2_00qhs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile0"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_00qhs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile0"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -56,7 +368,7 @@ script = ExtResource("2_00qhs")
 tile_index = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile2"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_2jes6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile2"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -67,7 +379,7 @@ script = ExtResource("2_00qhs")
 tile_index = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile3"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_oald3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile3"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -78,7 +390,7 @@ script = ExtResource("2_00qhs")
 tile_index = 4
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile4"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_p7y66")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile4"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -90,7 +402,7 @@ tile_index = 5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_uan53")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile5"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -101,7 +413,7 @@ script = ExtResource("2_00qhs")
 tile_index = 6
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile6"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_fdqq5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile6"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -112,7 +424,7 @@ script = ExtResource("2_00qhs")
 tile_index = 7
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile7"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_3yopf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile7"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -123,7 +435,7 @@ script = ExtResource("2_00qhs")
 tile_index = 8
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile8"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_n2xug")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile8"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -134,7 +446,7 @@ script = ExtResource("2_00qhs")
 tile_index = 9
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile9"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_wvjjy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile9"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -145,7 +457,7 @@ script = ExtResource("2_00qhs")
 tile_index = 10
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile10"]
-mesh = SubResource("BoxMesh_0htci")
+mesh = SubResource("BoxMesh_mj1qj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile10"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -156,7 +468,7 @@ script = ExtResource("2_00qhs")
 tile_index = 11
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile11"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_ojpbg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile11"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -167,7 +479,7 @@ script = ExtResource("2_00qhs")
 tile_index = 12
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile12"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_y1b8a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile12"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -178,7 +490,7 @@ script = ExtResource("2_00qhs")
 tile_index = 13
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile13"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_p58tj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile13"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -189,7 +501,7 @@ script = ExtResource("2_00qhs")
 tile_index = 14
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile14"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_cxbii")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile14"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -200,7 +512,7 @@ script = ExtResource("2_00qhs")
 tile_index = 15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile15"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_4i2f0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile15"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -211,7 +523,7 @@ script = ExtResource("2_00qhs")
 tile_index = 16
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile16"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_ooc17")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile16"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -223,7 +535,7 @@ tile_index = 17
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_vfec3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile17"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -234,7 +546,7 @@ script = ExtResource("2_00qhs")
 tile_index = 18
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile18"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_jccmx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile18"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -245,7 +557,7 @@ script = ExtResource("2_00qhs")
 tile_index = 19
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile19"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_f82vl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile19"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -256,7 +568,7 @@ script = ExtResource("2_00qhs")
 tile_index = 20
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile20"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_sirri")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile20"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -267,7 +579,7 @@ script = ExtResource("2_00qhs")
 tile_index = 21
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile21"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_654lc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile21"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -278,7 +590,7 @@ script = ExtResource("2_00qhs")
 tile_index = 22
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile22"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_rpe32")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile22"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -289,7 +601,7 @@ script = ExtResource("2_00qhs")
 tile_index = 23
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile23"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_vmvt2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile23"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -300,7 +612,7 @@ script = ExtResource("2_00qhs")
 tile_index = 24
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile24"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_wjxug")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile24"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -311,7 +623,7 @@ script = ExtResource("2_00qhs")
 tile_index = 25
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile25"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_14ysu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile25"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -322,7 +634,7 @@ script = ExtResource("2_00qhs")
 tile_index = 26
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile26"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_7ty2a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile26"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -333,7 +645,7 @@ script = ExtResource("2_00qhs")
 tile_index = 27
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile27"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_yd3ic")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile27"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -344,7 +656,7 @@ script = ExtResource("2_00qhs")
 tile_index = 28
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile28"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_pm1pr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile28"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -356,7 +668,7 @@ tile_index = 29
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile29"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_n2n4u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile29"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -367,7 +679,7 @@ script = ExtResource("2_00qhs")
 tile_index = 30
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile30"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_hiht7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile30"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -378,7 +690,7 @@ script = ExtResource("2_00qhs")
 tile_index = 31
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile31"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_57foy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile31"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -389,7 +701,7 @@ script = ExtResource("2_00qhs")
 tile_index = 32
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile32"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_oh7kj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile32"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -400,7 +712,7 @@ script = ExtResource("2_00qhs")
 tile_index = 33
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile33"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_rn13w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile33"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -411,7 +723,7 @@ script = ExtResource("2_00qhs")
 tile_index = 34
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile34"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_vcdea")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile34"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -422,7 +734,7 @@ script = ExtResource("2_00qhs")
 tile_index = 35
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile35"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_8dt1j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile35"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -433,7 +745,7 @@ script = ExtResource("2_00qhs")
 tile_index = 36
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile36"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_avsum")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile36"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -444,7 +756,7 @@ script = ExtResource("2_00qhs")
 tile_index = 37
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile37"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_78ky1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile37"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -455,7 +767,7 @@ script = ExtResource("2_00qhs")
 tile_index = 38
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile38"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_0t7fk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile38"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -466,7 +778,7 @@ script = ExtResource("2_00qhs")
 tile_index = 39
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile39"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_r51tu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile39"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -477,7 +789,7 @@ script = ExtResource("2_00qhs")
 tile_index = 40
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile40"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_f7num")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile40"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -489,7 +801,7 @@ tile_index = 41
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile41"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_soaj4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile41"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -500,7 +812,7 @@ script = ExtResource("2_00qhs")
 tile_index = 42
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile42"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_5huky")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile42"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -511,7 +823,7 @@ script = ExtResource("2_00qhs")
 tile_index = 43
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile43"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_pobe5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile43"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -522,7 +834,7 @@ script = ExtResource("2_00qhs")
 tile_index = 44
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile44"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_1a5sk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile44"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -533,7 +845,7 @@ script = ExtResource("2_00qhs")
 tile_index = 45
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile45"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_vlalc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile45"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -544,7 +856,7 @@ script = ExtResource("2_00qhs")
 tile_index = 46
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile46"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_x3suy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile46"]
 shape = SubResource("BoxShape3D_hqp13")
@@ -555,7 +867,7 @@ script = ExtResource("2_00qhs")
 tile_index = 47
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tile47"]
-mesh = SubResource("BoxMesh_844di")
+mesh = SubResource("BoxMesh_lctye")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile47"]
 shape = SubResource("BoxShape3D_hqp13")

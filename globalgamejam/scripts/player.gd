@@ -4,6 +4,8 @@ extends CharacterBody3D
 @export var mouse_sensitivity := 0.0022
 @export var gravity := 9.8
 @export var interact_distance := 1.5
+@export var respawn_point: Marker3D
+@export var maskManager : Node 
 
 @onready var interact_label: Label = $CanvasLayer/InteractLabel
 @onready var head: Node3D = $Head
@@ -11,8 +13,7 @@ extends CharacterBody3D
 @onready var raycast: RayCast3D = $Head/Camera3D/RayCast3D
 @onready var dot: ColorRect = $CanvasLayer/Control/ColorRect
 
-@export var maskManager : Node 
-
+var respawning := false
 var held_object: Node3D = null
 var hold_distance := 0.5	
 
@@ -113,3 +114,15 @@ func _drop_object():
 func _update_held_object():
 	var target_pos = camera.global_transform.origin + -camera.global_transform.basis.z * hold_distance
 	held_object.global_transform.origin = held_object.global_transform.origin.lerp(target_pos, 0.2)
+
+func respawn():
+	if respawning:
+		return
+
+	respawning = true
+
+	global_transform.origin = respawn_point.global_transform.origin
+	velocity = Vector3.ZERO
+
+	await get_tree().create_timer(0.1).timeout
+	respawning = false

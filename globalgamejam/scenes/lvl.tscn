@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://r3e1gimtxubc"]
+[gd_scene load_steps=35 format=3 uid="uid://r3e1gimtxubc"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_3rlxx"]
 [ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://scenes/cubo.tscn" id="2_2a1lc"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://mask_manager.tscn" id="11_h8j34"]
 [ext_resource type="PackedScene" uid="uid://bhvkerbrigteu" path="res://mural_puzzle.tscn" id="12_h8j34"]
 [ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="13_rv0fw"]
+[ext_resource type="Script" uid="uid://byp68i0evu2yl" path="res://scripts/dead_zone.gd" id="14_upgc2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)
@@ -34,11 +35,38 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="BoxMesh" id="BoxMesh_2a1lc"]
 size = Vector3(1, 0.5, 1)
 
-[node name="Node3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.14838)
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5ppj"]
+size = Vector3(50, 1, 50)
 
-[node name="Player" parent="." node_paths=PackedStringArray("maskManager") instance=ExtResource("1_3rlxx")]
-transform = Transform3D(-0.641356, 0, 0.767244, 0, 1, 0, -0.767244, 0, -0.641356, 0, 0.0507947, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_w3yln"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_upgc2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g5ppj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w3yln"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyfom"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lsyt0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5d6yd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4y413"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_20vyq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3054u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ynt8g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lyyc3"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_point", "maskManager") instance=ExtResource("1_3rlxx")]
+transform = Transform3D(-0.641356, 0, 0.767244, 0, 1, 0, -0.767244, 0, -0.641356, 0, 0.29206, 0)
+respawn_point = NodePath("../RespawnPoint")
 maskManager = NodePath("../MaskManager")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -155,10 +183,6 @@ transform = Transform3D(0.0596374, 0, 0.99822, 0, 1, 0, -0.99822, 0, 0.0596374, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.57312, 2.27098, 0.00720263, 0)
 mesh = SubResource("BoxMesh_2a1lc")
 
-[node name="Mesa2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.57312, 3.436, 0.00720263, 0)
-mesh = SubResource("BoxMesh_2a1lc")
-
 [node name="ColorPuzzle" parent="." instance=ExtResource("7_f2dqo")]
 transform = Transform3D(-0.999377, 0, -0.0353007, 0, 1, 0, 0.0353007, 0, -0.999377, 2.14921, 0.26458, 0)
 
@@ -178,3 +202,216 @@ transform = Transform3D(-0.274496, 0, 0.961588, 0, 1, 0, -0.961588, 0, -0.274496
 [node name="ColorPuzzleHidden" parent="." instance=ExtResource("13_rv0fw")]
 transform = Transform3D(-0.999655, 0, -0.0262466, 0, 1, 0, 0.0262466, 0, -0.999655, 2.14512, 0.264259, -0.00107908)
 visible = false
+
+[node name="RespawnPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.56729)
+
+[node name="DeadZone" type="Area3D" parent="."]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("14_upgc2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeadZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.51435, 8.71773)
+shape = SubResource("BoxShape3D_g5ppj")
+
+[node name="CaminoInvisible" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.491024, 7.76354)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible"]
+mesh = SubResource("BoxMesh_upgc2")
+
+[node name="CaminoInvisible2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.491024, 8.7768)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible2"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible2"]
+mesh = SubResource("BoxMesh_g5ppj")
+
+[node name="CaminoInvisible3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.491024, 9.77918)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible3"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible3"]
+mesh = SubResource("BoxMesh_w3yln")
+
+[node name="CaminoInvisible4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00475, -0.491024, 9.77918)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible4"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible4"]
+mesh = SubResource("BoxMesh_qyfom")
+
+[node name="CaminoInvisible5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00066, -0.491024, 9.77918)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible5"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible5"]
+mesh = SubResource("BoxMesh_lsyt0")
+
+[node name="CaminoInvisible6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99237, -0.491024, 9.77918)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible6"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible6"]
+mesh = SubResource("BoxMesh_5d6yd")
+
+[node name="CaminoInvisible7" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01229, -0.491024, 9.77918)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible7"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible7"]
+mesh = SubResource("BoxMesh_4y413")
+
+[node name="CaminoInvisible8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99237, -0.491024, 10.8059)
+
+[node name="CaminoInvisible" type="CollisionShape3D" parent="CaminoInvisible8"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="CaminoInvisible2" type="MeshInstance3D" parent="CaminoInvisible8"]
+mesh = SubResource("BoxMesh_20vyq")
+
+[node name="CaminoInvisible9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99237, -0.491024, 11.8201)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CaminoInvisible9"]
+shape = SubResource("BoxShape3D_w3yln")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CaminoInvisible9"]
+mesh = SubResource("BoxMesh_3054u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.76672, -0.497672, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_lyyc3")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.76672, -0.497672, 1.03258)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80268, -0.497672, 1.03258)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("BoxShape3D_lyyc3")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80268, -0.497672, 0.00823832)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+shape = SubResource("BoxShape3D_lyyc3")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80268, -0.497672, -1.02901)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7295, -0.497672, -1.02901)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.84007, -0.497672, -1.02901)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.84007, -0.497672, -0.000135422)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D8"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.84007, -0.497672, 1.04457)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D9"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D9"]
+shape = SubResource("BoxShape3D_lyyc3")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.84007, -0.497672, 2.05123)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D10"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80709, -0.497672, 2.05123)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D11"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.73704, -0.497672, 2.05123)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D12"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D12"]
+shape = SubResource("BoxShape3D_lyyc3")
+
+[node name="StaticBody3D13" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.863, -0.497672, 2.05123)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D13"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D13"]
+shape = SubResource("BoxShape3D_lyyc3")
+
+[node name="StaticBody3D14" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.863, -0.497672, 1.00398)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D14"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D14"]
+shape = SubResource("BoxShape3D_lyyc3")
+
+[node name="StaticBody3D15" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.863, -0.497672, -0.0200629)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D15"]
+mesh = SubResource("BoxMesh_ynt8g")
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.863, -0.497672, -1.03017)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0180485)
+mesh = SubResource("BoxMesh_ynt8g")
+
+[connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
