@@ -43,6 +43,7 @@ func show_temp_color(color: Color, duration := 1.0):
 		mesh.set_surface_override_material(0, mat)
 
 	mat.albedo_color = color
+	
 func reset():
 	color_index = 0
 	_update_color()
