@@ -173,7 +173,7 @@ normal_puzzle = NodePath("../ColorPuzzle")
 hidden_puzzle = NodePath("../ColorPuzzleHidden")
 
 [node name="MuralPuzzle" parent="." instance=ExtResource("12_h8j34")]
-transform = Transform3D(-0.274496, 0, 0.961588, 0, 1, 0, -0.961588, 0, -0.274496, -5.24529, -1.34805, 2.60924)
+transform = Transform3D(-0.274496, 0, 0.961588, 0, 1, 0, -0.961588, 0, -0.274496, -5.24529, -0.0554177, 2.60924)
 
 [node name="ColorPuzzleHidden" parent="." instance=ExtResource("13_rv0fw")]
 transform = Transform3D(-0.999655, 0, -0.0262466, 0, 1, 0, 0.0262466, 0, -0.999655, 2.14512, 0.264259, -0.00107908)
