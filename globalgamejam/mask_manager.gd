@@ -9,6 +9,8 @@ enum MaskType {
 
 var current_mask: MaskType = MaskType.NONE
 
+@export var normal_puzzle : Node3D
+@export var hidden_puzzle : Node3D
 
 func _input(event):
 	if event.is_action_pressed("mask1"):
@@ -89,9 +91,26 @@ func _activate_hidden():
 	for obj in get_tree().get_nodes_in_group("hidden"):
 		if obj.has_method("reveal"):
 			obj.reveal()
-
-
+	hidden_puzzle.visible = true
+	normal_puzzle.visible = false
+	set_puzzle_enabled(hidden_puzzle, true)
+	set_puzzle_enabled(normal_puzzle, false)
+	
 func _deactivate_hidden():
 	for obj in get_tree().get_nodes_in_group("hidden"):
 		if obj.has_method("hide"):
 			obj.hide()
+	hidden_puzzle.visible = false
+	normal_puzzle.visible = true
+	set_puzzle_enabled(hidden_puzzle, false)
+	set_puzzle_enabled(normal_puzzle, true)
+	
+func set_puzzle_enabled(puzzle: Node, enabled: bool):
+	puzzle.visible = enabled
+	puzzle.process_mode = Node.PROCESS_MODE_INHERIT
+
+	for body in puzzle.get_children():
+		if body is CollisionObject3D:
+			for child in body.get_children():
+				if child is CollisionShape3D:
+					child.disabled = not enabled

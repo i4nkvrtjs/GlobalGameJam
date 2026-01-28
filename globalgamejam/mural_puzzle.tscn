@@ -1,0 +1,561 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhvkerbrigteu"]
+
+[ext_resource type="Script" uid="uid://dh4itfa6mnrih" path="res://mural_puzzle.gd" id="1_i3tn2"]
+[ext_resource type="Script" uid="uid://c7gfl3kq33vln" path="res://mural_tile.gd" id="2_00qhs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3tn2"]
+albedo_color = Color(0.079607, 0.0758226, 0.535497, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_844di"]
+material = SubResource("StandardMaterial3D_i3tn2")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hqp13"]
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00qhs"]
+albedo_color = Color(0.079607, 0.0758226, 0.535497, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wtcg5"]
+material = SubResource("StandardMaterial3D_00qhs")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jes6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0htci"]
+material = SubResource("StandardMaterial3D_2jes6")
+size = Vector3(1, 1, 0.1)
+
+[node name="MuralPuzzle" type="Node3D"]
+script = ExtResource("1_i3tn2")
+
+[node name="Tile0" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -1.31484, 1.20618, 0)
+script = ExtResource("2_00qhs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile0"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile0"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile1" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.992968, 1.205, 0)
+script = ExtResource("2_00qhs")
+tile_index = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile1"]
+mesh = SubResource("BoxMesh_wtcg5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile1"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.673104, 1.20891, 0)
+script = ExtResource("2_00qhs")
+tile_index = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile2"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile2"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile3" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.354617, 1.20525, 0)
+script = ExtResource("2_00qhs")
+tile_index = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile3"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile3"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile4" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.034928, 1.20618, 0)
+script = ExtResource("2_00qhs")
+tile_index = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile4"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile4"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile5" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.292333, 1.20413, 0)
+script = ExtResource("2_00qhs")
+tile_index = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile5"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile6" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.605806, 1.20368, 0)
+script = ExtResource("2_00qhs")
+tile_index = 6
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile6"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile6"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile7" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.928131, 1.203, 0)
+script = ExtResource("2_00qhs")
+tile_index = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile7"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile7"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile8" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.251, 1.20247, 0)
+script = ExtResource("2_00qhs")
+tile_index = 8
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile8"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile8"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile9" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.57351, 1.20258, 0)
+script = ExtResource("2_00qhs")
+tile_index = 9
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile9"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile9"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile10" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.89106, 1.20365, 0)
+script = ExtResource("2_00qhs")
+tile_index = 10
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile10"]
+mesh = SubResource("BoxMesh_0htci")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile10"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile11" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 2.21105, 1.20328, 0)
+script = ExtResource("2_00qhs")
+tile_index = 11
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile11"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile11"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile12" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -1.31484, 0.88783, 0)
+script = ExtResource("2_00qhs")
+tile_index = 12
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile12"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile12"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile13" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.992968, 0.88664, 0)
+script = ExtResource("2_00qhs")
+tile_index = 13
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile13"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile13"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile14" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.673104, 0.89055, 0)
+script = ExtResource("2_00qhs")
+tile_index = 14
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile14"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile14"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile15" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.354617, 0.886889, 0)
+script = ExtResource("2_00qhs")
+tile_index = 15
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile15"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile15"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile16" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.034928, 0.88782, 0)
+script = ExtResource("2_00qhs")
+tile_index = 16
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile16"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile16"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile17" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.292333, 0.88577, 0)
+script = ExtResource("2_00qhs")
+tile_index = 17
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile17"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile18" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.605806, 0.885319, 0)
+script = ExtResource("2_00qhs")
+tile_index = 18
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile18"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile18"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile19" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.928131, 0.88464, 0)
+script = ExtResource("2_00qhs")
+tile_index = 19
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile19"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile19"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile20" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.251, 0.884109, 0)
+script = ExtResource("2_00qhs")
+tile_index = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile20"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile20"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile21" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.57351, 0.88422, 0)
+script = ExtResource("2_00qhs")
+tile_index = 21
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile21"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile21"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile22" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.89106, 0.885289, 0)
+script = ExtResource("2_00qhs")
+tile_index = 22
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile22"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile22"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile23" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 2.21105, 0.88492, 0)
+script = ExtResource("2_00qhs")
+tile_index = 23
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile23"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile23"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile24" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -1.31484, 0.56839, 0)
+script = ExtResource("2_00qhs")
+tile_index = 24
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile24"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile24"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile25" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.992968, 0.5672, 0)
+script = ExtResource("2_00qhs")
+tile_index = 25
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile25"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile25"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile26" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.673104, 0.57112, 0)
+script = ExtResource("2_00qhs")
+tile_index = 26
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile26"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile26"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile27" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.354617, 0.56745, 0)
+script = ExtResource("2_00qhs")
+tile_index = 27
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile27"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile27"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile28" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.034928, 0.56839, 0)
+script = ExtResource("2_00qhs")
+tile_index = 28
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile28"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile28"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile29" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.292333, 0.566339, 0)
+script = ExtResource("2_00qhs")
+tile_index = 29
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile29"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile30" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.605806, 0.56589, 0)
+script = ExtResource("2_00qhs")
+tile_index = 30
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile30"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile30"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile31" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.928131, 0.565199, 0)
+script = ExtResource("2_00qhs")
+tile_index = 31
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile31"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile31"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile32" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.251, 0.56468, 0)
+script = ExtResource("2_00qhs")
+tile_index = 32
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile32"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile32"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile33" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.57351, 0.56478, 0)
+script = ExtResource("2_00qhs")
+tile_index = 33
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile33"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile33"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile34" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.89106, 0.56585, 0)
+script = ExtResource("2_00qhs")
+tile_index = 34
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile34"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile34"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile35" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 2.21105, 0.56548, 0)
+script = ExtResource("2_00qhs")
+tile_index = 35
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile35"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile35"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile36" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -1.31484, 0.24943, 0)
+script = ExtResource("2_00qhs")
+tile_index = 36
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile36"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile36"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile37" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.992968, 0.24824, 0)
+script = ExtResource("2_00qhs")
+tile_index = 37
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile37"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile37"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile38" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.673104, 0.25216, 0)
+script = ExtResource("2_00qhs")
+tile_index = 38
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile38"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile38"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile39" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.354617, 0.2485, 0)
+script = ExtResource("2_00qhs")
+tile_index = 39
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile39"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile39"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile40" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, -0.034928, 0.24943, 0)
+script = ExtResource("2_00qhs")
+tile_index = 40
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile40"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile40"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile41" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.292333, 0.24738, 0)
+script = ExtResource("2_00qhs")
+tile_index = 41
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192723, 0, 0)
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile41"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile42" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.605806, 0.24693, 0)
+script = ExtResource("2_00qhs")
+tile_index = 42
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile42"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile42"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile43" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 0.928131, 0.24624, 0)
+script = ExtResource("2_00qhs")
+tile_index = 43
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile43"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile43"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile44" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.251, 0.24572, 0)
+script = ExtResource("2_00qhs")
+tile_index = 44
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile44"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile44"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile45" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.57351, 0.24582, 0)
+script = ExtResource("2_00qhs")
+tile_index = 45
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile45"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile45"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile46" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 1.89106, 0.246899, 0)
+script = ExtResource("2_00qhs")
+tile_index = 46
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile46"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile46"]
+shape = SubResource("BoxShape3D_hqp13")
+
+[node name="Tile47" type="StaticBody3D" parent="."]
+transform = Transform3D(0.309434, 0, 0, 0, 0.309434, 0, 0, 0, 0.309434, 2.21105, 0.24652, 0)
+script = ExtResource("2_00qhs")
+tile_index = 47
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tile47"]
+mesh = SubResource("BoxMesh_844di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile47"]
+shape = SubResource("BoxShape3D_hqp13")

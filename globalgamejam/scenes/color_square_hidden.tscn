@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2dpuu5uah21l"]
+
+[ext_resource type="Script" uid="uid://jvdvpeh46nov" path="res://scripts/color_square_hidden.gd" id="1_csuvk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_csuvk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bryyt"]
+material = SubResource("StandardMaterial3D_csuvk")
+size = Vector3(0.1, 0.01, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n7llr"]
+size = Vector3(0.1, 0.01, 0.1)
+
+[node name="ColorSquare" type="StaticBody3D" node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_csuvk")
+mesh = NodePath("MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_bryyt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_n7llr")

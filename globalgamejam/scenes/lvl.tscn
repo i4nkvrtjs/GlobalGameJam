@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://r3e1gimtxubc"]
+[gd_scene load_steps=21 format=3 uid="uid://r3e1gimtxubc"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_3rlxx"]
 [ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://scenes/cubo.tscn" id="2_2a1lc"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://xy4p3bkc4m7k" path="res://presesure_button.tscn" id="9_d474t"]
 [ext_resource type="PackedScene" uid="uid://dh1txo5aly446" path="res://hidden_object.tscn" id="10_4nwc7"]
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://mask_manager.tscn" id="11_h8j34"]
+[ext_resource type="PackedScene" uid="uid://bhvkerbrigteu" path="res://mural_puzzle.tscn" id="12_h8j34"]
+[ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="13_rv0fw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)
@@ -149,8 +151,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43424, 0.524199, 2.11208)
 [node name="presesureButton" parent="Cubo5" instance=ExtResource("9_d474t")]
 transform = Transform3D(0.0596374, 0, 0.99822, 0, 1, 0, -0.99822, 0, 0.0596374, 0.525291, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Mesa1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.57312, 2.27098, 0.00720263, 0)
+mesh = SubResource("BoxMesh_2a1lc")
+
+[node name="Mesa2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.57312, 3.436, 0.00720263, 0)
 mesh = SubResource("BoxMesh_2a1lc")
 
 [node name="ColorPuzzle" parent="." instance=ExtResource("7_f2dqo")]
@@ -162,4 +168,13 @@ buttons = [NodePath("../Cubo/presesureButton"), NodePath("../Cubo2/presesureButt
 [node name="HiddenObject" parent="." instance=ExtResource("10_4nwc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26227, 0.516886, 1.86144)
 
-[node name="MaskManager" parent="." instance=ExtResource("11_h8j34")]
+[node name="MaskManager" parent="." node_paths=PackedStringArray("normal_puzzle", "hidden_puzzle") instance=ExtResource("11_h8j34")]
+normal_puzzle = NodePath("../ColorPuzzle")
+hidden_puzzle = NodePath("../ColorPuzzleHidden")
+
+[node name="MuralPuzzle" parent="." instance=ExtResource("12_h8j34")]
+transform = Transform3D(-0.274496, 0, 0.961588, 0, 1, 0, -0.961588, 0, -0.274496, -5.24529, -0.0554177, 2.60924)
+
+[node name="ColorPuzzleHidden" parent="." instance=ExtResource("13_rv0fw")]
+transform = Transform3D(-0.999655, 0, -0.0262466, 0, 1, 0, 0.0262466, 0, -0.999655, 2.14512, 0.264259, -0.00107908)
+visible = false
