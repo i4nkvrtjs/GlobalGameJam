@@ -1,4 +1,7 @@
-[gd_resource type="Terrain3DAssets" load_steps=3 format=3 uid="uid://gk6yf2on2eyl"]
+[gd_resource type="Terrain3DAssets" load_steps=6 format=3 uid="uid://gk6yf2on2eyl"]
+
+[ext_resource type="Texture2D" uid="uid://b5tvswe8d5eap" path="res://scenes/Presente_data_Terrain3d/pasto_alb_ao_height.dds" id="1_n1ghj"]
+[ext_resource type="Texture2D" uid="uid://bb0rt4ajj3drc" path="res://scenes/Presente_data_Terrain3d/pasto_normal_rough.dds" id="2_4c4gg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmmlt"]
 transparency = 4
@@ -18,5 +21,12 @@ last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
 
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_8vm1w"]
+name = "pasto_alb_ao_height"
+albedo_texture = ExtResource("1_n1ghj")
+normal_texture = ExtResource("2_4c4gg")
+uv_scale = 0.177
+
 [resource]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_tcnme")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_8vm1w")])
