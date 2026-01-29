@@ -9,7 +9,7 @@ size = Vector3(1, 0.1, 1)
 size = Vector3(1, 0.1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2d4br"]
-size = Vector3(1, 0.2, 1)
+size = Vector3(0.9, 0.2, 0.9)
 
 [node name="TileInvisibleHover" type="Node3D"]
 script = ExtResource("1_i3wvk")
