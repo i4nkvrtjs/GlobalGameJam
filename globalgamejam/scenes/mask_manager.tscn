@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2japg316rkry"]
 
-[ext_resource type="Script" uid="uid://xmrnjycc0itl" path="res://mask_manager.gd" id="1_0ebfu"]
+[ext_resource type="Script" uid="uid://xmrnjycc0itl" path="res://scripts/mask_manager.gd" id="1_0ebfu"]
 
 [node name="MaskManager" type="Node"]
 script = ExtResource("1_0ebfu")

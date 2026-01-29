@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://xy4p3bkc4m7k"]
 
-[ext_resource type="Script" uid="uid://c8pvx61qr84nv" path="res://presesure_button.gd" id="1_5fwba"]
+[ext_resource type="Script" uid="uid://c8pvx61qr84nv" path="res://scripts/presesure_button.gd" id="1_5fwba"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_818gb"]
 albedo_color = Color(0.470588, 1, 1, 1)

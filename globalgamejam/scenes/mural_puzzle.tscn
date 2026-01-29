@@ -1,7 +1,7 @@
 [gd_scene load_steps=100 format=3 uid="uid://bhvkerbrigteu"]
 
-[ext_resource type="Script" uid="uid://dh4itfa6mnrih" path="res://mural_puzzle.gd" id="1_i3tn2"]
-[ext_resource type="Script" uid="uid://c7gfl3kq33vln" path="res://mural_tile.gd" id="2_00qhs"]
+[ext_resource type="Script" uid="uid://dh4itfa6mnrih" path="res://scripts/mural_puzzle.gd" id="1_i3tn2"]
+[ext_resource type="Script" uid="uid://c7gfl3kq33vln" path="res://scripts/mural_tile.gd" id="2_00qhs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3tn2"]
 albedo_color = Color(0.0784314, 0.0745098, 0.537255, 1)

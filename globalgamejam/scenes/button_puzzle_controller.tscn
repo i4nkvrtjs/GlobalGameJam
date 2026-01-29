@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cbrx13oubiy2d"]
 
-[ext_resource type="Script" uid="uid://mbqd7bq25o1i" path="res://button_puzzle_controller.gd" id="1_e2ewv"]
+[ext_resource type="Script" uid="uid://mbqd7bq25o1i" path="res://scripts/button_puzzle_controller.gd" id="1_e2ewv"]
 
 [node name="ButtonPuzzleController" type="Node3D"]
 script = ExtResource("1_e2ewv")

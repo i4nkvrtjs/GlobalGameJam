@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://du4wph3ux86xh"]
+
+[ext_resource type="Script" uid="uid://jqx7axjsrhwi" path="res://scripts/tile_invisible_hover.gd" id="1_i3wvk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a0i74"]
+size = Vector3(1, 0.1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_22obl"]
+size = Vector3(1, 0.1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2d4br"]
+size = Vector3(1, 0.2, 1)
+
+[node name="TileInvisibleHover" type="Node3D"]
+script = ExtResource("1_i3wvk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_a0i74")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_22obl")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_2d4br")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_body_exited"]

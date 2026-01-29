@@ -1,5 +1,7 @@
 extends Node
 
+@onready var color_rect: ColorRect = $"../FiltroOculto/ColorRect"
+
 enum MaskType {
 	NONE,
 	PAST,
@@ -95,6 +97,7 @@ func _activate_hidden():
 	normal_puzzle.visible = false
 	set_puzzle_enabled(hidden_puzzle, true)
 	set_puzzle_enabled(normal_puzzle, false)
+	color_rect.visible = true
 	
 func _deactivate_hidden():
 	for obj in get_tree().get_nodes_in_group("hidden"):
@@ -104,6 +107,7 @@ func _deactivate_hidden():
 	normal_puzzle.visible = true
 	set_puzzle_enabled(hidden_puzzle, false)
 	set_puzzle_enabled(normal_puzzle, true)
+	color_rect.visible = false
 	
 func set_puzzle_enabled(puzzle: Node, enabled: bool):
 	puzzle.visible = enabled
@@ -114,3 +118,4 @@ func set_puzzle_enabled(puzzle: Node, enabled: bool):
 			for child in body.get_children():
 				if child is CollisionShape3D:
 					child.disabled = not enabled
+	
