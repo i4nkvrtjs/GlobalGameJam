@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dq3ri4yi3iljt"
-path="res://.godot/imported/Arbol_Shaded.glb-c11cbcb32555eacc0eae998fc4ea2102.scn"
+uid="uid://ctg1ogxijr6w0"
+path="res://.godot/imported/Arbol_001.glb-8cbca295f61e2d7c5c9d23d75f75dc60.scn"
 
 [deps]
 
-source_file="res://Meshes/Arbol_Shaded.glb"
-dest_files=["res://.godot/imported/Arbol_Shaded.glb-c11cbcb32555eacc0eae998fc4ea2102.scn"]
+source_file="res://Assets/Arbol_001.glb"
+dest_files=["res://.godot/imported/Arbol_001.glb-8cbca295f61e2d7c5c9d23d75f75dc60.scn"]
 
 [params]
 

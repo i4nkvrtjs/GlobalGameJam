@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbsm52b1eggb7"]
 
-[ext_resource type="PackedScene" uid="uid://ctg1ogxijr6w0" path="res://Meshes/Arbol_001.glb" id="1_p0kut"]
+[ext_resource type="PackedScene" uid="uid://ctg1ogxijr6w0" path="res://Assets/Arbol_001.glb" id="1_p0kut"]
 [ext_resource type="Shader" uid="uid://3bykdpg42n6l" path="res://arbol_hojas.gdshader" id="4_3yhh0"]
 [ext_resource type="Texture2D" uid="uid://bodwhygf0drt3" path="res://Texturas/arbol_hojas_alpha.png" id="5_gh8n2"]
 
