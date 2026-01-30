@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bodwhygf0drt3"
-path.s3tc="res://.godot/imported/arbol_hojas_alpha.png-7a7c2d4c055daca0c9133fbb9e8980db.s3tc.ctex"
+uid="uid://b8bken6ibipb"
+path.s3tc="res://.godot/imported/arbol_tronco.png-a488e9acf80b9e34702caed56b8ada65.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Texturas/arbol_hojas_alpha.png"
-dest_files=["res://.godot/imported/arbol_hojas_alpha.png-7a7c2d4c055daca0c9133fbb9e8980db.s3tc.ctex"]
+source_file="res://Assets/Texturas/arbol_tronco.png"
+dest_files=["res://.godot/imported/arbol_tronco.png-a488e9acf80b9e34702caed56b8ada65.s3tc.ctex"]
 
 [params]
 

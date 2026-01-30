@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctg1ogxijr6w0"
-path="res://.godot/imported/Arbol_001.glb-8cbca295f61e2d7c5c9d23d75f75dc60.scn"
+path="res://.godot/imported/Arbol_001.glb-c998bf91184c4327e9224fa14c8a4605.scn"
 
 [deps]
 
-source_file="res://Assets/Arbol_001.glb"
-dest_files=["res://.godot/imported/Arbol_001.glb-8cbca295f61e2d7c5c9d23d75f75dc60.scn"]
+source_file="res://Assets/Meshes/Arbol_001.glb"
+dest_files=["res://.godot/imported/Arbol_001.glb-c998bf91184c4327e9224fa14c8a4605.scn"]
 
 [params]
 

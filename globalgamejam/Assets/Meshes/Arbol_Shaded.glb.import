@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dq3ri4yi3iljt"
-path="res://.godot/imported/Arbol_Shaded.glb-02358241bb9e1ae7faefb3ce5c984984.scn"
+path="res://.godot/imported/Arbol_Shaded.glb-b9876cd46499a07440866b6493159de1.scn"
 
 [deps]
 
-source_file="res://Assets/Arbol_Shaded.glb"
-dest_files=["res://.godot/imported/Arbol_Shaded.glb-02358241bb9e1ae7faefb3ce5c984984.scn"]
+source_file="res://Assets/Meshes/Arbol_Shaded.glb"
+dest_files=["res://.godot/imported/Arbol_Shaded.glb-b9876cd46499a07440866b6493159de1.scn"]
 
 [params]
 

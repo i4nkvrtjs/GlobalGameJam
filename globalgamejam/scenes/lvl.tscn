@@ -13,11 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://mask_manager.tscn" id="11_h8j34"]
 [ext_resource type="PackedScene" uid="uid://bhvkerbrigteu" path="res://mural_puzzle.tscn" id="12_h8j34"]
 [ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="13_rv0fw"]
-[ext_resource type="PackedScene" uid="uid://dq3ri4yi3iljt" path="res://Assets/Arbol_Shaded.glb" id="14_w3yln"]
-[ext_resource type="Texture2D" uid="uid://b8bken6ibipb" path="res://Texturas/arbol_tronco.png" id="15_5d6yd"]
-[ext_resource type="Shader" uid="uid://3bykdpg42n6l" path="res://arbol_hojas.gdshader" id="15_qyfom"]
-[ext_resource type="Shader" uid="uid://dhinyd4b2rqkt" path="res://arbol_tronco.gdshader" id="16_5d6yd"]
-[ext_resource type="Texture2D" uid="uid://bodwhygf0drt3" path="res://Texturas/arbol_hojas_alpha.png" id="16_lsyt0"]
+[ext_resource type="PackedScene" uid="uid://dq3ri4yi3iljt" path="res://Assets/Meshes/Arbol_Shaded.glb" id="14_w3yln"]
+[ext_resource type="Texture2D" uid="uid://b8bken6ibipb" path="res://Assets/Texturas/arbol_tronco.png" id="15_5d6yd"]
+[ext_resource type="Shader" uid="uid://3bykdpg42n6l" path="res://Assets/Shader/arbol_hojas.gdshader" id="15_qyfom"]
+[ext_resource type="Shader" uid="uid://dhinyd4b2rqkt" path="res://Assets/Shader/arbol_tronco.gdshader" id="16_5d6yd"]
+[ext_resource type="Texture2D" uid="uid://bodwhygf0drt3" path="res://Assets/Texturas/arbol_hojas_alpha.png" id="16_lsyt0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)

@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8bken6ibipb"
-path.s3tc="res://.godot/imported/arbol_tronco.png-4aa5c1ad7a3b46578c89636e7fef709b.s3tc.ctex"
+uid="uid://b5h62hj7cky28"
+path.s3tc="res://.godot/imported/Arbol_Shaded_0.png-a614f6a3f87b6cf6f8a2f7fe3041c0b4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "a426029bc711419eb517c965b9c45fb7"
+}
 
 [deps]
 
-source_file="res://Texturas/arbol_tronco.png"
-dest_files=["res://.godot/imported/arbol_tronco.png-4aa5c1ad7a3b46578c89636e7fef709b.s3tc.ctex"]
+source_file="res://Assets/Texturas/Arbol_Shaded_0.png"
+dest_files=["res://.godot/imported/Arbol_Shaded_0.png-a614f6a3f87b6cf6f8a2f7fe3041c0b4.s3tc.ctex"]
 
 [params]
 

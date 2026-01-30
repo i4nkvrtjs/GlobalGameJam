@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5h62hj7cky28"
-path.s3tc="res://.godot/imported/Arbol_Shaded_0.png-ead0527a49e4c7c0ae089e7290178100.s3tc.ctex"
+uid="uid://bodwhygf0drt3"
+path.s3tc="res://.godot/imported/arbol_hojas_alpha.png-eaaa57bd7077f18fcaf5402f3031444b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "a426029bc711419eb517c965b9c45fb7"
-}
 
 [deps]
 
-source_file="res://Assets/Arbol_Shaded_0.png"
-dest_files=["res://.godot/imported/Arbol_Shaded_0.png-ead0527a49e4c7c0ae089e7290178100.s3tc.ctex"]
+source_file="res://Assets/Texturas/arbol_hojas_alpha.png"
+dest_files=["res://.godot/imported/arbol_hojas_alpha.png-eaaa57bd7077f18fcaf5402f3031444b.s3tc.ctex"]
 
 [params]
 
