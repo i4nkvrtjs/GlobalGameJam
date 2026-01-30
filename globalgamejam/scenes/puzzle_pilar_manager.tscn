@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bocelu72dnsif"]
+
+[ext_resource type="Script" uid="uid://c7i3raha7ymq5" path="res://scripts/puzzle_pilar_manager.gd" id="1_bhofv"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_bhofv")

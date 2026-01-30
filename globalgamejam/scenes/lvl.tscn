@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://r3e1gimtxubc"]
+[gd_scene load_steps=38 format=3 uid="uid://r3e1gimtxubc"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_3rlxx"]
 [ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://scenes/cubo.tscn" id="2_2a1lc"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="13_rv0fw"]
 [ext_resource type="Script" uid="uid://byp68i0evu2yl" path="res://scripts/dead_zone.gd" id="14_upgc2"]
 [ext_resource type="PackedScene" uid="uid://du4wph3ux86xh" path="res://scenes/tile_invisible_hover.tscn" id="15_g5ppj"]
+[ext_resource type="PackedScene" uid="uid://bocelu72dnsif" path="res://scenes/puzzle_pilar_manager.tscn" id="16_qyfom"]
+[ext_resource type="PackedScene" uid="uid://btws0yy8tnkda" path="res://pilar.tscn" id="17_lsyt0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)
@@ -522,5 +524,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7685, -0.0569285, 4.00528
 
 [node name="TileInvisibleHover10" parent="." instance=ExtResource("15_g5ppj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.767, -0.0569285, 4.00528)
+
+[node name="Node" parent="." instance=ExtResource("16_qyfom")]
+pillars = Array[NodePath]([NodePath("../Area3D"), NodePath("../Area3D2"), NodePath("../Area3D3")])
+
+[node name="Area3D" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
+transform = Transform3D(-0.806104, 0, -0.591774, 0, 1, 0, 0.591774, 0, -0.806104, 6.52022, 0.872534, 4.33371)
+manager = NodePath("../Node")
+
+[node name="Area3D2" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
+transform = Transform3D(-0.816672, 0, -0.577102, 0, 1, 0, 0.577102, 0, -0.816672, 5.1409, 0.837136, 5.25443)
+image_index = 1
+manager = NodePath("../Node")
+
+[node name="Area3D3" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
+transform = Transform3D(-0.888096, 0, -0.459657, 0, 1, 0, 0.459657, 0, -0.888096, 3.5534, 0.879746, 5.81043)
+image_index = 2
+manager = NodePath("../Node")
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]

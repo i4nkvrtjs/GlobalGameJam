@@ -26,6 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.580093, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 collision_mask = 5
+collide_with_areas = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

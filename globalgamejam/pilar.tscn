@@ -1,0 +1,40 @@
+[gd_scene load_steps=16 format=3 uid="uid://btws0yy8tnkda"]
+
+[ext_resource type="Script" uid="uid://dbj5531y1yiqe" path="res://scripts/pilar.gd" id="1_hm83i"]
+[ext_resource type="Texture2D" uid="uid://cubbfx0cdifh4" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.22.png" id="2_0epwf"]
+[ext_resource type="Texture2D" uid="uid://y3vukjhoiy64" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.26.png" id="3_2pdfh"]
+[ext_resource type="Texture2D" uid="uid://6y866teg0avr" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.29.png" id="4_ho1oa"]
+[ext_resource type="Texture2D" uid="uid://rqy2xq8rcp8j" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.31.png" id="5_ai4a7"]
+[ext_resource type="Texture2D" uid="uid://b33d2rsrh1mua" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.34.png" id="6_nksrx"]
+[ext_resource type="Texture2D" uid="uid://beipbkthaiuq3" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.37.png" id="7_irqao"]
+[ext_resource type="Texture2D" uid="uid://vtotb5yyotpr" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.40.png" id="8_x085i"]
+[ext_resource type="Texture2D" uid="uid://bs3x410r8wyy3" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.44.png" id="9_b2oar"]
+[ext_resource type="Texture2D" uid="uid://bcwy2ygwruryo" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.48.png" id="10_qw284"]
+[ext_resource type="Texture2D" uid="uid://ckju0c1b35cft" path="res://imagenes placeholder/Screen Shot 2026-01-30 at 00.20.52.png" id="11_okb0k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bn8xo"]
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0epwf"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0epwf"]
+material = SubResource("StandardMaterial3D_0epwf")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_grlfp"]
+
+[node name="Area3D" type="Area3D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_hm83i")
+images = Array[Texture2D]([ExtResource("2_0epwf"), ExtResource("3_2pdfh"), ExtResource("4_ho1oa"), ExtResource("5_ai4a7"), ExtResource("6_nksrx"), ExtResource("7_irqao"), ExtResource("8_x085i"), ExtResource("9_b2oar"), ExtResource("10_qw284"), ExtResource("11_okb0k")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bn8xo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.488712, 0, 0, 0, 0.0114628, -0.488578, 0, 0.488578, 0.0114628, 0, 0, 0)
+mesh = SubResource("PlaneMesh_0epwf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.512013)
+mesh = SubResource("CylinderMesh_grlfp")
