@@ -99,11 +99,23 @@ transform = Transform3D(7.25086, 0, 0, 0, 7.25086, 0, 0, 0, 7.25086, 0, 0, 0)
 mesh = SubResource("PlaneMesh_4iw1c")
 skeleton = NodePath("../..")
 
+[node name="Piso2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.405424, 0, 0, 0, 1, 0, 0, 0, 1.16903, -15.2423, 0, -0.684669)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piso2"]
+transform = Transform3D(7.25086, 0, 0, 0, 7.25086, 0, 0, 0, 7.25086, 0, -0.0319614, 0)
+shape = SubResource("BoxShape3D_hx1ia")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Piso2"]
+transform = Transform3D(7.25086, 0, 0, 0, 7.25086, 0, 0, 0, 7.25086, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4iw1c")
+skeleton = NodePath("../..")
+
 [node name="Door" parent="." instance=ExtResource("3_4iw1c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.296758, 0.0128233, -3.01432)
 
 [node name="Door2" parent="." instance=ExtResource("3_4iw1c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38475, 0.0128233, -3.16526)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2532, 0.0128233, -3.16526)
 
 [node name="pared" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.76237, 0, 0, 0, 1.57993, 0, 0, 0, 0.115721, 2.17428, 0.806284, -3.01018)
@@ -142,7 +154,7 @@ mesh = SubResource("BoxMesh_4iw1c")
 shape = SubResource("ConcavePolygonShape3D_hx1ia")
 
 [node name="pared5" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.72289, 0, 0.00547421, 0, 1.57993, 0, -0.128646, 0, -0.115866, -5.4413, 0.798329, -3.07677)
+transform = Transform3D(-2.48891, 0, 0.00549643, 0, 1.57993, 0, -0.117591, 0, -0.116336, -5.37421, 0.798329, -3.07677)
 mesh = SubResource("BoxMesh_4iw1c")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="pared5"]
@@ -255,7 +267,7 @@ transform = Transform3D(-0.999655, 0, -0.0262466, 0, 1, 0, 0.0262466, 0, -0.9996
 visible = false
 
 [node name="RespawnPoint" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.56729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.68698, 0, -0.21611)
 
 [node name="DeadZone" type="Area3D" parent="."]
 collision_layer = 5
@@ -530,16 +542,16 @@ pillars = Array[NodePath]([NodePath("../Area3D"), NodePath("../Area3D2"), NodePa
 solution = [5, 7, 8]
 
 [node name="Area3D" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
-transform = Transform3D(-0.806104, 0, -0.591774, 0, 1, 0, 0.591774, 0, -0.806104, 6.52022, 0.872534, 4.33371)
+transform = Transform3D(-0.051325, 0, 0.998682, 0, 1, 0, -0.998682, 0, -0.051325, -16.4529, 0.872534, 0.679184)
 manager = NodePath("../Node")
 
 [node name="Area3D2" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
-transform = Transform3D(-0.816672, 0, -0.577102, 0, 1, 0, 0.577102, 0, -0.816672, 5.1409, 0.837136, 5.25443)
+transform = Transform3D(-0.0332595, 0, 0.999447, 0, 1, 0, -0.999447, 0, -0.0332595, -16.464, 0.837136, -0.979166)
 image_index = 1
 manager = NodePath("../Node")
 
 [node name="Area3D3" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
-transform = Transform3D(-0.888096, 0, -0.459657, 0, 1, 0, 0.459657, 0, -0.888096, 3.5534, 0.879746, 5.81043)
+transform = Transform3D(0.104112, 0, 0.994565, 0, 1, 0, -0.994565, 0, 0.104112, -16.056, 0.879746, -2.61098)
 image_index = 2
 manager = NodePath("../Node")
 
