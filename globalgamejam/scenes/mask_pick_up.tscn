@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvw15wp3e7ffw"]
+
+[ext_resource type="Script" uid="uid://bv5jqbtuclr8d" path="res://scripts/mask_pick_up.gd" id="1_weumc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15oww"]
+albedo_color = Color(1, 0.447486, 0.999238, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_15oww"]
+material = SubResource("StandardMaterial3D_15oww")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_weumc"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="MaskPickUp" type="Area3D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_weumc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_15oww")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_weumc")

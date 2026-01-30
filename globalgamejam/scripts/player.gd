@@ -1,38 +1,47 @@
 extends CharacterBody3D
 
-@export var speed := 3.0
-@export var mouse_sensitivity := 0.0022
-@export var gravity := 9.8
-@export var interact_distance := 1.5
-
 @onready var interact_label: Label = $CanvasLayer/InteractLabel
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var raycast: RayCast3D = $Head/Camera3D/RayCast3D
 @onready var dot: ColorRect = $CanvasLayer/Control/ColorRect
 
-@export var maskManager : Node 
+@export var speed := 3.0
+@export var mouse_sensitivity := 0.0022
+@export var gravity := 9.8
+@export var interact_distance := 1.5
+@export var respawn_marker: Marker3D
 
 var held_object: Node3D = null
-var hold_distance := 0.5	
+var hold_distance := 0.5
+var respawn_position : Vector3
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	raycast.target_position = Vector3(0, 0, -interact_distance)
+	respawn_position = respawn_marker.global_position
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		head.rotate_x(-event.relative.y * mouse_sensitivity)
-		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+		head.rotation.x = clamp(
+			head.rotation.x,
+			deg_to_rad(-80),
+			deg_to_rad(80)
+		)
 
 	if event.is_action_pressed("interact"):
 		_handle_interact()
 
-	
+
 func _process(_delta):
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
+		if collider == null:
+			dot.color = Color.WHITE
+			return
+
 		var distance = raycast.global_transform.origin.distance_to(
 			raycast.get_collision_point()
 		)
@@ -42,7 +51,8 @@ func _process(_delta):
 			return
 
 	dot.color = Color.WHITE
-	
+
+
 func _physics_process(delta):
 	# Gravedad
 	if not is_on_floor():
@@ -65,8 +75,9 @@ func _physics_process(delta):
 	# Mantener objeto agarrado
 	if held_object:
 		_update_held_object()
-	
+
 	_update_interact_ui()
+
 
 func _update_interact_ui():
 	if held_object:
@@ -75,6 +86,10 @@ func _update_interact_ui():
 
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
+		if collider == null:
+			interact_label.visible = false
+			return
+
 		var distance = raycast.global_transform.origin.distance_to(
 			raycast.get_collision_point()
 		)
@@ -85,6 +100,7 @@ func _update_interact_ui():
 
 	interact_label.visible = false
 
+
 func _handle_interact():
 	if held_object:
 		_drop_object()
@@ -92,11 +108,18 @@ func _handle_interact():
 
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
+		if collider == null:
+			return
+
 		var distance = raycast.global_transform.origin.distance_to(
 			raycast.get_collision_point()
 		)
+
 		if distance <= interact_distance and collider.has_method("interact"):
 			collider.interact(self)
+
+
+# ---------------- GRAB / DROP ----------------
 
 func grab_object(obj: Node3D):
 	held_object = obj
@@ -104,12 +127,21 @@ func grab_object(obj: Node3D):
 	if obj is RigidBody3D:
 		obj.freeze = true
 
+
 func _drop_object():
 	if held_object is RigidBody3D:
 		held_object.freeze = false
 
 	held_object = null
 
+
 func _update_held_object():
-	var target_pos = camera.global_transform.origin + -camera.global_transform.basis.z * hold_distance
-	held_object.global_transform.origin = held_object.global_transform.origin.lerp(target_pos, 0.2)
+	var target_pos = camera.global_transform.origin \
+		+ -camera.global_transform.basis.z * hold_distance
+
+	held_object.global_transform.origin = \
+		held_object.global_transform.origin.lerp(target_pos, 0.2)
+
+func respawn():
+	global_position = respawn_position
+	velocity = Vector3.ZERO		
