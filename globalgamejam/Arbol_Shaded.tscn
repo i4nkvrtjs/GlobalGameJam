@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://bd07olrml08hh"]
+
+[ext_resource type="PackedScene" uid="uid://ctg1ogxijr6w0" path="res://Meshes/Arbol_001.glb" id="1_2hgbx"]
+[ext_resource type="Texture2D" uid="uid://b8bken6ibipb" path="res://Texturas/arbol_tronco.png" id="2_pkxw0"]
+[ext_resource type="Shader" uid="uid://dhinyd4b2rqkt" path="res://arbol_tronco.gdshader" id="3_1178m"]
+[ext_resource type="Shader" uid="uid://3bykdpg42n6l" path="res://arbol_hojas.gdshader" id="4_h4w2l"]
+[ext_resource type="Texture2D" uid="uid://bodwhygf0drt3" path="res://Texturas/arbol_hojas_alpha.png" id="5_51vg0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hoebc"]
+albedo_texture = ExtResource("2_pkxw0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3e6tl"]
+render_priority = 0
+shader = ExtResource("3_1178m")
+shader_parameter/light_steps = 3.0
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/outline_mask = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_83h1v"]
+render_priority = 0
+shader = ExtResource("4_h4w2l")
+shader_parameter/color = Color(0, 0.52549, 0, 1)
+shader_parameter/alpha = ExtResource("5_51vg0")
+shader_parameter/leaves_scale = 3.38
+shader_parameter/leaf_bend_amount = 0.7
+shader_parameter/light_steps = 5.0
+
+[node name="Arbol_001" instance=ExtResource("1_2hgbx")]
+
+[node name="Arbol_Tronco_001" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_hoebc")
+surface_material_override/0 = SubResource("ShaderMaterial_3e6tl")
+
+[node name="Arbol_Hojas_001" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_83h1v")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://r3e1gimtxubc"]
+[gd_scene load_steps=29 format=3 uid="uid://r3e1gimtxubc"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_3rlxx"]
 [ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://scenes/cubo.tscn" id="2_2a1lc"]
@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://mask_manager.tscn" id="11_h8j34"]
 [ext_resource type="PackedScene" uid="uid://bhvkerbrigteu" path="res://mural_puzzle.tscn" id="12_h8j34"]
 [ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="13_rv0fw"]
+[ext_resource type="PackedScene" uid="uid://ctg1ogxijr6w0" path="res://Meshes/Arbol_001.glb" id="14_lsyt0"]
+[ext_resource type="Texture2D" uid="uid://b8bken6ibipb" path="res://Texturas/arbol_tronco.png" id="15_5d6yd"]
+[ext_resource type="Shader" uid="uid://dhinyd4b2rqkt" path="res://arbol_tronco.gdshader" id="16_4y413"]
+[ext_resource type="Shader" uid="uid://3bykdpg42n6l" path="res://arbol_hojas.gdshader" id="17_20vyq"]
+[ext_resource type="Texture2D" uid="uid://bodwhygf0drt3" path="res://Texturas/arbol_hojas_alpha.png" id="18_3054u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)
@@ -33,6 +38,26 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_2a1lc"]
 size = Vector3(1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynt8g"]
+albedo_texture = ExtResource("15_5d6yd")
+uv1_scale = Vector3(4.775, 4.775, 4.775)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lyyc3"]
+render_priority = 0
+shader = ExtResource("16_4y413")
+shader_parameter/light_steps = 3.0
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/outline_mask = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n62re"]
+render_priority = 0
+shader = ExtResource("17_20vyq")
+shader_parameter/color = Color(0, 0.503838, 6.73831e-07, 1)
+shader_parameter/alpha = ExtResource("18_3054u")
+shader_parameter/leaves_scale = 49.96
+shader_parameter/leaf_bend_amount = 0.7
+shader_parameter/light_steps = 5.0
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.14838)
@@ -178,3 +203,15 @@ transform = Transform3D(-0.274496, 0, 0.961588, 0, 1, 0, -0.961588, 0, -0.274496
 [node name="ColorPuzzleHidden" parent="." instance=ExtResource("13_rv0fw")]
 transform = Transform3D(-0.999655, 0, -0.0262466, 0, 1, 0, 0.0262466, 0, -0.999655, 2.14512, 0.264259, -0.00107908)
 visible = false
+
+[node name="Arbol_001" parent="." instance=ExtResource("14_lsyt0")]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0.670032, 0.294581, -1.21728)
+
+[node name="Arbol_Tronco_001" parent="Arbol_001" index="0"]
+material_override = SubResource("StandardMaterial3D_ynt8g")
+surface_material_override/0 = SubResource("ShaderMaterial_lyyc3")
+
+[node name="Arbol_Hojas_001" parent="Arbol_001" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_n62re")
+
+[editable path="Arbol_001"]
