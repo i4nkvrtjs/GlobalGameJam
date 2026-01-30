@@ -18,4 +18,7 @@ func check_solution():
 
 func _solve():
 	solved = true
-	print("Puzzle resuelto")
+	print("Puzzle pilares resuelto")
+	for cube in get_tree().get_nodes_in_group("floating_cubes"):
+		print("Activando cubo:", cube.name)
+		cube.activate()

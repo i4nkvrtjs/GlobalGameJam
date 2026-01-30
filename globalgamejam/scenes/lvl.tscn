@@ -527,6 +527,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.767, -0.0569285, 4.00528)
 
 [node name="Node" parent="." instance=ExtResource("16_qyfom")]
 pillars = Array[NodePath]([NodePath("../Area3D"), NodePath("../Area3D2"), NodePath("../Area3D3")])
+solution = [5, 7, 8]
 
 [node name="Area3D" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
 transform = Transform3D(-0.806104, 0, -0.591774, 0, 1, 0, 0.591774, 0, -0.806104, 6.52022, 0.872534, 4.33371)
