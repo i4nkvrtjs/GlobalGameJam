@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://54g30o78cj21"]
+[gd_scene load_steps=12 format=3 uid="uid://54g30o78cj21"]
 
 [ext_resource type="Terrain3DAssets" uid="uid://gk6yf2on2eyl" path="res://scenes/Presente_data_Terrain3d/AssetPRESENTE.tres" id="1_cj7v4"]
+[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="2_s2tf8"]
 
 [sub_resource type="Gradient" id="Gradient_s2tf8"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -19,9 +20,9 @@ domain_warp_fractal_lacunarity = 1.5
 domain_warp_fractal_gain = 1.0
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vmmlt"]
-noise = SubResource("FastNoiseLite_rbtr0")
-color_ramp = SubResource("Gradient_s2tf8")
 seamless = true
+color_ramp = SubResource("Gradient_s2tf8")
+noise = SubResource("FastNoiseLite_rbtr0")
 
 [sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_tcnme"]
 _shader_parameters = {
@@ -52,11 +53,72 @@ _shader_parameters = {
 }
 world_background = 2
 
+[sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s2tf8"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
+sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
+
+[sub_resource type="Sky" id="Sky_s2tf8"]
+sky_material = SubResource("ProceduralSkyMaterial_s2tf8")
+
+[sub_resource type="Environment" id="Environment_rbtr0"]
+background_mode = 2
+sky = SubResource("Sky_s2tf8")
+ambient_light_source = 3
+ambient_light_color = Color(0.93408, 0.93408, 0.93408, 1)
+ambient_light_energy = 3.88
+
 [node name="Presente" type="Node3D"]
 
 [node name="Terrain3D" type="Terrain3D" parent="."]
 data_directory = "res://scenes/Presente_data_Terrain3d"
 material = SubResource("Terrain3DMaterial_tcnme")
 assets = ExtResource("1_cj7v4")
+cull_margin = 1000.0
 top_level = true
 metadata/_edit_lock_ = true
+
+[node name="Templo" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Templo"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+mesh = SubResource("BoxMesh_rbtr0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Templo"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+shape = SubResource("ConcavePolygonShape3D_s2tf8")
+
+[node name="TemploJaguar" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95.7205, 5.04896, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TemploJaguar"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+mesh = SubResource("BoxMesh_rbtr0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TemploJaguar"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+shape = SubResource("ConcavePolygonShape3D_s2tf8")
+
+[node name="TemploDelSol" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -76.0509)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+mesh = SubResource("BoxMesh_rbtr0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+shape = SubResource("ConcavePolygonShape3D_s2tf8")
+
+[node name="Player" parent="." instance=ExtResource("2_s2tf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.4068, 10.661)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rbtr0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
+light_energy = 3.783
