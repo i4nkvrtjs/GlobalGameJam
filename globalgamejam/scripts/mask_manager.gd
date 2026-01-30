@@ -9,25 +9,42 @@ enum MaskType {
 	HIDDEN
 }
 
+var unlocked_masks := {
+	MaskType.HIDDEN: false,
+	MaskType.PAST: false,
+	MaskType.FUTURE: false
+}
+
 var current_mask: MaskType = MaskType.NONE
 
-@export var normal_puzzle : Node3D
-@export var hidden_puzzle : Node3D
+@export var normal_puzzle: Node3D
+@export var hidden_puzzle: Node3D
+
+func _ready():
+	_clear_mask()
 
 func _input(event):
 	if event.is_action_pressed("mask1"):
 		toggle_mask(MaskType.PAST)
-
 	elif event.is_action_pressed("mask2"):
 		toggle_mask(MaskType.FUTURE)
-
 	elif event.is_action_pressed("mask3"):
 		toggle_mask(MaskType.HIDDEN)
+
+
+# ---------------- UNLOCK ----------------
+
+func unlock_mask(mask: MaskType):
+	unlocked_masks[mask] = true
+	print("Máscara desbloqueada:", mask)
 
 
 # ---------------- TOGGLE ----------------
 
 func toggle_mask(mask: MaskType):
+	if not unlocked_masks.get(mask, false):
+		return
+
 	if current_mask == mask:
 		_clear_mask()
 	else:
@@ -48,8 +65,6 @@ func _set_mask(mask: MaskType):
 		MaskType.HIDDEN:
 			_activate_hidden()
 
-	print("Máscara equipada:", mask)
-
 
 func _clear_mask():
 	if current_mask == MaskType.NONE:
@@ -64,24 +79,21 @@ func _clear_mask():
 			_deactivate_hidden()
 
 	current_mask = MaskType.NONE
-	print("Máscara removida")
 
 
 # ---------------- PAST ----------------
 
 func _activate_past():
-	pass
-
+	print("Máscara del pasado activada")
 
 func _deactivate_past():
-	pass
+	print("Máscara del pasado desactivada")
 
 
 # ---------------- FUTURE ----------------
 
 func _activate_future():
 	pass
-
 
 func _deactivate_future():
 	pass
@@ -90,26 +102,49 @@ func _deactivate_future():
 # ---------------- HIDDEN ----------------
 
 func _activate_hidden():
+	print("Máscara de lo oculto activada")
+	
 	for obj in get_tree().get_nodes_in_group("hidden"):
+		if not is_instance_valid(obj):
+			continue
 		if obj.has_method("reveal"):
 			obj.reveal()
+
 	hidden_puzzle.visible = true
 	normal_puzzle.visible = false
+
 	set_puzzle_enabled(hidden_puzzle, true)
 	set_puzzle_enabled(normal_puzzle, false)
-	color_rect.visible = true
-	
+
+	if color_rect:
+		color_rect.visible = true
+
+
 func _deactivate_hidden():
+	print("Máscara de lo oculto desactivada")
+	
 	for obj in get_tree().get_nodes_in_group("hidden"):
+		if not is_instance_valid(obj):
+			continue
 		if obj.has_method("hide"):
 			obj.hide()
+
 	hidden_puzzle.visible = false
 	normal_puzzle.visible = true
+
 	set_puzzle_enabled(hidden_puzzle, false)
 	set_puzzle_enabled(normal_puzzle, true)
-	color_rect.visible = false
-	
+
+	if color_rect:
+		color_rect.visible = false
+
+
+# ---------------- UTIL ----------------
+
 func set_puzzle_enabled(puzzle: Node, enabled: bool):
+	if not puzzle:
+		return
+
 	puzzle.visible = enabled
 	puzzle.process_mode = Node.PROCESS_MODE_INHERIT
 
@@ -118,4 +153,3 @@ func set_puzzle_enabled(puzzle: Node, enabled: bool):
 			for child in body.get_children():
 				if child is CollisionShape3D:
 					child.disabled = not enabled
-	

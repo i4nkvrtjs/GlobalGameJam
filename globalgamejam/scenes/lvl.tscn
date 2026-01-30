@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://r3e1gimtxubc"]
+[gd_scene load_steps=39 format=3 uid="uid://r3e1gimtxubc"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_3rlxx"]
 [ext_resource type="PackedScene" uid="uid://dw0jx341ff6sg" path="res://scenes/cubo.tscn" id="2_2a1lc"]
@@ -16,7 +16,8 @@
 [ext_resource type="Script" uid="uid://byp68i0evu2yl" path="res://scripts/dead_zone.gd" id="14_upgc2"]
 [ext_resource type="PackedScene" uid="uid://du4wph3ux86xh" path="res://scenes/tile_invisible_hover.tscn" id="15_g5ppj"]
 [ext_resource type="PackedScene" uid="uid://bocelu72dnsif" path="res://scenes/puzzle_pilar_manager.tscn" id="16_qyfom"]
-[ext_resource type="PackedScene" uid="uid://btws0yy8tnkda" path="res://pilar.tscn" id="17_lsyt0"]
+[ext_resource type="PackedScene" uid="uid://btws0yy8tnkda" path="res://scenes/pilar.tscn" id="17_lsyt0"]
+[ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="18_lsyt0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)
@@ -78,11 +79,11 @@ size = Vector3(1, 0.1, 1)
 size = Vector3(1, 0.1, 1)
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.910223, 0)
 
-[node name="Player" parent="." node_paths=PackedStringArray("respawn_point", "maskManager") instance=ExtResource("1_3rlxx")]
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_3rlxx")]
 transform = Transform3D(-0.641356, 0, 0.767244, 0, 1, 0, -0.767244, 0, -0.641356, 0, 0.29206, 0)
-respawn_point = NodePath("../RespawnPoint")
-maskManager = NodePath("../MaskManager")
+respawn_marker = NodePath("../RespawnPoint")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 6.46186, 0)
@@ -537,22 +538,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7685, -0.0569285, 4.00528
 [node name="TileInvisibleHover10" parent="." instance=ExtResource("15_g5ppj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.767, -0.0569285, 4.00528)
 
-[node name="Node" parent="." instance=ExtResource("16_qyfom")]
+[node name="PilarPuzzleManager" parent="." instance=ExtResource("16_qyfom")]
 pillars = Array[NodePath]([NodePath("../Area3D"), NodePath("../Area3D2"), NodePath("../Area3D3")])
 solution = [5, 7, 8]
 
 [node name="Area3D" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
 transform = Transform3D(-0.051325, 0, 0.998682, 0, 1, 0, -0.998682, 0, -0.051325, -16.4529, 0.872534, 0.679184)
-manager = NodePath("../Node")
+manager = NodePath("../PilarPuzzleManager")
 
 [node name="Area3D2" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
 transform = Transform3D(-0.0332595, 0, 0.999447, 0, 1, 0, -0.999447, 0, -0.0332595, -16.464, 0.837136, -0.979166)
 image_index = 1
-manager = NodePath("../Node")
+manager = NodePath("../PilarPuzzleManager")
 
 [node name="Area3D3" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("17_lsyt0")]
 transform = Transform3D(0.104112, 0, 0.994565, 0, 1, 0, -0.994565, 0, 0.104112, -16.056, 0.879746, -2.61098)
 image_index = 2
-manager = NodePath("../Node")
+manager = NodePath("../PilarPuzzleManager")
+
+[node name="MaskPickUp" parent="." node_paths=PackedStringArray("mask_manager") instance=ExtResource("18_lsyt0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.595801, 3.60712)
+mask_type = 3
+mask_manager = NodePath("../MaskManager")
+
+[node name="MaskPickUp2" parent="." node_paths=PackedStringArray("mask_manager") instance=ExtResource("18_lsyt0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.41171, 0.682574, 0)
+mask_manager = NodePath("../MaskManager")
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
