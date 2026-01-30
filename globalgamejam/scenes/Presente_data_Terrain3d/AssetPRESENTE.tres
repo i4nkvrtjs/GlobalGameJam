@@ -25,7 +25,9 @@ lod0_range = 128.0
 name = "pasto_alb_ao_height"
 albedo_texture = ExtResource("1_n1ghj")
 normal_texture = ExtResource("2_4c4gg")
-uv_scale = 0.177
+ao_strength = 1.429
+roughness = 0.189
+uv_scale = 0.051
 
 [resource]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_tcnme")])
