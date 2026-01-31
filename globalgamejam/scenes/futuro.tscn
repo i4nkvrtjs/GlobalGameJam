@@ -55,7 +55,7 @@ transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.
 light_energy = 3.783
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_xr3ju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.6531, 7.50386)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 45.5298, 7.50386)
 respawn_marker = NodePath("../Marker3D")
 
 [node name="Marker3D" type="Marker3D" parent="."]
@@ -80,6 +80,7 @@ shape = SubResource("ConcavePolygonShape3D_0fuvb")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
 
 [node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("6_sp6jf")]
-transform = Transform3D(0.284132, 0, -0.958785, 0, 1, 0, 0.958785, 0, 0.284132, 137.323, 0, -2.9011)
+transform = Transform3D(0.284132, 0, -0.958785, 0, 1, 0, 0.958785, 0, 0.284132, 137.324, 0.380493, -3.1496)
 
+[editable path="Player"]
 [editable path="Templo_Jaguar"]
