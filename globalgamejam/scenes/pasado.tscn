@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bjvoium6413yf"]
+[gd_scene load_steps=37 format=3 uid="uid://bjvoium6413yf"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_myd5o"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="5_qxwao"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="6_sxv3u"]
 [ext_resource type="PackedScene" uid="uid://beabkghoklnjc" path="res://Assets/Meshes/Mesa_Base.glb" id="7_kunhq"]
+[ext_resource type="PackedScene" uid="uid://lr1xht8nliub" path="res://Assets/Meshes/Cultivos/Cultivos.glb" id="11_ctp4p"]
+[ext_resource type="Texture2D" uid="uid://c8pmy6q18hvpm" path="res://Assets/Meshes/Cultivos/Trigo_Nuevo.png" id="12_cumfr"]
+[ext_resource type="Texture2D" uid="uid://b4e16ex3p1uod" path="res://Assets/Meshes/Cultivos/Calabaza_Nuevo.png" id="13_gu8yi"]
+[ext_resource type="PackedScene" uid="uid://cbipnkunf6284" path="res://Assets/Meshes/Arboles/Pasado/Arboles_Pasado.glb" id="14_cumfr"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
 
@@ -52,6 +56,37 @@ albedo_color = Color(0.134098, 0.402452, 0.101932, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_qxwao"]
 material = SubResource("StandardMaterial3D_7ob1l")
 size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f85kl"]
+albedo_texture = ExtResource("12_cumfr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctp4p"]
+albedo_color = Color(0.336608, 0.336608, 0.336608, 1)
+albedo_texture = ExtResource("12_cumfr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wys3b"]
+albedo_texture = ExtResource("12_cumfr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cumfr"]
+albedo_texture = ExtResource("12_cumfr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2vwi"]
+albedo_texture = ExtResource("12_cumfr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gu8yi"]
+albedo_texture = ExtResource("12_cumfr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iiobs"]
+albedo_texture = ExtResource("13_gu8yi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7dyh"]
+albedo_texture = ExtResource("13_gu8yi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_taxwt"]
+albedo_texture = ExtResource("13_gu8yi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bfs0"]
+albedo_texture = ExtResource("13_gu8yi")
 
 [node name="PASADO" type="Node3D"]
 
@@ -138,65 +173,108 @@ shape = SubResource("BoxShape3D_kunhq")
 
 [node name="TRIGO" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.2248, -3.34855, 118.338)
+visible = false
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="TRIGO6" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.4566, -3.34855, 118.338)
+visible = false
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="TRIGO4" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9245, -3.34855, 118.338)
+visible = false
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="TRIGO5" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.1175, -3.34855, 118.338)
+visible = false
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0174, -3.59591, 118.53)
+visible = false
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA4" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0174, -3.59591, 91.5276)
+visible = false
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA2" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1383, -3.59591, 118.53)
+visible = false
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA3" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4615, -3.59591, 91.4723)
+visible = false
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.4887, -2.77212, 91.594)
+visible = false
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL2" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7523, -2.77212, 91.5873)
+visible = false
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL3" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.2403, -2.77212, 91.5493)
+visible = false
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL4" type="MeshInstance3D" parent="Cultivos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9767, -2.77212, 91.7147)
+visible = false
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
+
+[node name="Cultivos2" parent="." instance=ExtResource("11_ctp4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98114, 0, -0.638174)
+
+[node name="Cultivo_Trigo_001" parent="Cultivos2" index="0"]
+material_override = SubResource("StandardMaterial3D_f85kl")
+surface_material_override/0 = SubResource("StandardMaterial3D_ctp4p")
+
+[node name="Cultivo_Trigo_002" parent="Cultivos2" index="1"]
+material_override = SubResource("StandardMaterial3D_wys3b")
+surface_material_override/0 = SubResource("StandardMaterial3D_cumfr")
+
+[node name="Cultivo_Trigo_003" parent="Cultivos2" index="2"]
+material_override = SubResource("StandardMaterial3D_a2vwi")
+surface_material_override/0 = SubResource("StandardMaterial3D_gu8yi")
+
+[node name="Cultivo_Calabaza_001" parent="Cultivos2" index="9"]
+surface_material_override/0 = SubResource("StandardMaterial3D_iiobs")
+
+[node name="Cultivo_Calabaza_002" parent="Cultivos2" index="10"]
+surface_material_override/0 = SubResource("StandardMaterial3D_r7dyh")
+
+[node name="Cultivo_Calabaza_003" parent="Cultivos2" index="11"]
+surface_material_override/0 = SubResource("StandardMaterial3D_taxwt")
+
+[node name="Cultivo_Calabaza_004" parent="Cultivos2" index="12"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6bfs0")
+
+[node name="Arboles_Pasado" parent="." instance=ExtResource("14_cumfr")]
 
 [editable path="Templo/Pedestal_Futuro"]
 [editable path="Templo/Pedestal_Oculto"]
 [editable path="Templo/Pedestal_Pasado"]
 [editable path="Mesa_Base"]
+[editable path="Cultivos2"]
+[editable path="Arboles_Pasado"]

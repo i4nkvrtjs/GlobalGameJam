@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cc5dksl388xcs"]
+[gd_scene load_steps=19 format=3 uid="uid://cc5dksl388xcs"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_xr3ju"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="5_dsema"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_sp6jf"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="6_sp6jf"]
+[ext_resource type="PackedScene" uid="uid://cbt14glfcl7b" path="res://Assets/Meshes/Futuro/Futuro_Estacionamiento.glb" id="11_u11dy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
 
@@ -97,6 +98,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.9
 
 [node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("6_sp6jf")]
 transform = Transform3D(0.284132, 0, -0.958785, 0, 1, 0, 0.958785, 0, 0.284132, 137.324, 0.380493, -3.1496)
+
+[node name="Futuro_Estacionamiento" parent="." instance=ExtResource("11_u11dy")]
 
 [editable path="Player"]
 [editable path="Templo_Jaguar"]
