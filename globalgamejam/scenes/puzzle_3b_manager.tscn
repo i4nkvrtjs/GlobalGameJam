@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2viqo08a2ash"]
+
+[ext_resource type="Script" uid="uid://dbmpy43ilkpgs" path="res://scripts/puzzle_3b_manager.gd" id="1_rqa80"]
+
+[node name="Puzzle3BManager" type="Node"]
+script = ExtResource("1_rqa80")
