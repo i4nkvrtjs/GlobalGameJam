@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://xy4p3bkc4m7k"]
+[gd_scene load_steps=6 format=3 uid="uid://xy4p3bkc4m7k"]
 
 [ext_resource type="Script" uid="uid://c8pvx61qr84nv" path="res://scripts/presesure_button.gd" id="1_5fwba"]
+[ext_resource type="PackedScene" uid="uid://2gdipwgik5dy" path="res://Assets/Animaciones/Pedestal_Boton.glb" id="2_5ans2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_818gb"]
 albedo_color = Color(0.470588, 1, 1, 1)
@@ -10,7 +11,7 @@ material = SubResource("StandardMaterial3D_818gb")
 size = Vector3(0.1, 0.1, 0.05)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ntiiy"]
-size = Vector3(0.1, 0.1, 0.05)
+size = Vector3(0.181445, 0.170081, 0.05)
 
 [node name="presesureButton" type="StaticBody3D"]
 script = ExtResource("1_5fwba")
@@ -19,4 +20,8 @@ script = ExtResource("1_5fwba")
 mesh = SubResource("BoxMesh_5fwba")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00126952, 0.00101928, 0)
 shape = SubResource("BoxShape3D_ntiiy")
+
+[node name="Pedestal_Boton" parent="." instance=ExtResource("2_5ans2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.603259, 0.543001)

@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_xr3ju"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_awhkr"]
 [ext_resource type="PackedScene" uid="uid://beabkghoklnjc" path="res://Assets/Meshes/Mesa_Base.glb" id="2_exmyc"]
-[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestal_Futuro.glb" id="3_u11dy"]
-[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestal_Oculto.glb" id="4_6tjhc"]
+[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestales/Pedestal_Futuro.glb" id="3_u11dy"]
+[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestales/Pedestal_Oculto.glb" id="4_6tjhc"]
 [ext_resource type="PackedScene" uid="uid://cctjtpyok7753" path="res://Assets/Templos/Templo_Sol_PistaIntervenido.glb" id="4_sl4s5"]
-[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestal_Pasado.glb" id="5_dsema"]
+[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="5_dsema"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_sp6jf"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="6_sp6jf"]
 

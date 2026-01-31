@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_myd5o"]
-[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestal_Futuro.glb" id="2_lmlgj"]
+[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestales/Pedestal_Futuro.glb" id="2_lmlgj"]
 [ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_qxwao"]
-[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestal_Oculto.glb" id="3_0py83"]
+[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestales/Pedestal_Oculto.glb" id="3_0py83"]
 [ext_resource type="PackedScene" uid="uid://dhgdskappuel8" path="res://Assets/Terrenos/Terreno_Pasdo_Plano.glb" id="4_7ob1l"]
-[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestal_Pasado.glb" id="4_r37jq"]
+[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="4_r37jq"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="5_qxwao"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="6_sxv3u"]
 [ext_resource type="PackedScene" uid="uid://beabkghoklnjc" path="res://Assets/Meshes/Mesa_Base.glb" id="7_kunhq"]
@@ -137,62 +137,62 @@ shape = SubResource("BoxShape3D_kunhq")
 [node name="Cultivos" type="Node" parent="."]
 
 [node name="TRIGO" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2309, -3.34855, 122.159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.2248, -3.34855, 118.338)
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="TRIGO6" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.4627, -3.34855, 122.159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.4566, -3.34855, 118.338)
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="TRIGO4" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5621, -3.34855, 122.159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9245, -3.34855, 118.338)
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="TRIGO5" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.7551, -3.34855, 122.159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.1175, -3.34855, 118.338)
 mesh = SubResource("PlaneMesh_3vfec")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0235, -3.59591, 122.351)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0174, -3.59591, 118.53)
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA4" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0235, -3.59591, 95.3482)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0174, -3.59591, 91.5276)
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA2" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7759, -3.59591, 122.351)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1383, -3.59591, 118.53)
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="CALABAZA3" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0991, -3.59591, 95.2929)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4615, -3.59591, 91.4723)
 mesh = SubResource("PlaneMesh_461ql")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.1263, -2.77212, 95.4146)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.4887, -2.77212, 91.594)
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL2" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.3899, -2.77212, 95.4079)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7523, -2.77212, 91.5873)
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL3" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2464, -2.77212, 95.3699)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.2403, -2.77212, 91.5493)
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
 
 [node name="FRIJOL4" type="MeshInstance3D" parent="Cultivos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.9828, -2.77212, 95.5353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9767, -2.77212, 91.7147)
 mesh = SubResource("PlaneMesh_qxwao")
 skeleton = NodePath("../..")
 

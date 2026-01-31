@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=23 format=3 uid="uid://cyrhqgl1wsy63"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
@@ -7,13 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://bqcnyvse47lp" path="res://Assets/Meshes/Mesa_ConPanel.glb" id="2_iyyln"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
 [ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
-[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestal_Futuro.glb" id="6_u5kdj"]
+[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestales/Pedestal_Futuro.glb" id="6_u5kdj"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
 [ext_resource type="PackedScene" uid="uid://xy4p3bkc4m7k" path="res://scenes/presesure_button.tscn" id="7_y4vcq"]
-[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestal_Oculto.glb" id="8_6c6hh"]
-[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestal_Pasado.glb" id="9_8jlby"]
+[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
+[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
-[ext_resource type="PackedScene" uid="uid://c8f5lu7o08nlk" path="res://Assets/Animaciones/Pedestal_Boton_v2.glb" id="9_y4vcq"]
 [ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
 
@@ -139,19 +138,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9407e-08, 0.605431, -0.5557
 [node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Futuro/presesureButton" index="0"]
 visible = false
 
-[node name="Pedestal_Boton_Futuro" parent="Templo/Puzzle1/Pedestal_Futuro" instance=ExtResource("9_y4vcq")]
-
 [node name="Pedestal_Oculto" parent="Templo/Puzzle1" instance=ExtResource("8_6c6hh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185572, 43.7959, -4.24907)
+
+[node name="Boton" parent="Templo/Puzzle1/Pedestal_Oculto" index="0"]
+visible = false
 
 [node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Oculto" instance=ExtResource("7_y4vcq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60186, -0.553983)
 
+[node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Oculto/presesureButton" index="0"]
+visible = false
+
 [node name="Pedestal_Pasado" parent="Templo/Puzzle1" instance=ExtResource("9_8jlby")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.228515)
 
+[node name="Boton" parent="Templo/Puzzle1/Pedestal_Pasado" index="1"]
+visible = false
+
 [node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Pasado" instance=ExtResource("7_y4vcq")]
 transform = Transform3D(1, 0, 3.90799e-14, 0, 1, 0, -3.90799e-14, 0, 1, 0.00736965, 0.602097, -0.578064)
+
+[node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Pasado/presesureButton" index="0"]
+visible = false
 
 [node name="TemploDelSol" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
@@ -191,6 +200,10 @@ transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 13
 [editable path="Templo/Puzzle1/ButtonPuzzleController"]
 [editable path="Templo/Puzzle1/Pedestal_Futuro"]
 [editable path="Templo/Puzzle1/Pedestal_Futuro/presesureButton"]
-[editable path="Templo/Puzzle1/Pedestal_Futuro/Pedestal_Boton_Futuro"]
+[editable path="Templo/Puzzle1/Pedestal_Futuro/presesureButton/Pedestal_Boton"]
+[editable path="Templo/Puzzle1/Pedestal_Oculto"]
+[editable path="Templo/Puzzle1/Pedestal_Oculto/presesureButton"]
+[editable path="Templo/Puzzle1/Pedestal_Pasado"]
+[editable path="Templo/Puzzle1/Pedestal_Pasado/presesureButton"]
 [editable path="Templo_Jaguar"]
 [editable path="Terreno_Montañas"]

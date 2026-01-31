@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dsfyuvgwn40r"
+path.s3tc="res://.godot/imported/Cultivo_Trigo_Nuevo (1)_Trigo_Nuevo.png-455c8f14c15c1d1a9d0990c0fa451d75.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "76cb0a3787346fc28fb0d803a1feb34b"
+}
+
+[deps]
+
+source_file="res://Assets/Meshes/Cultivos/Cultivo_Trigo_Nuevo (1)_Trigo_Nuevo.png"
+dest_files=["res://.godot/imported/Cultivo_Trigo_Nuevo (1)_Trigo_Nuevo.png-455c8f14c15c1d1a9d0990c0fa451d75.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
