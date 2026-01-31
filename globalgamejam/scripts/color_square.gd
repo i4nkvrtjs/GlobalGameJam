@@ -47,3 +47,6 @@ func show_temp_color(color: Color, duration := 1.0):
 func reset():
 	color_index = 0
 	_update_color()
+	
+func get_color_index():
+	return color_index

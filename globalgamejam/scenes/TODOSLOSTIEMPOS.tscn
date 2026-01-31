@@ -1,7 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://54g30o78cj21"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_pf67n"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://bdnxsxxdg4ygd" path="res://scenes/PRESENTE.tscn" id="2_nr8a6"]
+=======
 [ext_resource type="PackedScene" uid="uid://cyrhqgl1wsy63" path="res://scenes/presente.tscn" id="2_nr8a6"]
+>>>>>>> 1348f84bae5497571c249bb403b708c24ecd18ce
 [ext_resource type="PackedScene" uid="uid://c2gu3jt86rv3a" path="res://Assets/Terreno_Backdrop.glb" id="3_y3i3p"]
 [ext_resource type="Texture2D" uid="uid://6vy1fd2jd6jr" path="res://Assets/Terreno_Backdrop_Backdrop_TEX.png" id="4_qjwgc"]
 [ext_resource type="PackedScene" uid="uid://bjvoium6413yf" path="res://scenes/pasado.tscn" id="5_qjwgc"]

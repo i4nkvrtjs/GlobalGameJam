@@ -16,9 +16,11 @@ var unlocked_masks := {
 }
 
 var current_mask: MaskType = MaskType.NONE
+var future_puzzle_unlocked := false
 
 @export var normal_puzzle: Node3D
 @export var hidden_puzzle: Node3D
+@export var future_puzzle: Node
 
 func _ready():
 	_clear_mask()
@@ -38,6 +40,8 @@ func unlock_mask(mask: MaskType):
 	unlocked_masks[mask] = true
 	print("Máscara desbloqueada:", mask)
 
+	if mask == MaskType.FUTURE:
+		_unlock_future_puzzle()
 
 # ---------------- TOGGLE ----------------
 
@@ -98,6 +102,15 @@ func _activate_future():
 func _deactivate_future():
 	pass
 
+func _unlock_future_puzzle():
+	future_puzzle_unlocked = true
+
+	if future_puzzle:
+		set_puzzle_enabled(future_puzzle, true)
+		if future_puzzle.has_method("unlock_future_mask"):
+			future_puzzle.unlock_future_mask()
+			
+	print("Puzzle del futuro desbloqueado")
 
 # ---------------- HIDDEN ----------------
 
@@ -145,7 +158,6 @@ func set_puzzle_enabled(puzzle: Node, enabled: bool):
 	if not puzzle:
 		return
 
-	puzzle.visible = enabled
 	puzzle.process_mode = Node.PROCESS_MODE_INHERIT
 
 	for body in puzzle.get_children():
