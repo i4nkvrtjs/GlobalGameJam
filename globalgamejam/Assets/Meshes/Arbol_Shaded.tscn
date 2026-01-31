@@ -1,20 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd07olrml08hh"]
+[gd_scene load_steps=5 format=3 uid="uid://bd07olrml08hh"]
 
 [ext_resource type="PackedScene" uid="uid://ctg1ogxijr6w0" path="res://Assets/Meshes/Arbol_001.glb" id="1_820xg"]
-[ext_resource type="Texture2D" uid="uid://b8bken6ibipb" path="res://Assets/Texturas/arbol_tronco.png" id="2_7l1sw"]
-[ext_resource type="Shader" uid="uid://dhinyd4b2rqkt" path="res://Assets/Shader/arbol_tronco.gdshader" id="3_wsiud"]
 [ext_resource type="Shader" uid="uid://3bykdpg42n6l" path="res://Assets/Shader/arbol_hojas.gdshader" id="4_imukp"]
 [ext_resource type="Texture2D" uid="uid://bodwhygf0drt3" path="res://Assets/Texturas/arbol_hojas_alpha.png" id="5_kyalu"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hoebc"]
-albedo_texture = ExtResource("2_7l1sw")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3e6tl"]
-render_priority = 0
-shader = ExtResource("3_wsiud")
-shader_parameter/light_steps = 3.0
-shader_parameter/uv_scale = Vector2(1, 1)
-shader_parameter/outline_mask = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_83h1v"]
 render_priority = 0
@@ -27,9 +15,11 @@ shader_parameter/light_steps = 5.0
 
 [node name="Arbol_Shaded" instance=ExtResource("1_820xg")]
 
-[node name="Arbol_Tronco_001" parent="." index="0"]
-material_override = SubResource("StandardMaterial3D_hoebc")
-surface_material_override/0 = SubResource("ShaderMaterial_3e6tl")
-
 [node name="Arbol_Hojas_001" parent="." index="1"]
 surface_material_override/0 = SubResource("ShaderMaterial_83h1v")
+
+[node name="Camera3D" type="Camera3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.6394, 34.2097)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.8211, -12.5974)

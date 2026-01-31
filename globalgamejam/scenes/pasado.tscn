@@ -1,0 +1,149 @@
+[gd_scene load_steps=18 format=3 uid="uid://bjvoium6413yf"]
+
+[ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
+[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_myd5o"]
+[ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_qxwao"]
+[ext_resource type="PackedScene" uid="uid://dhgdskappuel8" path="res://Assets/Terrenos/Terreno_Pasdo_Plano.glb" id="4_7ob1l"]
+[ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="5_qxwao"]
+[ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="6_sxv3u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s2tf8"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
+sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
+
+[sub_resource type="Sky" id="Sky_s2tf8"]
+sky_material = SubResource("ProceduralSkyMaterial_s2tf8")
+
+[sub_resource type="Environment" id="Environment_rbtr0"]
+background_mode = 2
+sky = SubResource("Sky_s2tf8")
+ambient_light_source = 3
+ambient_light_color = Color(0.93408, 0.93408, 0.93408, 1)
+ambient_light_energy = 3.88
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myd5o"]
+albedo_color = Color(1, 0.65098, 0.152941, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3vfec"]
+material = SubResource("StandardMaterial3D_myd5o")
+size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vfec"]
+albedo_color = Color(0.681259, 0.356826, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_461ql"]
+material = SubResource("StandardMaterial3D_3vfec")
+size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ob1l"]
+albedo_color = Color(0.134098, 0.402452, 0.101932, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qxwao"]
+material = SubResource("StandardMaterial3D_7ob1l")
+size = Vector2(20, 20)
+
+[node name="PASADO" type="Node3D"]
+
+[node name="Templo" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Templo"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 31.7334, 0)
+visible = false
+mesh = SubResource("BoxMesh_rbtr0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Templo"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 31.7334, 0)
+visible = false
+shape = SubResource("ConcavePolygonShape3D_s2tf8")
+
+[node name="Marker3D" type="Marker3D" parent="Templo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
+
+[node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_7ob1l")]
+
+[node name="TemploDelSol" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+mesh = SubResource("BoxMesh_rbtr0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+shape = SubResource("ConcavePolygonShape3D_s2tf8")
+
+[node name="Templo_Sol" parent="TemploDelSol" instance=ExtResource("2_qxwao")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rbtr0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.0392426, 0.99923, 0, -0.99923, 0.0392426, 317.92, 213.777, -215.257)
+light_energy = 3.783
+
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_myd5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 47.221, 8.24702)
+respawn_marker = NodePath("../Marker3D")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="TRIGO" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2309, -3.34855, 122.159)
+mesh = SubResource("PlaneMesh_3vfec")
+
+[node name="TRIGO6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.4627, -3.34855, 122.159)
+mesh = SubResource("PlaneMesh_3vfec")
+
+[node name="TRIGO4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5621, -3.34855, 122.159)
+mesh = SubResource("PlaneMesh_3vfec")
+
+[node name="TRIGO5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.7551, -3.34855, 122.159)
+mesh = SubResource("PlaneMesh_3vfec")
+
+[node name="CALABAZA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0235, -3.59591, 122.351)
+mesh = SubResource("PlaneMesh_461ql")
+
+[node name="CALABAZA4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0235, -3.59591, 95.3482)
+mesh = SubResource("PlaneMesh_461ql")
+
+[node name="CALABAZA2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7759, -3.59591, 122.351)
+mesh = SubResource("PlaneMesh_461ql")
+
+[node name="CALABAZA3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0991, -3.59591, 95.2929)
+mesh = SubResource("PlaneMesh_461ql")
+
+[node name="FRIJOL" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.1263, -2.77212, 95.4146)
+mesh = SubResource("PlaneMesh_qxwao")
+
+[node name="FRIJOL2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.3899, -2.77212, 95.4079)
+mesh = SubResource("PlaneMesh_qxwao")
+
+[node name="FRIJOL3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2464, -2.77212, 95.3699)
+mesh = SubResource("PlaneMesh_qxwao")
+
+[node name="FRIJOL4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.9828, -2.77212, 95.5353)
+mesh = SubResource("PlaneMesh_qxwao")
+
+[node name="Terreno_Pasdo_Plano" parent="." instance=ExtResource("4_7ob1l")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("5_qxwao")]
+transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 137.324, 0.380493, -3.1496)
+
+[node name="Templo_Jaguar" parent="." instance=ExtResource("6_sxv3u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
