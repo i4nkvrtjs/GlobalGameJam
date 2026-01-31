@@ -23,6 +23,3 @@ func _process(_delta):
 func _solve():
 	solved = true
 	print("PUZZLE DE BOTONES RESUELTO")
-	for cube in get_tree().get_nodes_in_group("floating_cubes"):
-		print("Activando cubo:", cube.name)
-		cube.activate()

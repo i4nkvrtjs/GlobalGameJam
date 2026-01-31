@@ -1,9 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://cc5dksl388xcs"]
+[gd_scene load_steps=18 format=3 uid="uid://cc5dksl388xcs"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_xr3ju"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_awhkr"]
+[ext_resource type="PackedScene" uid="uid://beabkghoklnjc" path="res://Assets/Meshes/Mesa_Base.glb" id="2_exmyc"]
+[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestal_Futuro.glb" id="3_u11dy"]
+[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestal_Oculto.glb" id="4_6tjhc"]
 [ext_resource type="PackedScene" uid="uid://cctjtpyok7753" path="res://Assets/Templos/Templo_Sol_PistaIntervenido.glb" id="4_sl4s5"]
+[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestal_Pasado.glb" id="5_dsema"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_sp6jf"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="6_sp6jf"]
 
@@ -46,6 +50,18 @@ shape = SubResource("ConcavePolygonShape3D_2sfii")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 
 [node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_paovc")]
+
+[node name="Mesa_Base" parent="Templo" instance=ExtResource("2_exmyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.483)
+
+[node name="Pedestal_Futuro" parent="Templo" instance=ExtResource("3_u11dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69016, 43.7959, -0.228515)
+
+[node name="Pedestal_Oculto" parent="Templo" instance=ExtResource("4_6tjhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185572, 43.7959, -4.24907)
+
+[node name="Pedestal_Pasado" parent="Templo" instance=ExtResource("5_dsema")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7183, 43.7959, -0.228515)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rbtr0")

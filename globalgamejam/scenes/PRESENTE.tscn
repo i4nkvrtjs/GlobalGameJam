@@ -1,17 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=24 format=3 uid="uid://cyrhqgl1wsy63"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
 [ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_37n8p"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_527ci"]
+[ext_resource type="PackedScene" uid="uid://bqcnyvse47lp" path="res://Assets/Meshes/Mesa_ConPanel.glb" id="2_iyyln"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
 [ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
+[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestal_Futuro.glb" id="6_u5kdj"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[ext_resource type="PackedScene" uid="uid://xy4p3bkc4m7k" path="res://scenes/presesure_button.tscn" id="7_y4vcq"]
+[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestal_Oculto.glb" id="8_6c6hh"]
+[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestal_Pasado.glb" id="9_8jlby"]
+[ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
+[ext_resource type="PackedScene" uid="uid://c8f5lu7o08nlk" path="res://Assets/Animaciones/Pedestal_Boton_v2.glb" id="9_y4vcq"]
+[ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
+[ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
 sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
@@ -26,12 +30,30 @@ ambient_light_source = 3
 ambient_light_color = Color(0.93408, 0.93408, 0.93408, 1)
 ambient_light_energy = 3.88
 
+[sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
 [sub_resource type="BoxMesh" id="BoxMesh_37n8p"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0fuvb"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="PRESENTE" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rbtr0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
+light_energy = 0.709
+
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_grxra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.6531, 7.50386)
+respawn_marker = NodePath("../Marker3D")
+
+[node name="Marker3D" type="Marker3D" parent="."]
 
 [node name="Templo" type="StaticBody3D" parent="."]
 
@@ -48,21 +70,88 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 
 [node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_jmayt")]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_rbtr0")
+[node name="Mesa_ConPanel" parent="Templo" instance=ExtResource("2_iyyln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.483)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
-light_energy = 3.783
+[node name="Puzzles" type="Node3D" parent="Templo"]
 
-[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_grxra")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.6531, 7.50386)
-respawn_marker = NodePath("../Marker3D")
+[node name="ColorPuzzle2A" parent="Templo/Puzzles" instance=ExtResource("9_rlwvq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 45.3744, 0)
 
-[node name="Marker3D" type="Marker3D" parent="."]
+[node name="ColorSquare0" parent="Templo/Puzzles/ColorPuzzle2A" index="0"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.510874, 0.0289993, 0.832)
 
-[node name="Terreno" parent="." instance=ExtResource("2_527ci")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+[node name="ColorSquare1" parent="Templo/Puzzles/ColorPuzzle2A" index="1"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, 0.029, 0.501)
+
+[node name="ColorSquare2" parent="Templo/Puzzles/ColorPuzzle2A" index="2"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, 0.029, 0.169)
+
+[node name="ColorSquare3" parent="Templo/Puzzles/ColorPuzzle2A" index="3"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, 0.029, -0.159)
+
+[node name="ColorSquare4" parent="Templo/Puzzles/ColorPuzzle2A" index="4"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, 0.029, -0.5)
+
+[node name="ColorSquare5" parent="Templo/Puzzles/ColorPuzzle2A" index="5"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, 0.029, -0.836)
+
+[node name="ColorSquare6" parent="Templo/Puzzles/ColorPuzzle2A" index="6"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, -0.231, 0.838)
+
+[node name="ColorSquare7" parent="Templo/Puzzles/ColorPuzzle2A" index="7"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, -0.234371, 0.499414)
+
+[node name="ColorSquare8" parent="Templo/Puzzles/ColorPuzzle2A" index="8"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, -0.228657, 0.165479)
+
+[node name="ColorSquare9" parent="Templo/Puzzles/ColorPuzzle2A" index="9"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, -0.233406, -0.168937)
+
+[node name="ColorSquare10" parent="Templo/Puzzles/ColorPuzzle2A" index="10"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, -0.227512, -0.502397)
+
+[node name="ColorSquare11" parent="Templo/Puzzles/ColorPuzzle2A" index="11"]
+transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, -0.236874, -0.843871)
+
+[node name="CheckButton" parent="Templo/Puzzles/ColorPuzzle2A" index="12"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.313556, -0.217937, 8.44755e-09)
+
+[node name="MeshInstance3D" parent="Templo/Puzzles/ColorPuzzle2A/CheckButton" index="0"]
+visible = false
+
+[node name="ColorPuzzleHidden" parent="Templo/Puzzles" instance=ExtResource("10_dn7ci")]
+
+[node name="Puzzle1" type="Node" parent="Templo"]
+
+[node name="ButtonPuzzleController" parent="Templo/Puzzle1" node_paths=PackedStringArray("buttons") instance=ExtResource("10_lh8va")]
+buttons = [NodePath("../Pedestal_Futuro/presesureButton"), NodePath("../Pedestal_Oculto/presesureButton"), NodePath("../Pedestal_Pasado/presesureButton")]
+
+[node name="Pedestal_Futuro" parent="Templo/Puzzle1" instance=ExtResource("6_u5kdj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.69016, 43.7959, -0.228515)
+
+[node name="Boton" parent="Templo/Puzzle1/Pedestal_Futuro" index="0"]
+visible = false
+
+[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Futuro" instance=ExtResource("7_y4vcq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9407e-08, 0.605431, -0.555744)
+
+[node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Futuro/presesureButton" index="0"]
+visible = false
+
+[node name="Pedestal_Boton_Futuro" parent="Templo/Puzzle1/Pedestal_Futuro" instance=ExtResource("9_y4vcq")]
+
+[node name="Pedestal_Oculto" parent="Templo/Puzzle1" instance=ExtResource("8_6c6hh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185572, 43.7959, -4.24907)
+
+[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Oculto" instance=ExtResource("7_y4vcq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60186, -0.553983)
+
+[node name="Pedestal_Pasado" parent="Templo/Puzzle1" instance=ExtResource("9_8jlby")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.228515)
+
+[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Pasado" instance=ExtResource("7_y4vcq")]
+transform = Transform3D(1, 0, 3.90799e-14, 0, 1, 0, -3.90799e-14, 0, 1, 0.00736965, 0.602097, -0.578064)
 
 [node name="TemploDelSol" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
@@ -80,6 +169,9 @@ shape = SubResource("ConcavePolygonShape3D_0fuvb")
 [node name="Templo_Jaguar" parent="." instance=ExtResource("5_0fuvb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
 
+[node name="Terreno" parent="." instance=ExtResource("2_527ci")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
 [node name="Terreno_Montañas" parent="." instance=ExtResource("6_2sfii")]
 transform = Transform3D(1.48979, 0, -0.174694, 0, 1.5, 0, 0.174694, 0, 1.48979, 313.488, -28.011, 268.277)
 
@@ -95,5 +187,10 @@ transform = Transform3D(-0.148833, 0, 0.9937, 0, 1.23447, 0, -1.15574, 0, -0.127
 [node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("7_4iy1q")]
 transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 137.324, 0.380493, -3.1496)
 
+[editable path="Templo/Puzzles/ColorPuzzle2A"]
+[editable path="Templo/Puzzle1/ButtonPuzzleController"]
+[editable path="Templo/Puzzle1/Pedestal_Futuro"]
+[editable path="Templo/Puzzle1/Pedestal_Futuro/presesureButton"]
+[editable path="Templo/Puzzle1/Pedestal_Futuro/Pedestal_Boton_Futuro"]
 [editable path="Templo_Jaguar"]
 [editable path="Terreno_Montañas"]

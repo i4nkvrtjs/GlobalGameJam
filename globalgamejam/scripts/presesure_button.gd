@@ -2,6 +2,7 @@ extends StaticBody3D
 
 @export var press_depth := 0.05
 @export var press_time := 0.2
+@onready var animationbutton = $"../Pedestal_Boton_Futuro/AnimationPlayer"
 
 var pressed := false
 var start_position: Vector3
@@ -16,6 +17,7 @@ func interact(_interactor):
 		return
 
 	pressed = true
+	animationbutton.play("Cube_001Action")
 	_press_animation()
 
 
@@ -27,3 +29,4 @@ func _press_animation():
 		start_position - Vector3.DOWN * press_depth,
 		press_time
 	)
+	
