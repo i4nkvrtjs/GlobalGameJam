@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://cc5dksl388xcs"]
+
+[ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
+[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_xr3ju"]
+[ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_awhkr"]
+[ext_resource type="PackedScene" uid="uid://cctjtpyok7753" path="res://Assets/Templos/Templo_Sol_PistaIntervenido.glb" id="4_sl4s5"]
+[ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_sp6jf"]
+[ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="6_sp6jf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
+sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
+
+[sub_resource type="Sky" id="Sky_s2tf8"]
+sky_material = SubResource("ProceduralSkyMaterial_s2tf8")
+
+[sub_resource type="Environment" id="Environment_rbtr0"]
+background_mode = 2
+sky = SubResource("Sky_s2tf8")
+ambient_light_source = 3
+ambient_light_color = Color(0.93408, 0.93408, 0.93408, 1)
+ambient_light_energy = 3.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_37n8p"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0fuvb"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="FUTURO" type="Node3D"]
+
+[node name="Templo" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Templo"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+mesh = SubResource("BoxMesh_0fuvb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Templo"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 31.7334, 0)
+shape = SubResource("ConcavePolygonShape3D_2sfii")
+
+[node name="Marker3D" type="Marker3D" parent="Templo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
+
+[node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_paovc")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rbtr0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
+light_energy = 3.783
+
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_xr3ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.6531, 7.50386)
+respawn_marker = NodePath("../Marker3D")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="Terreno" parent="." instance=ExtResource("2_awhkr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="TemploDelSol" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+mesh = SubResource("BoxMesh_37n8p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+shape = SubResource("ConcavePolygonShape3D_0fuvb")
+
+[node name="Templo_Sol_PistaIntervenido" parent="TemploDelSol" instance=ExtResource("4_sl4s5")]
+
+[node name="Templo_Jaguar" parent="." instance=ExtResource("5_sp6jf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
+
+[node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("6_sp6jf")]
+transform = Transform3D(0.284132, 0, -0.958785, 0, 1, 0, 0.958785, 0, 0.284132, 137.323, 0, -2.9011)
+
+[editable path="Templo_Jaguar"]

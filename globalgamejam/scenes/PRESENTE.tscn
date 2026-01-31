@@ -1,61 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://54g30o78cj21"]
+[gd_scene load_steps=15 format=3 uid="uid://bdnxsxxdg4ygd"]
 
-[ext_resource type="Terrain3DAssets" uid="uid://gk6yf2on2eyl" path="res://scenes/Presente_data_Terrain3d/AssetPRESENTE.tres" id="1_cj7v4"]
-[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="2_s2tf8"]
+[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
+[ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
+[ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_37n8p"]
+[ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_527ci"]
+[ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
+[ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
+[ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
 
-[sub_resource type="Gradient" id="Gradient_s2tf8"]
-offsets = PackedFloat32Array(0.2, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+[sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_rbtr0"]
-noise_type = 2
-frequency = 0.03
-cellular_jitter = 3.0
-cellular_return_type = 0
-domain_warp_enabled = true
-domain_warp_type = 1
-domain_warp_amplitude = 50.0
-domain_warp_fractal_type = 2
-domain_warp_fractal_lacunarity = 1.5
-domain_warp_fractal_gain = 1.0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vmmlt"]
-seamless = true
-color_ramp = SubResource("Gradient_s2tf8")
-noise = SubResource("FastNoiseLite_rbtr0")
-
-[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_tcnme"]
-_shader_parameters = {
-&"bias_distance": 512.0,
-&"blend_sharpness": 0.5,
-&"depth_blur": 0.0,
-&"enable_macro_variation": true,
-&"enable_projection": true,
-&"flat_terrain_normals": false,
-&"macro_variation1": Color(1, 1, 1, 1),
-&"macro_variation2": Color(1, 1, 1, 1),
-&"macro_variation_slope": 0.333,
-&"mipmap_bias": 1.0,
-&"noise1_angle": 0.0,
-&"noise1_offset": Vector2(0.5, 0.5),
-&"noise1_scale": 0.04,
-&"noise2_scale": 0.076,
-&"noise_texture": SubResource("NoiseTexture2D_vmmlt"),
-&"projection_threshold": 0.8,
-&"world_noise_fragment_normals": false,
-&"world_noise_height": 64.0,
-&"world_noise_lod_distance": 7500.0,
-&"world_noise_max_octaves": 4,
-&"world_noise_min_octaves": 2,
-&"world_noise_offset": Vector3(0, 0, 0),
-&"world_noise_region_blend": 0.33,
-&"world_noise_scale": 5.0
-}
-world_background = 2
-
-[sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s2tf8"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
@@ -71,28 +26,36 @@ ambient_light_source = 3
 ambient_light_color = Color(0.93408, 0.93408, 0.93408, 1)
 ambient_light_energy = 3.88
 
-[node name="Presente" type="Node3D"]
+[sub_resource type="BoxMesh" id="BoxMesh_37n8p"]
 
+<<<<<<< HEAD
 [node name="Terrain3D" type="Terrain3D" parent="."]
 data_directory = "res://scenes/Presente_data_Terrain3d"
 material = SubResource("Terrain3DMaterial_tcnme")
 assets = ExtResource("1_cj7v4")
 cull_margin = 1000.0
 top_level = true
+=======
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0fuvb"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="PRESENTE" type="Node3D"]
+>>>>>>> 4f42f888c4193c3027f536115b0ed5151b60870e
 
 [node name="Templo" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Templo"]
 transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
-mesh = SubResource("BoxMesh_rbtr0")
+mesh = SubResource("BoxMesh_0fuvb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Templo"]
-transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
-shape = SubResource("ConcavePolygonShape3D_s2tf8")
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 31.7334, 0)
+shape = SubResource("ConcavePolygonShape3D_2sfii")
 
-[node name="TemploJaguar" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95.7205, 5.04896, 0)
+[node name="Marker3D" type="Marker3D" parent="Templo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 
+<<<<<<< HEAD
 [node name="MeshInstance3D" type="MeshInstance3D" parent="TemploJaguar"]
 transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
 mesh = SubResource("BoxMesh_rbtr0")
@@ -115,6 +78,9 @@ shape = SubResource("ConcavePolygonShape3D_s2tf8")
 [node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("2_s2tf8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.4068, 10.661)
 respawn_marker = NodePath("../Respawn")
+=======
+[node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_jmayt")]
+>>>>>>> 4f42f888c4193c3027f536115b0ed5151b60870e
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rbtr0")
@@ -123,4 +89,49 @@ environment = SubResource("Environment_rbtr0")
 transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
 light_energy = 3.783
 
+<<<<<<< HEAD
 [node name="Respawn" type="Marker3D" parent="."]
+=======
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_grxra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.6531, 7.50386)
+respawn_marker = NodePath("../Marker3D")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="Terreno" parent="." instance=ExtResource("2_527ci")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="TemploDelSol" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+mesh = SubResource("BoxMesh_37n8p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TemploDelSol"]
+transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
+shape = SubResource("ConcavePolygonShape3D_0fuvb")
+
+[node name="Templo_Sol" parent="TemploDelSol" instance=ExtResource("2_37n8p")]
+
+[node name="Templo_Jaguar" parent="." instance=ExtResource("5_0fuvb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
+
+[node name="Terreno_Montañas" parent="." instance=ExtResource("6_2sfii")]
+transform = Transform3D(1.48979, 0, -0.174694, 0, 1.5, 0, 0.174694, 0, 1.48979, 313.488, -28.011, 268.277)
+
+[node name="Retopo_Landscape_009" parent="Terreno_Montañas" index="0"]
+transform = Transform3D(0.057642, 0, -0.998337, 0, 1, 0, 0.998337, 0, 0.057642, -149.36, 0, 159.607)
+
+[node name="Retopo_Landscape_002" parent="Terreno_Montañas" index="1"]
+transform = Transform3D(-0.587291, 0, 0.809376, 0, 0.999999, 0, -0.809376, 0, -0.587291, -90.1228, 8.07852, 264.1)
+
+[node name="Retopo_Landscape_016" parent="Terreno_Montañas" index="3"]
+transform = Transform3D(-0.148833, 0, 0.9937, 0, 1.23447, 0, -1.15574, 0, -0.127966, -121.702, 15.5316, -166.845)
+
+[node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("7_4iy1q")]
+transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 137.324, 0.380493, -3.1496)
+
+[editable path="Templo_Jaguar"]
+[editable path="Terreno_Montañas"]
+>>>>>>> 4f42f888c4193c3027f536115b0ed5151b60870e

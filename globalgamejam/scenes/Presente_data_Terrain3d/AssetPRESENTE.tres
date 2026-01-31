@@ -1,5 +1,6 @@
-[gd_resource type="Terrain3DAssets" load_steps=6 format=3 uid="uid://gk6yf2on2eyl"]
+[gd_resource type="Terrain3DAssets" load_steps=8 format=3 uid="uid://gk6yf2on2eyl"]
 
+[ext_resource type="PackedScene" uid="uid://d25umjkvic7nm" path="res://Assets/Arbol_Shaded_V6.glb" id="1_4c4gg"]
 [ext_resource type="Texture2D" uid="uid://b5tvswe8d5eap" path="res://scenes/Presente_data_Terrain3d/pasto_alb_ao_height.dds" id="1_n1ghj"]
 [ext_resource type="Texture2D" uid="uid://bb0rt4ajj3drc" path="res://scenes/Presente_data_Terrain3d/pasto_normal_rough.dds" id="2_4c4gg"]
 
@@ -21,6 +22,15 @@ last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
 
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_8vm1w"]
+name = "Arbol_Shaded_V6"
+id = 1
+scene_file = ExtResource("1_4c4gg")
+density = 0.01
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_8vm1w"]
 name = "pasto_alb_ao_height"
 albedo_texture = ExtResource("1_n1ghj")
@@ -30,5 +40,5 @@ roughness = 0.189
 uv_scale = 0.051
 
 [resource]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_tcnme")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_tcnme"), SubResource("Terrain3DMeshAsset_8vm1w")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_8vm1w")])
