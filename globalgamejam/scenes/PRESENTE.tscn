@@ -79,7 +79,6 @@ material = SubResource("Terrain3DMaterial_tcnme")
 assets = ExtResource("1_cj7v4")
 cull_margin = 1000.0
 top_level = true
-metadata/_edit_lock_ = true
 
 [node name="Templo" type="StaticBody3D" parent="."]
 
@@ -113,8 +112,9 @@ mesh = SubResource("BoxMesh_rbtr0")
 transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181, 0)
 shape = SubResource("ConcavePolygonShape3D_s2tf8")
 
-[node name="Player" parent="." instance=ExtResource("2_s2tf8")]
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("2_s2tf8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.4068, 10.661)
+respawn_marker = NodePath("../Respawn")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rbtr0")
@@ -122,3 +122,5 @@ environment = SubResource("Environment_rbtr0")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
 light_energy = 3.783
+
+[node name="Respawn" type="Marker3D" parent="."]

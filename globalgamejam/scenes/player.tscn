@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxkaf8dcdkegd"]
+[gd_scene load_steps=6 format=3 uid="uid://bxkaf8dcdkegd"]
 
 [ext_resource type="Script" uid="uid://cewh6byj0ygmt" path="res://scripts/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dno4o8ix2lm86" path="res://Assets/Catalejo.png" id="2_g2els"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
 
@@ -72,3 +73,11 @@ theme_override_font_sizes/font_size = 42
 text = "<Click to interact>"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_g2els")
