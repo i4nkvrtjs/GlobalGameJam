@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bjvoium6413yf"]
+[gd_scene load_steps=42 format=3 uid="uid://bjvoium6413yf"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_myd5o"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://bb7h3btfteamb" path="res://Assets/Pasado - Arboles.glb" id="15_gu8yi"]
 [ext_resource type="PackedScene" uid="uid://c0cw75pawskj" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.001.glb" id="16_wys3b"]
 [ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.002.glb" id="17_a2vwi"]
+[ext_resource type="PackedScene" uid="uid://4et1m5tm03no" path="res://Assets/Presente/Obstaculos/Obstaculo_Estatua.glb" id="18_a2vwi"]
+[ext_resource type="PackedScene" uid="uid://rlcr0k2enku5" path="res://Assets/Meshes/Pistas/Mural_Pasado.glb" id="19_iiobs"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
 
@@ -282,6 +284,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.187587)
 
 [node name="Obstaculo_Pasillo_0022" parent="." instance=ExtResource("17_a2vwi")]
 transform = Transform3D(-0.194371, 0, 0.980928, 0, 1, 0, -0.980928, 0, -0.194371, -5.11158, 0.37167, 0.0744648)
+
+[node name="Obstaculo_Estatua" parent="." instance=ExtResource("18_a2vwi")]
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 1, 9.138, 46.61, -3.00149)
+
+[node name="Mural_Pasado" parent="." instance=ExtResource("19_iiobs")]
+transform = Transform3D(-1.14305e-07, 0, 2.615, 0, 2.615, 0, -2.615, 0, -1.14305e-07, 7.10709, 45.0721, 0.726811)
 
 [editable path="Templo/Pedestal_Futuro"]
 [editable path="Templo/Pedestal_Oculto"]
