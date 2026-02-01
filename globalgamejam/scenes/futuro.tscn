@@ -59,13 +59,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.483)
 
 [node name="Pedestal_Futuro" parent="Templo" instance=ExtResource("3_u11dy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69016, 43.7959, -0.228515)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69016, 43.7959, -0.57218)
 
 [node name="Pedestal_Oculto" parent="Templo" instance=ExtResource("4_6tjhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185572, 43.7959, -4.24907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0593621, 43.7959, -4.24907)
 
 [node name="Pedestal_Pasado" parent="Templo" instance=ExtResource("5_dsema")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7183, 43.7959, -0.228515)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7183, 43.7959, -0.57218)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rbtr0")
