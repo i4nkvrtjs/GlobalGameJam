@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=29 format=3 uid="uid://cyrhqgl1wsy63"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cata06da5jpg5" path="res://Assets/Presente/Presente Carpas.glb" id="18_vyrum"]
 [ext_resource type="PackedScene" uid="uid://ciio5ojraef3m" path="res://Assets/Presente/Presente Arboles Montaña Templo.glb" id="19_vyrum"]
 [ext_resource type="PackedScene" uid="uid://bwgb7h5hsu7lv" path="res://Assets/Meshes/Pistas/Maldicion.glb" id="20_difdc"]
+[ext_resource type="PackedScene" uid="uid://vs8emnkbno1j" path="res://Assets/Meshes/Pistas/Mirar_Pasado_Cartel.glb" id="21_b460h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
 sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
@@ -210,8 +211,12 @@ transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 13
 [node name="Presente Arboles Montaña Templo" parent="." instance=ExtResource("19_vyrum")]
 
 [node name="Maldicion" parent="." instance=ExtResource("20_difdc")]
-transform = Transform3D(-4, 0.00231377, -0.0015179, 0.00231363, 4, 0.000376353, 0.00151812, 0.000375475, -4, 0.0773491, 46.7573, 4.34291)
+transform = Transform3D(2.225, 0, 0, 0, 2.225, 0, 0, 0, 2.225, 0.609125, 46.4129, -6.1819)
 
+[node name="Mirar_Pasado_Cartel" parent="." instance=ExtResource("21_b460h")]
+transform = Transform3D(-9.44166e-08, 0, 2.16, 0, 2.16, 0, -2.16, 0, -9.44166e-08, -6.58512, 46.3073, -0.643312)
+
+[editable path="Player"]
 [editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Puzzles/ColorPuzzle2A"]
 [editable path="Templo/Puzzle1/ButtonPuzzleController"]

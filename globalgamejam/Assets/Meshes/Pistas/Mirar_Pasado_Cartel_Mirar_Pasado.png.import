@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://rnodv8y1am63"
+path.s3tc="res://.godot/imported/Mirar_Pasado_Cartel_Mirar_Pasado.png-999086768a392946e0d287cd513d5e8f.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "4bfe2ccab278015598cc857619ea664b"
+}
+
+[deps]
+
+source_file="res://Assets/Meshes/Pistas/Mirar_Pasado_Cartel_Mirar_Pasado.png"
+dest_files=["res://.godot/imported/Mirar_Pasado_Cartel_Mirar_Pasado.png-999086768a392946e0d287cd513d5e8f.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
