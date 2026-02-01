@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=32 format=3 uid="uid://cyrhqgl1wsy63"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://bwgb7h5hsu7lv" path="res://Assets/Meshes/Pistas/Maldicion.glb" id="20_difdc"]
 [ext_resource type="PackedScene" uid="uid://vs8emnkbno1j" path="res://Assets/Meshes/Pistas/Mirar_Pasado_Cartel.glb" id="21_b460h"]
 [ext_resource type="PackedScene" uid="uid://dcrd3066eh83o" path="res://Assets/Meshes/Pistas/Miraste_Atras.glb" id="22_hh7j3"]
+[ext_resource type="PackedScene" uid="uid://c0cw75pawskj" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.001.glb" id="23_2xilg"]
+[ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.002.glb" id="24_hnikr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
 sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
@@ -219,6 +221,10 @@ transform = Transform3D(-9.44166e-08, 0, 2.16, 0, 2.16, 0, -2.16, 0, -9.44166e-0
 
 [node name="Miraste_Atras" parent="." instance=ExtResource("22_hh7j3")]
 transform = Transform3D(-9.44166e-08, 0, -2.16, 0, 2.16, 0, 2.16, 0, -9.44166e-08, 6.55812, 45.829, -0.432566)
+
+[node name="Obstaculo_Pasillo_0012" parent="." instance=ExtResource("23_2xilg")]
+
+[node name="Obstaculo_Pasillo_0022" parent="." instance=ExtResource("24_hnikr")]
 
 [editable path="Player"]
 [editable path="Templo/Templo_Tikal"]
