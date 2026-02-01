@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://54g30o78cj21"]
+[gd_scene load_steps=6 format=3 uid="uid://d3wrgue5c5ye4"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_qjwgc"]
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://scenes/mask_manager.tscn" id="2_dobs2"]
-[ext_resource type="PackedScene" uid="uid://cyrhqgl1wsy63" path="res://scenes/presente.tscn" id="3_vb607"]
+[ext_resource type="PackedScene" uid="uid://cawpxoyhsp5fc" path="res://scenes/presente.tscn" id="3_vb607"]
 [ext_resource type="PackedScene" uid="uid://bjvoium6413yf" path="res://scenes/pasado.tscn" id="4_kc4mv"]
 [ext_resource type="PackedScene" uid="uid://cc5dksl388xcs" path="res://scenes/futuro.tscn" id="5_xl62j"]
 
@@ -25,6 +25,10 @@ future_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/Puzzle3BManager
 
 [node name="PRESENTE" parent="WorldAnchor" instance=ExtResource("3_vb607")]
 
+[node name="Puzzle3BManager" parent="WorldAnchor/PRESENTE/Templo/Puzzles" index="2"]
+buttons = Array[NodePath]([NodePath("../../Mesa_ConPanel/A1"), NodePath("../../Mesa_ConPanel/A2"), NodePath("../../Mesa_ConPanel/A3"), NodePath("../../Mesa_ConPanel/A4"), NodePath("../../Mesa_ConPanel/A5"), NodePath("../../Mesa_ConPanel/A6"), NodePath("../../Mesa_ConPanel/B1"), NodePath("../../Mesa_ConPanel/B2"), NodePath("../../Mesa_ConPanel/B3"), NodePath("../../Mesa_ConPanel/B4"), NodePath("../../Mesa_ConPanel/B5"), NodePath("../../Mesa_ConPanel/B6")])
+check_button = NodePath("../../Mesa_ConPanel/Boton de Resolucion")
+
 [node name="Abrir" parent="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.404217, 0.949965, 0)
 
@@ -38,6 +42,9 @@ mask_manager = NodePath("../../../../../../MaskManager")
 process_mode = 4
 visible = false
 
+[node name="MaskFuturePickUp" parent="WorldAnchor/PASADO/Templo/Pedestal_Futuro/Mascara_Futuro2" index="1" node_paths=PackedStringArray("mask_manager")]
+mask_manager = NodePath("../../../../../../MaskManager")
+
 [node name="FUTURO" parent="WorldAnchor" instance=ExtResource("5_xl62j")]
 process_mode = 4
 visible = false
@@ -45,6 +52,7 @@ visible = false
 [editable path="Player"]
 [editable path="WorldAnchor/PRESENTE"]
 [editable path="WorldAnchor/PRESENTE/Templo/Templo_Tikal"]
+[editable path="WorldAnchor/PRESENTE/Templo/Mesa_ConPanel"]
 [editable path="WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzle2A"]
 [editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/ButtonPuzzleController"]
 [editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Futuro"]
@@ -60,8 +68,15 @@ visible = false
 [editable path="WorldAnchor/PRESENTE/Terreno_Montañas"]
 [editable path="WorldAnchor/PASADO"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro"]
+[editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo"]
+[editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro/Mascara_Futuro2"]
+[editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro/Mascara_Futuro2/MaskFuturePickUp"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Oculto"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Pasado"]
+[editable path="WorldAnchor/PASADO/Templo/MuralPuzzle"]
+[editable path="WorldAnchor/PASADO/Templo/Mural_Pasado"]
 [editable path="WorldAnchor/PASADO/Mesa_Base"]
 [editable path="WorldAnchor/PASADO/Cultivos2"]
-[editable path="WorldAnchor/PASADO/Mural_Pasado"]
+[editable path="WorldAnchor/FUTURO"]
+[editable path="WorldAnchor/FUTURO/Templo_Jaguar"]
+[editable path="WorldAnchor/FUTURO/Futuro - Arboles"]

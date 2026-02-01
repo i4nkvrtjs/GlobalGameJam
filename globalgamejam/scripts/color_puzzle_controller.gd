@@ -18,6 +18,8 @@ extends Node3D
 ]
 
 @export var auto_resolve := true
+@onready var miraste_atras: Node3D = $"../../../Miraste_Atras"
+
 
 var solved := false
 
@@ -42,6 +44,7 @@ func check_solution():
 
 func _solve():
 	solved = true
+	miraste_atras.visible = true
 	print("PUZZLE RESUELTO")
 	
 	for button in buttons:

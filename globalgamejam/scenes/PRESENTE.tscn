@@ -1,11 +1,11 @@
-[gd_scene load_steps=42 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=42 format=3 uid="uid://cawpxoyhsp5fc"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
 [ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_37n8p"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_527ci"]
 [ext_resource type="PackedScene" uid="uid://bqcnyvse47lp" path="res://Assets/Meshes/Mesa_ConPanel.glb" id="2_iyyln"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
-[ext_resource type="PackedScene" uid="uid://2viqo08a2ash" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
+[ext_resource type="PackedScene" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
 [ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
 [ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Animaciones/Pedestales/Pedestal_Futuro.glb" id="6_u5kdj"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Animaciones/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
 [ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Animaciones/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
-[ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
+[ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
 [ext_resource type="PackedScene" uid="uid://dq8w3jf1gfsu0" path="res://Assets/Animaciones/Pedestales/PedestalAnimadoMascaraPasado.glb" id="11_81647"]
 [ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="12_w86e2"]
@@ -38,7 +38,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 size = Vector3(1, 1.2149, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_71hvr"]
-size = Vector3(7.42407, 1, 3.08386)
+size = Vector3(13.796, 1, 3.08386)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_81647"]
 size = Vector3(2.65259, 1.5675, 24.0396)
@@ -219,7 +219,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.49539, 44.5378, 10.4583)
 shape = SubResource("BoxShape3D_71hvr")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46533, 44.5378, 10.4583)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27936, 44.5378, 10.4583)
 shape = SubResource("BoxShape3D_71hvr")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Templo/Colisiones"]
@@ -304,6 +304,7 @@ transform = Transform3D(-1.56501e-07, 0, 3.58032, 0, 3.58032, 0, -3.58032, 0, -1
 
 [node name="Miraste_Atras" parent="." instance=ExtResource("22_hh7j3")]
 transform = Transform3D(-1.5299e-07, 0, -3.5, 0, 3.5, 0, 3.5, 0, -1.5299e-07, 6.55812, 45.8319, -0.382623)
+visible = false
 
 [node name="Obstaculo_Pasillo_0012" parent="." instance=ExtResource("23_2xilg")]
 

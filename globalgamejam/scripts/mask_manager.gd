@@ -112,10 +112,20 @@ func _deactivate_past():
 # ---------------- FUTURE ----------------
 
 func _activate_future():
-	pass
+	pasado.process_mode=Node.PROCESS_MODE_DISABLED
+	pasado.visible=false
+	presente.process_mode=Node.PROCESS_MODE_DISABLED
+	presente.visible=false
+	futuro.process_mode=Node.PROCESS_MODE_INHERIT
+	futuro.visible=true
 
 func _deactivate_future():
-	pass
+	pasado.process_mode=Node.PROCESS_MODE_DISABLED
+	pasado.visible=false
+	presente.process_mode=Node.PROCESS_MODE_INHERIT
+	presente.visible=true
+	futuro.process_mode=Node.PROCESS_MODE_DISABLED
+	futuro.visible=false
 
 func _unlock_future_puzzle():
 	future_puzzle_unlocked = true
