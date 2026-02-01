@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bjvoium6413yf"]
+[gd_scene load_steps=40 format=3 uid="uid://bjvoium6413yf"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_myd5o"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://b4e16ex3p1uod" path="res://Assets/Meshes/Cultivos/Calabaza_Nuevo.png" id="13_gu8yi"]
 [ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="14_cumfr"]
 [ext_resource type="PackedScene" uid="uid://bb7h3btfteamb" path="res://Assets/Pasado - Arboles.glb" id="15_gu8yi"]
+[ext_resource type="PackedScene" uid="uid://c0cw75pawskj" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.001.glb" id="16_wys3b"]
+[ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.002.glb" id="17_a2vwi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
 
@@ -274,6 +276,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6bfs0")
 [node name="Arboles_Montaña" parent="." instance=ExtResource("14_cumfr")]
 
 [node name="Pasado - Arboles" parent="." instance=ExtResource("15_gu8yi")]
+
+[node name="Obstaculo_Pasillo_0012" parent="." instance=ExtResource("16_wys3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.187587)
+
+[node name="Obstaculo_Pasillo_0022" parent="." instance=ExtResource("17_a2vwi")]
+transform = Transform3D(-0.194371, 0, 0.980928, 0, 1, 0, -0.980928, 0, -0.194371, -5.11158, 0.37167, 0.0744648)
 
 [editable path="Templo/Pedestal_Futuro"]
 [editable path="Templo/Pedestal_Oculto"]
