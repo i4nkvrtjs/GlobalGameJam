@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cc5dksl388xcs"]
+[gd_scene load_steps=22 format=3 uid="uid://cc5dksl388xcs"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_awhkr"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="14_nuqfr"]
 [ext_resource type="PackedScene" uid="uid://vf342ut7ex4a" path="res://Assets/Infografias/Futuro_Cartel_Info_Cultivo.glb" id="15_e2u8t"]
 [ext_resource type="PackedScene" uid="uid://bkkydpl8wfq5t" path="res://Assets/Meshes/Pistas/Mural_Presente.glb" id="16_7yqjh"]
+[ext_resource type="PackedScene" uid="uid://djjtvivsgfpvm" path="res://Assets/Presente/Obstaculos/Enredaderas_Escalera.glb" id="17_2pefn"]
 [ext_resource type="PackedScene" uid="uid://bbdy2xx8y3tgm" path="res://Assets/Infografias/Info_Mural.glb" id="17_oky4b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
@@ -98,6 +99,8 @@ transform = Transform3D(-1.14305e-07, 0, 2.615, 0, 2.615, 0, -2.615, 0, -1.14305
 
 [node name="Info_Mural" parent="." instance=ExtResource("17_oky4b")]
 transform = Transform3D(0.0237861, 0, 0.599528, 0, 0.6, 0, -0.599528, 0, 0.0237861, 6.94363, 43.7494, 4.29704)
+
+[node name="Enredaderas_Escalera" parent="." instance=ExtResource("17_2pefn")]
 
 [editable path="Templo_Jaguar"]
 [editable path="Futuro - Arboles"]
