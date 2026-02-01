@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=40 format=3 uid="uid://cyrhqgl1wsy63"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
@@ -43,10 +43,34 @@ ambient_light_energy = 3.88
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_71hvr"]
+size = Vector3(7.42407, 1, 3.08386)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_81647"]
+size = Vector3(2.65259, 1.5675, 24.0396)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_101vk"]
+size = Vector3(23.6967, 1.77917, 2.67676)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w86e2"]
+size = Vector3(5.29395, 7.15295, 0.553467)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tlxmo"]
+size = Vector3(0.511841, 6.95209, 11.7081)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6wrqp"]
+size = Vector3(13.784, 6.87064, 0.566406)
+
 [sub_resource type="BoxMesh" id="BoxMesh_37n8p"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0fuvb"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d61pw"]
+size = Vector3(5.00293, 5.68137, 5.53979)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_anvkm"]
+size = Vector3(4.56213, 5.32758, 3.39795)
 
 [node name="PRESENTE" type="Node3D"]
 
@@ -171,6 +195,48 @@ transform = Transform3D(1, 0, 3.90799e-14, 0, 1, 0, -3.90799e-14, 0, 1, 0.007369
 [node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Pasado/presesureButton" index="0"]
 visible = false
 
+[node name="Colisiones" type="StaticBody3D" parent="Templo"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.49539, 44.5378, 10.4583)
+shape = SubResource("BoxShape3D_71hvr")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46533, 44.5378, 10.4583)
+shape = SubResource("BoxShape3D_71hvr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9077, 44.8595, 0.106287)
+shape = SubResource("BoxShape3D_81647")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7812, 44.8595, 0.106287)
+shape = SubResource("BoxShape3D_81647")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0900574, 44.8042, -10.8182)
+shape = SubResource("BoxShape3D_101vk")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25271, 47.2428, 4.82885)
+shape = SubResource("BoxShape3D_w86e2")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.26228, 47.2428, 4.82885)
+shape = SubResource("BoxShape3D_w86e2")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.66334, 47.3234, -0.766998)
+shape = SubResource("BoxShape3D_tlxmo")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67093, 47.3234, -0.766998)
+shape = SubResource("BoxShape3D_tlxmo")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Templo/Colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0132141, 47.3436, -6.3892)
+shape = SubResource("BoxShape3D_6wrqp")
+
 [node name="TemploDelSol" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
 
@@ -224,16 +290,29 @@ transform = Transform3D(-1.5299e-07, 0, -3.5, 0, 3.5, 0, 3.5, 0, -1.5299e-07, 6.
 
 [node name="Obstaculo_Pasillo_0012" parent="." instance=ExtResource("23_2xilg")]
 
-[node name="Obstaculo_Pasillo_0013" parent="." instance=ExtResource("23_2xilg")]
+[node name="Obstaculo_Pasillo_0013" parent="Obstaculo_Pasillo_0012" instance=ExtResource("23_2xilg")]
 transform = Transform3D(-0.415805, 0, 0.909454, 0, 1, 0, -0.909454, 0, -0.415805, -19.594, 0, 2.57513)
 
-[node name="Obstaculo_Pasillo_0014" parent="." instance=ExtResource("23_2xilg")]
+[node name="Obstaculo_Pasillo_0014" parent="Obstaculo_Pasillo_0012" instance=ExtResource("23_2xilg")]
 transform = Transform3D(-0.415805, 0, 0.909454, 0, 1, 0, -0.909454, 0, -0.415805, -19.594, 0, 4.63676)
 
-[node name="Obstaculo_Pasillo_0015" parent="." instance=ExtResource("23_2xilg")]
+[node name="Obstaculo_Pasillo_0015" parent="Obstaculo_Pasillo_0012" instance=ExtResource("23_2xilg")]
 transform = Transform3D(0.974386, 0, 0.224883, 0, 1, 0, -0.224883, 0, 0.974386, -1.96956, 0, -2.96871)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Obstaculo_Pasillo_0012"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstaculo_Pasillo_0012/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.31574, 46.7894, 8.09171)
+shape = SubResource("BoxShape3D_d61pw")
+
 [node name="Obstaculo_Pasillo_0022" parent="." instance=ExtResource("24_hnikr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.57867)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Obstaculo_Pasillo_0022"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstaculo_Pasillo_0022/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.21137, 45.8523, -2.13617)
+shape = SubResource("BoxShape3D_anvkm")
 
 [editable path="Player"]
 [editable path="Templo/Templo_Tikal"]
