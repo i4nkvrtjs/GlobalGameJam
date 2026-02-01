@@ -383,3 +383,4 @@ shape = SubResource("BoxShape3D_pacsd")
 [editable path="Templo/Pedestal_Pasado"]
 [editable path="Mesa_Base"]
 [editable path="Cultivos2"]
+[editable path="Mural_Pasado"]
