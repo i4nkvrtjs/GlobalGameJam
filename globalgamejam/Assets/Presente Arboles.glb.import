@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cbipnkunf6284"
-path="res://.godot/imported/Arboles_Pasado.glb-a91b9a55f74f7146699d7bc46c25b38f.scn"
+uid="uid://m5tkoiyu6rvr"
+path="res://.godot/imported/Presente Arboles.glb-9e2da532595d465a4ecf731ffa1e56a2.scn"
 
 [deps]
 
-source_file="res://Assets/Meshes/Arboles/Pasado/Arboles_Pasado.glb"
-dest_files=["res://.godot/imported/Arboles_Pasado.glb-a91b9a55f74f7146699d7bc46c25b38f.scn"]
+source_file="res://Assets/Presente Arboles.glb"
+dest_files=["res://.godot/imported/Presente Arboles.glb-9e2da532595d465a4ecf731ffa1e56a2.scn"]
 
 [params]
 

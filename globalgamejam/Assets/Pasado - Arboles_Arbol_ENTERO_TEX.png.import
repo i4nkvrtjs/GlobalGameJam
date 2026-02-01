@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk0uk5umvivf7"
-path.s3tc="res://.godot/imported/Arboles_Pasado_Arbol_ENTERO_TEX.png-c149dcdc032c28fc9b19a5eaf5737a29.s3tc.ctex"
+uid="uid://dsu7l2ly4fllo"
+path.s3tc="res://.godot/imported/Pasado - Arboles_Arbol_ENTERO_TEX.png-cd7a03b56728b1b6d91542dc0934e43d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Meshes/Arboles/Pasado/Arboles_Pasado_Arbol_ENTERO_TEX.png"
-dest_files=["res://.godot/imported/Arboles_Pasado_Arbol_ENTERO_TEX.png-c149dcdc032c28fc9b19a5eaf5737a29.s3tc.ctex"]
+source_file="res://Assets/Pasado - Arboles_Arbol_ENTERO_TEX.png"
+dest_files=["res://.godot/imported/Pasado - Arboles_Arbol_ENTERO_TEX.png-cd7a03b56728b1b6d91542dc0934e43d.s3tc.ctex"]
 
 [params]
 

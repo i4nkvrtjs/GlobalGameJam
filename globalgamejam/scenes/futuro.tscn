@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cc5dksl388xcs"]
+[gd_scene load_steps=22 format=3 uid="uid://cc5dksl388xcs"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_xr3ju"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="6_sp6jf"]
 [ext_resource type="PackedScene" uid="uid://cbt14glfcl7b" path="res://Assets/Meshes/Futuro/Futuro_Estacionamiento.glb" id="11_u11dy"]
 [ext_resource type="PackedScene" uid="uid://du5yvb82bh77x" path="res://Assets/Futuro/Futuro - Cartel Bievenidos.glb" id="12_6tjhc"]
+[ext_resource type="PackedScene" uid="uid://xhgq7xcm0e7d" path="res://Assets/Futuro/Futuro - Arboles.glb" id="13_dsema"]
+[ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="14_nuqfr"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
 
@@ -105,5 +107,13 @@ transform = Transform3D(0.284132, 0, -0.958785, 0, 1, 0, 0.958785, 0, 0.284132, 
 [node name="Futuro - Cartel Bievenidos" parent="." instance=ExtResource("12_6tjhc")]
 transform = Transform3D(0.992603, 0, -0.121402, 0, 1, 0, 0.121402, 0, 0.992603, 41.125, 0, -64.3437)
 
+[node name="Futuro - Arboles" parent="." instance=ExtResource("13_dsema")]
+
+[node name="Arbol_Hojas_003" parent="Futuro - Arboles" index="1"]
+transform = Transform3D(-5.00025e-08, -0.419452, 5.00025e-08, 0, -5.00025e-08, -0.419452, 0.419451, -5.00025e-08, 5.96076e-15, 67.0919, -4.85706, -68.9956)
+
+[node name="Arboles_Montaña" parent="." instance=ExtResource("14_nuqfr")]
+
 [editable path="Player"]
 [editable path="Templo_Jaguar"]
+[editable path="Futuro - Arboles"]

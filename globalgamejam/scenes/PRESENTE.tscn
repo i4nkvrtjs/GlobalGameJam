@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=27 format=3 uid="uid://cyrhqgl1wsy63"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
@@ -13,8 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
 [ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
-[ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
+[ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
+[ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="16_mmms4"]
+[ext_resource type="PackedScene" uid="uid://m5tkoiyu6rvr" path="res://Assets/Presente Arboles.glb" id="17_kfotx"]
+[ext_resource type="PackedScene" uid="uid://cata06da5jpg5" path="res://Assets/Presente/Presente Carpas.glb" id="18_vyrum"]
+[ext_resource type="PackedScene" uid="uid://ciio5ojraef3m" path="res://Assets/Presente/Presente Arboles Montaña Templo.glb" id="19_vyrum"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
 sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
@@ -195,6 +199,14 @@ transform = Transform3D(-0.148833, 0, 0.9937, 0, 1.23447, 0, -1.15574, 0, -0.127
 
 [node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("7_4iy1q")]
 transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 137.324, 0.380493, -3.1496)
+
+[node name="Arboles_Montaña" parent="." instance=ExtResource("16_mmms4")]
+
+[node name="Presente Arboles" parent="." instance=ExtResource("17_kfotx")]
+
+[node name="Presente Carpas" parent="." instance=ExtResource("18_vyrum")]
+
+[node name="Presente Arboles Montaña Templo" parent="." instance=ExtResource("19_vyrum")]
 
 [editable path="Templo/Puzzles/ColorPuzzle2A"]
 [editable path="Templo/Puzzle1/ButtonPuzzleController"]

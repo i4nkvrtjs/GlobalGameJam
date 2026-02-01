@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bjvoium6413yf"]
+[gd_scene load_steps=38 format=3 uid="uid://bjvoium6413yf"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_myd5o"]
@@ -13,7 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://lr1xht8nliub" path="res://Assets/Meshes/Cultivos/Cultivos.glb" id="11_ctp4p"]
 [ext_resource type="Texture2D" uid="uid://c8pmy6q18hvpm" path="res://Assets/Meshes/Cultivos/Trigo_Nuevo.png" id="12_cumfr"]
 [ext_resource type="Texture2D" uid="uid://b4e16ex3p1uod" path="res://Assets/Meshes/Cultivos/Calabaza_Nuevo.png" id="13_gu8yi"]
-[ext_resource type="PackedScene" uid="uid://cbipnkunf6284" path="res://Assets/Meshes/Arboles/Pasado/Arboles_Pasado.glb" id="14_cumfr"]
+[ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="14_cumfr"]
+[ext_resource type="PackedScene" uid="uid://bb7h3btfteamb" path="res://Assets/Pasado - Arboles.glb" id="15_gu8yi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
 
@@ -270,11 +271,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_taxwt")
 [node name="Cultivo_Calabaza_004" parent="Cultivos2" index="12"]
 surface_material_override/0 = SubResource("StandardMaterial3D_6bfs0")
 
-[node name="Arboles_Pasado" parent="." instance=ExtResource("14_cumfr")]
+[node name="Arboles_Montaña" parent="." instance=ExtResource("14_cumfr")]
+
+[node name="Pasado - Arboles" parent="." instance=ExtResource("15_gu8yi")]
 
 [editable path="Templo/Pedestal_Futuro"]
 [editable path="Templo/Pedestal_Oculto"]
 [editable path="Templo/Pedestal_Pasado"]
 [editable path="Mesa_Base"]
 [editable path="Cultivos2"]
-[editable path="Arboles_Pasado"]
