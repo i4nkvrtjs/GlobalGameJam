@@ -1,20 +1,23 @@
-[gd_scene load_steps=40 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=41 format=3 uid="uid://dcxcv687mq3dd"]
 
-[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
 [ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_37n8p"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_527ci"]
 [ext_resource type="PackedScene" uid="uid://bqcnyvse47lp" path="res://Assets/Meshes/Mesa_ConPanel.glb" id="2_iyyln"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
+[ext_resource type="PackedScene" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
 [ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
-[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestales/Pedestal_Futuro.glb" id="6_u5kdj"]
+[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Animaciones/Pedestales/Pedestal_Futuro.glb" id="6_u5kdj"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
 [ext_resource type="PackedScene" uid="uid://xy4p3bkc4m7k" path="res://scenes/presesure_button.tscn" id="7_y4vcq"]
-[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
-[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
+[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Animaciones/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
+[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Animaciones/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
-[ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
+[ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
+[ext_resource type="PackedScene" uid="uid://dq8w3jf1gfsu0" path="res://Assets/Animaciones/Pedestales/PedestalAnimadoMascaraPasado.glb" id="11_81647"]
+[ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="12_w86e2"]
+[ext_resource type="PackedScene" uid="uid://dvovs73wka2te" path="res://Assets/Meshes/Mascaras/Mascara_Pasado.glb" id="13_tlxmo"]
 [ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="16_mmms4"]
 [ext_resource type="PackedScene" uid="uid://m5tkoiyu6rvr" path="res://Assets/Presente Arboles.glb" id="17_kfotx"]
 [ext_resource type="PackedScene" uid="uid://cata06da5jpg5" path="res://Assets/Presente/Presente Carpas.glb" id="18_vyrum"]
@@ -25,23 +28,13 @@
 [ext_resource type="PackedScene" uid="uid://c0cw75pawskj" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.001.glb" id="23_2xilg"]
 [ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Presente/Obstaculos/Obstaculo_Pasillo.002.glb" id="24_hnikr"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
-sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
-
-[sub_resource type="Sky" id="Sky_s2tf8"]
-sky_material = SubResource("ProceduralSkyMaterial_s2tf8")
-
-[sub_resource type="Environment" id="Environment_rbtr0"]
-background_mode = 2
-sky = SubResource("Sky_s2tf8")
-ambient_light_source = 3
-ambient_light_color = Color(0.93408, 0.93408, 0.93408, 1)
-ambient_light_energy = 3.88
-
 [sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rw8db"]
+size = Vector3(1, 1.2149, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_71hvr"]
 size = Vector3(7.42407, 1, 3.08386)
@@ -73,19 +66,6 @@ size = Vector3(5.00293, 5.68137, 5.53979)
 size = Vector3(4.56213, 5.32758, 3.39795)
 
 [node name="PRESENTE" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_rbtr0")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
-light_energy = 0.709
-
-[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_grxra")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.6531, 7.50386)
-respawn_marker = NodePath("../Marker3D")
-
-[node name="Marker3D" type="Marker3D" parent="."]
 
 [node name="Templo" type="StaticBody3D" parent="."]
 
@@ -154,6 +134,8 @@ visible = false
 
 [node name="ColorPuzzleHidden" parent="Templo/Puzzles" instance=ExtResource("10_dn7ci")]
 
+[node name="Puzzle3BManager" parent="Templo/Puzzles" instance=ExtResource("5_w86e2")]
+
 [node name="Puzzle1" type="Node" parent="Templo"]
 
 [node name="ButtonPuzzleController" parent="Templo/Puzzle1" node_paths=PackedStringArray("buttons") instance=ExtResource("10_lh8va")]
@@ -186,7 +168,13 @@ visible = false
 [node name="Pedestal_Pasado" parent="Templo/Puzzle1" instance=ExtResource("9_8jlby")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.57218)
 
+[node name="Pedestal_Tzolkin_Pasado" parent="Templo/Puzzle1/Pedestal_Pasado" index="0"]
+visible = false
+
 [node name="Boton" parent="Templo/Puzzle1/Pedestal_Pasado" index="1"]
+visible = false
+
+[node name="Pedstal_Base" parent="Templo/Puzzle1/Pedestal_Pasado" index="2"]
 visible = false
 
 [node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Pasado" instance=ExtResource("7_y4vcq")]
@@ -194,6 +182,34 @@ transform = Transform3D(1, 0, 3.90799e-14, 0, 1, 0, -3.90799e-14, 0, 1, 0.007369
 
 [node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Pasado/presesureButton" index="0"]
 visible = false
+
+[node name="PedestalMascaraPasado" parent="Templo/Puzzle1/Pedestal_Pasado" instance=ExtResource("11_81647")]
+
+[node name="Abrir" parent="Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado" index="0"]
+transform = Transform3D(-1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, -0.404217, 0.949965, 0)
+
+[node name="AbrirDer" parent="Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado" index="1"]
+transform = Transform3D(-1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0, 1, 0.404217, 0.949965, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107452, 0)
+shape = SubResource("BoxShape3D_rw8db")
+
+[node name="MaskFuturePickUp" parent="Templo/Puzzle1/Pedestal_Pasado" instance=ExtResource("12_w86e2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00400305, 0.949577, -0.0326986)
+
+[node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0410423, -0.0409126, 0)
+visible = false
+
+[node name="CollisionShape3D" parent="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0735512, 0.0161241)
+disabled = true
+
+[node name="Mascara_Pasado2" parent="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp" instance=ExtResource("13_tlxmo")]
+transform = Transform3D(-6.55671e-08, -1.5, -6.55671e-08, 0, -6.55671e-08, 1.5, -1.5, 6.55671e-08, 2.86603e-15, 0.0490537, -0.174824, 0.00400305)
 
 [node name="Colisiones" type="StaticBody3D" parent="Templo"]
 
@@ -314,7 +330,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.57867)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.21137, 45.8523, -2.13617)
 shape = SubResource("BoxShape3D_anvkm")
 
-[editable path="Player"]
 [editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Puzzles/ColorPuzzle2A"]
 [editable path="Templo/Puzzle1/ButtonPuzzleController"]
@@ -325,5 +340,7 @@ shape = SubResource("BoxShape3D_anvkm")
 [editable path="Templo/Puzzle1/Pedestal_Oculto/presesureButton"]
 [editable path="Templo/Puzzle1/Pedestal_Pasado"]
 [editable path="Templo/Puzzle1/Pedestal_Pasado/presesureButton"]
+[editable path="Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado"]
+[editable path="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp"]
 [editable path="Templo_Jaguar"]
 [editable path="Terreno_Montañas"]

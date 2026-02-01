@@ -1,6 +1,9 @@
 extends Node
 
-@onready var color_rect: ColorRect = $"../FiltroOculto/ColorRect"
+@onready var color_rect: ColorRect = $"../Player/CanvasLayer/Control/ColorRect"
+@onready var presente: Node3D = $"../WorldAnchor/PRESENTE"
+@onready var pasado: Node3D = $"../WorldAnchor/PASADO"
+@onready var futuro: Node3D = $"../WorldAnchor/FUTURO"
 
 enum MaskType {
 	NONE,
@@ -88,9 +91,21 @@ func _clear_mask():
 # ---------------- PAST ----------------
 
 func _activate_past():
+	pasado.process_mode=Node.PROCESS_MODE_INHERIT
+	pasado.visible=true
+	presente.process_mode=Node.PROCESS_MODE_DISABLED
+	presente.visible=false
+	futuro.process_mode=Node.PROCESS_MODE_DISABLED
+	futuro.visible=false
 	print("Máscara del pasado activada")
 
 func _deactivate_past():
+	pasado.process_mode=Node.PROCESS_MODE_DISABLED
+	pasado.visible=false
+	presente.process_mode=Node.PROCESS_MODE_INHERIT
+	presente.visible=true
+	futuro.process_mode=Node.PROCESS_MODE_DISABLED
+	futuro.visible=false
 	print("Máscara del pasado desactivada")
 
 

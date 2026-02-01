@@ -1,13 +1,12 @@
-[gd_scene load_steps=25 format=3 uid="uid://cc5dksl388xcs"]
+[gd_scene load_steps=21 format=3 uid="uid://cc5dksl388xcs"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
-[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_xr3ju"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_awhkr"]
 [ext_resource type="PackedScene" uid="uid://beabkghoklnjc" path="res://Assets/Meshes/Mesa_Base.glb" id="2_exmyc"]
-[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Meshes/Pedestales/Pedestal_Futuro.glb" id="3_u11dy"]
-[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestales/Pedestal_Oculto.glb" id="4_6tjhc"]
+[ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Animaciones/Pedestales/Pedestal_Futuro.glb" id="3_u11dy"]
+[ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Animaciones/Pedestales/Pedestal_Oculto.glb" id="4_6tjhc"]
 [ext_resource type="PackedScene" uid="uid://cctjtpyok7753" path="res://Assets/Templos/Templo_Sol_PistaIntervenido.glb" id="4_sl4s5"]
-[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="5_dsema"]
+[ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Animaciones/Pedestales/Pedestal_Pasado.glb" id="5_dsema"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_sp6jf"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="6_sp6jf"]
 [ext_resource type="PackedScene" uid="uid://cbt14glfcl7b" path="res://Assets/Meshes/Futuro/Futuro_Estacionamiento.glb" id="11_u11dy"]
@@ -22,19 +21,6 @@
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
-sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
-
-[sub_resource type="Sky" id="Sky_s2tf8"]
-sky_material = SubResource("ProceduralSkyMaterial_s2tf8")
-
-[sub_resource type="Environment" id="Environment_rbtr0"]
-background_mode = 2
-sky = SubResource("Sky_s2tf8")
-ambient_light_source = 3
-ambient_light_color = Color(0.93408, 0.93408, 0.93408, 1)
-ambient_light_energy = 3.88
 
 [sub_resource type="BoxMesh" id="BoxMesh_37n8p"]
 
@@ -69,19 +55,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0593621, 43.7959, -4.24907)
 
 [node name="Pedestal_Pasado" parent="Templo" instance=ExtResource("5_dsema")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7183, 43.7959, -0.57218)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_rbtr0")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.5336, 0.845737, 0, -0.845737, 0.5336, 323.92, 213.777, -221.257)
-light_energy = 3.783
-
-[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_xr3ju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 45.5298, 7.50386)
-respawn_marker = NodePath("../Marker3D")
-
-[node name="Marker3D" type="Marker3D" parent="."]
 
 [node name="Terreno" parent="." instance=ExtResource("2_awhkr")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -126,6 +99,5 @@ transform = Transform3D(-1.14305e-07, 0, 2.615, 0, 2.615, 0, -2.615, 0, -1.14305
 [node name="Info_Mural" parent="." instance=ExtResource("17_oky4b")]
 transform = Transform3D(0.0237861, 0, 0.599528, 0, 0.6, 0, -0.599528, 0, 0.0237861, 6.94363, 43.7494, 4.29704)
 
-[editable path="Player"]
 [editable path="Templo_Jaguar"]
 [editable path="Futuro - Arboles"]

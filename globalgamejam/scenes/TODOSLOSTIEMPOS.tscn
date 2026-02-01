@@ -1,45 +1,67 @@
-[gd_scene load_steps=8 format=3 uid="uid://54g30o78cj21"]
+[gd_scene load_steps=6 format=3 uid="uid://d3wrgue5c5ye4"]
 
-[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_pf67n"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://bdnxsxxdg4ygd" path="res://scenes/PRESENTE.tscn" id="2_nr8a6"]
-=======
-[ext_resource type="PackedScene" uid="uid://cyrhqgl1wsy63" path="res://scenes/presente.tscn" id="2_nr8a6"]
->>>>>>> 1348f84bae5497571c249bb403b708c24ecd18ce
-[ext_resource type="PackedScene" uid="uid://c2gu3jt86rv3a" path="res://Assets/Terreno_Backdrop.glb" id="3_y3i3p"]
-[ext_resource type="Texture2D" uid="uid://6vy1fd2jd6jr" path="res://Assets/Terreno_Backdrop_Backdrop_TEX.png" id="4_qjwgc"]
-[ext_resource type="PackedScene" uid="uid://bjvoium6413yf" path="res://scenes/pasado.tscn" id="5_qjwgc"]
-[ext_resource type="PackedScene" uid="uid://cc5dksl388xcs" path="res://scenes/futuro.tscn" id="6_dobs2"]
+[ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_qjwgc"]
+[ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://scenes/mask_manager.tscn" id="2_dobs2"]
+[ext_resource type="PackedScene" uid="uid://dcxcv687mq3dd" path="res://scenes/presente.tscn" id="3_vb607"]
+[ext_resource type="PackedScene" uid="uid://bjvoium6413yf" path="res://scenes/pasado.tscn" id="4_kc4mv"]
+[ext_resource type="PackedScene" uid="uid://cc5dksl388xcs" path="res://scenes/futuro.tscn" id="5_xl62j"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dobs2"]
-transparency = 1
-albedo_texture = ExtResource("4_qjwgc")
-backlight_enabled = true
-backlight = Color(0.691357, 0.691357, 0.691357, 1)
+[node name="Todoslostiempos" type="Node3D"]
 
-[node name="TODOSLOSTIEMPOS" type="Node3D"]
-
-[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_pf67n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57196, 58.3743, 10.0655)
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_qjwgc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8969, 7.34461)
+speed = 3.5
 respawn_marker = NodePath("../Marker3D")
 
-[node name="Terreno_Backdrop" parent="." instance=ExtResource("3_y3i3p")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-
-[node name="Cylinder" parent="Terreno_Backdrop" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_dobs2")
-
 [node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.0027, 10.4047)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0320691, 44.8468, 7.58652)
 
-[node name="ANCLAdemundos" type="Node3D" parent="."]
+[node name="MaskManager" parent="." node_paths=PackedStringArray("normal_puzzle", "hidden_puzzle", "future_puzzle") instance=ExtResource("2_dobs2")]
+normal_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzle2A")
+hidden_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzleHidden")
+future_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/Puzzle3BManager")
 
-[node name="PRESENTE" parent="ANCLAdemundos" instance=ExtResource("2_nr8a6")]
+[node name="WorldAnchor" type="Node3D" parent="."]
 
-[node name="PASADO" parent="ANCLAdemundos" instance=ExtResource("5_qjwgc")]
+[node name="PRESENTE" parent="WorldAnchor" instance=ExtResource("3_vb607")]
+
+[node name="Abrir" parent="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.404217, 0.949965, 0)
+
+[node name="AbrirDer" parent="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado" index="1"]
+transform = Transform3D(0.999999, 0.00129445, 0, -0.00129445, 0.999999, 0, 0, 0, 1, 0.404217, 0.949965, 0)
+
+[node name="MaskFuturePickUp" parent="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado" index="5" node_paths=PackedStringArray("mask_manager")]
+mask_manager = NodePath("../../../../../../MaskManager")
+
+[node name="PASADO" parent="WorldAnchor" instance=ExtResource("4_kc4mv")]
+process_mode = 4
 visible = false
 
-[node name="FUTURO" parent="ANCLAdemundos" instance=ExtResource("6_dobs2")]
+[node name="FUTURO" parent="WorldAnchor" instance=ExtResource("5_xl62j")]
+process_mode = 4
 visible = false
 
-[editable path="Terreno_Backdrop"]
+[editable path="Player"]
+[editable path="WorldAnchor/PRESENTE"]
+[editable path="WorldAnchor/PRESENTE/Templo/Templo_Tikal"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzle2A"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/ButtonPuzzleController"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Futuro"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Futuro/presesureButton"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Futuro/presesureButton/Pedestal_Boton"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Oculto"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Oculto/presesureButton"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/presesureButton"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp"]
+[editable path="WorldAnchor/PRESENTE/Templo_Jaguar"]
+[editable path="WorldAnchor/PRESENTE/Terreno_Montañas"]
+[editable path="WorldAnchor/PASADO"]
+[editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro"]
+[editable path="WorldAnchor/PASADO/Templo/Pedestal_Oculto"]
+[editable path="WorldAnchor/PASADO/Templo/Pedestal_Pasado"]
+[editable path="WorldAnchor/PASADO/Mesa_Base"]
+[editable path="WorldAnchor/PASADO/Cultivos2"]
+[editable path="WorldAnchor/PASADO/Mural_Pasado"]

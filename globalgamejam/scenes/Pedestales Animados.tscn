@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5xidrr4b55r1"]
 
-[ext_resource type="PackedScene" uid="uid://72lkjv7ei70d" path="res://Assets/Meshes/Pedestales/PedestalMascaraOculto.glb" id="4_fr3er"]
-[ext_resource type="PackedScene" uid="uid://dq8w3jf1gfsu0" path="res://Assets/Meshes/Pedestales/PedestalMascaraPasado.glb" id="5_fr3er"]
-[ext_resource type="PackedScene" uid="uid://ca12uksg5ul76" path="res://Assets/Meshes/Pedestales/PedestalMascaraFuturo.glb" id="5_ld5lf"]
+[ext_resource type="PackedScene" uid="uid://72lkjv7ei70d" path="res://Assets/Animaciones/Pedestales/PedestalAnimadoMascaraOculto.glb" id="4_fr3er"]
+[ext_resource type="PackedScene" uid="uid://dq8w3jf1gfsu0" path="res://Assets/Animaciones/Pedestales/PedestalAnimadoMascaraPasado.glb" id="5_fr3er"]
+[ext_resource type="PackedScene" uid="uid://ca12uksg5ul76" path="res://Assets/Animaciones/Pedestales/PedestalAnimadoMascaraFuturo.glb" id="5_ld5lf"]
 
 [node name="Pedestales Animados" type="Node3D"]
 
