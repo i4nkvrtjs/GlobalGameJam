@@ -111,19 +111,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 [node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_7ob1l")]
 
 [node name="Pedestal_Futuro" parent="Templo" instance=ExtResource("2_lmlgj")]
-transform = Transform3D(0.00034912, 0, -1, 0, 1, 0, 1, 0, 0.00034912, 4.69016, 43.7959, -0.228515)
+transform = Transform3D(0.00034912, 0, -1, 0, 1, 0, 1, 0, 0.00034912, 4.69016, 43.7959, -0.57218)
 
 [node name="Boton" parent="Templo/Pedestal_Futuro" index="0"]
 visible = false
 
 [node name="Pedestal_Oculto" parent="Templo" instance=ExtResource("3_0py83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185572, 43.7959, -4.24907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0593621, 43.7959, -4.24907)
 
 [node name="Boton" parent="Templo/Pedestal_Oculto" index="0"]
 visible = false
 
 [node name="Pedestal_Pasado" parent="Templo" instance=ExtResource("4_r37jq")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.228515)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.57218)
 
 [node name="Boton" parent="Templo/Pedestal_Pasado" index="1"]
 visible = false

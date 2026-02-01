@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Meshes/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
 [ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Meshes/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
-[ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
+[ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
 [ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="16_mmms4"]
 [ext_resource type="PackedScene" uid="uid://m5tkoiyu6rvr" path="res://Assets/Presente Arboles.glb" id="17_kfotx"]
@@ -136,7 +136,7 @@ visible = false
 buttons = [NodePath("../Pedestal_Futuro/presesureButton"), NodePath("../Pedestal_Oculto/presesureButton"), NodePath("../Pedestal_Pasado/presesureButton")]
 
 [node name="Pedestal_Futuro" parent="Templo/Puzzle1" instance=ExtResource("6_u5kdj")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.69016, 43.7959, -0.228515)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.69016, 43.7959, -0.57218)
 
 [node name="Boton" parent="Templo/Puzzle1/Pedestal_Futuro" index="0"]
 visible = false
@@ -148,7 +148,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9407e-08, 0.605431, -0.5557
 visible = false
 
 [node name="Pedestal_Oculto" parent="Templo/Puzzle1" instance=ExtResource("8_6c6hh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185572, 43.7959, -4.24907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0593621, 43.7959, -4.24907)
 
 [node name="Boton" parent="Templo/Puzzle1/Pedestal_Oculto" index="0"]
 visible = false
@@ -160,7 +160,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60186, -0.553983)
 visible = false
 
 [node name="Pedestal_Pasado" parent="Templo/Puzzle1" instance=ExtResource("9_8jlby")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.228515)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.57218)
 
 [node name="Boton" parent="Templo/Puzzle1/Pedestal_Pasado" index="1"]
 visible = false
@@ -214,15 +214,24 @@ transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 13
 [node name="Presente Arboles Montaña Templo" parent="." instance=ExtResource("19_vyrum")]
 
 [node name="Maldicion" parent="." instance=ExtResource("20_difdc")]
-transform = Transform3D(2.225, 0, 0, 0, 2.225, 0, 0, 0, 2.225, 0.609125, 46.4129, -6.1819)
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0.000148535, 45.861, -6.09325)
 
 [node name="Mirar_Pasado_Cartel" parent="." instance=ExtResource("21_b460h")]
-transform = Transform3D(-9.44166e-08, 0, 2.16, 0, 2.16, 0, -2.16, 0, -9.44166e-08, -6.58512, 45.821, -0.643312)
+transform = Transform3D(-1.56501e-07, 0, 3.58032, 0, 3.58032, 0, -3.58032, 0, -1.56501e-07, -6.58512, 45.821, -0.643312)
 
 [node name="Miraste_Atras" parent="." instance=ExtResource("22_hh7j3")]
-transform = Transform3D(-9.44166e-08, 0, -2.16, 0, 2.16, 0, 2.16, 0, -9.44166e-08, 6.55812, 45.829, -0.432566)
+transform = Transform3D(-1.5299e-07, 0, -3.5, 0, 3.5, 0, 3.5, 0, -1.5299e-07, 6.55812, 45.8319, -0.382623)
 
 [node name="Obstaculo_Pasillo_0012" parent="." instance=ExtResource("23_2xilg")]
+
+[node name="Obstaculo_Pasillo_0013" parent="." instance=ExtResource("23_2xilg")]
+transform = Transform3D(-0.415805, 0, 0.909454, 0, 1, 0, -0.909454, 0, -0.415805, -19.594, 0, 2.57513)
+
+[node name="Obstaculo_Pasillo_0014" parent="." instance=ExtResource("23_2xilg")]
+transform = Transform3D(-0.415805, 0, 0.909454, 0, 1, 0, -0.909454, 0, -0.415805, -19.594, 0, 4.63676)
+
+[node name="Obstaculo_Pasillo_0015" parent="." instance=ExtResource("23_2xilg")]
+transform = Transform3D(0.974386, 0, 0.224883, 0, 1, 0, -0.224883, 0, 0.974386, -1.96956, 0, -2.96871)
 
 [node name="Obstaculo_Pasillo_0022" parent="." instance=ExtResource("24_hnikr")]
 
