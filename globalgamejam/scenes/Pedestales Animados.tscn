@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5xidrr4b55r1"]
+
+[ext_resource type="PackedScene" uid="uid://bs83www6yoh46" path="res://Assets/Pedestales Animados/Pedestal_Mascara_Futuro_Animacion.glb" id="1_n7qmf"]
+[ext_resource type="PackedScene" uid="uid://djn66xihvddjx" path="res://Assets/Pedestales Animados/Pedestal_Mascara_Oculto_Animacion.glb" id="2_8sp5d"]
+[ext_resource type="PackedScene" uid="uid://cw56e6b5ag3au" path="res://Assets/Pedestales Animados/Pedestal_Mascara_Pasado_Animacion.glb" id="3_8sp5d"]
+
+[node name="Pedestales Animados" type="Node3D"]
+
+[node name="Pedestal_Mascara_Futuro_Animacion" parent="." instance=ExtResource("1_n7qmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53077, 0, -1.52852)
+
+[node name="Pedestal_Mascara_Oculto_Animacion" parent="." instance=ExtResource("2_8sp5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21334, 0, -1.60532)
+
+[node name="Pedestal_Mascara_Pasado_Animacion" parent="." instance=ExtResource("3_8sp5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51191, 0, -1.68313)
+
+[editable path="Pedestal_Mascara_Futuro_Animacion"]
+[editable path="Pedestal_Mascara_Oculto_Animacion"]
+[editable path="Pedestal_Mascara_Pasado_Animacion"]

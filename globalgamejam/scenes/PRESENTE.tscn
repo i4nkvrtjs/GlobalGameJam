@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cyrhqgl1wsy63"]
+[gd_scene load_steps=28 format=3 uid="uid://cyrhqgl1wsy63"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_grxra"]
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://m5tkoiyu6rvr" path="res://Assets/Presente Arboles.glb" id="17_kfotx"]
 [ext_resource type="PackedScene" uid="uid://cata06da5jpg5" path="res://Assets/Presente/Presente Carpas.glb" id="18_vyrum"]
 [ext_resource type="PackedScene" uid="uid://ciio5ojraef3m" path="res://Assets/Presente/Presente Arboles Montaña Templo.glb" id="19_vyrum"]
+[ext_resource type="PackedScene" uid="uid://bwgb7h5hsu7lv" path="res://Assets/Meshes/Pistas/Maldicion.glb" id="20_difdc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s2tf8"]
 sky_top_color = Color(0.423426, 0.492457, 0.780377, 1)
@@ -183,7 +184,7 @@ shape = SubResource("ConcavePolygonShape3D_0fuvb")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
 
 [node name="Terreno" parent="." instance=ExtResource("2_527ci")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.0306625, 0.107914, -0.136238)
 
 [node name="Terreno_Montañas" parent="." instance=ExtResource("6_2sfii")]
 transform = Transform3D(1.48979, 0, -0.174694, 0, 1.5, 0, 0.174694, 0, 1.48979, 313.488, -28.011, 268.277)
@@ -208,6 +209,10 @@ transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 13
 
 [node name="Presente Arboles Montaña Templo" parent="." instance=ExtResource("19_vyrum")]
 
+[node name="Maldicion" parent="." instance=ExtResource("20_difdc")]
+transform = Transform3D(-4, 0.00231377, -0.0015179, 0.00231363, 4, 0.000376353, 0.00151812, 0.000375475, -4, 0.0773491, 46.7573, 4.34291)
+
+[editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Puzzles/ColorPuzzle2A"]
 [editable path="Templo/Puzzle1/ButtonPuzzleController"]
 [editable path="Templo/Puzzle1/Pedestal_Futuro"]
