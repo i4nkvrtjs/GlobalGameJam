@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://43rfriehtxv5"]
+
+[ext_resource type="Script" uid="uid://cva0smtrxrwj0" path="res://scripts/message_manager.gd" id="1_0w3w2"]
+
+[node name="MessageManager" type="Node"]
+script = ExtResource("1_0w3w2")

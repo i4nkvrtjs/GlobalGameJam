@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://clg6wk6uf0w3o"]
+
+[ext_resource type="Script" uid="uid://cymxc3g57dg63" path="res://scripts/message_ui.gd" id="1_jutt6"]
+[ext_resource type="Texture2D" uid="uid://5jw2gf0ftkav" path="res://Assets/Yax_Mutul_-_GANASTE.png" id="2_b5lgu"]
+
+[node name="MessageUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_jutt6")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.252
+anchor_top = 0.119
+anchor_right = 0.722
+anchor_bottom = 0.837
+offset_left = -0.559998
+offset_top = 0.32
+offset_right = -0.160095
+offset_bottom = 0.359985
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MessageText" type="Label" parent="Panel"]
+layout_mode = 2
+offset_right = 600.0
+offset_bottom = 23.0
+autowrap_mode = 2
+
+[node name="WinImage" type="TextureRect" parent="Panel"]
+visible = false
+layout_mode = 2
+offset_left = -317.0
+offset_top = -88.0
+offset_right = 963.0
+offset_bottom = 632.0
+texture = ExtResource("2_b5lgu")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 476.0
+offset_right = 603.0
+offset_bottom = 507.0
+text = "Continue"

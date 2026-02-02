@@ -42,9 +42,21 @@ func _input(event):
 func unlock_mask(mask: MaskType):
 	unlocked_masks[mask] = true
 	print("Máscara desbloqueada:", mask)
-
+	
+	if mask == MaskType.PAST:
+		MessageManager.show_message(
+			"You've obtained the mask of the past. Press 1 to travel to the past."
+		)
+	
 	if mask == MaskType.FUTURE:
 		_unlock_future_puzzle()
+		MessageManager.show_message(
+			"You've obtained the mask of the future. Press 2 to travel to the future."
+		)
+	if mask == MaskType.HIDDEN:
+		MessageManager.show_message(
+			"You've obtained the hidden mask. Press 3 to reveal hidden things."
+		)
 
 # ---------------- TOGGLE ----------------
 
