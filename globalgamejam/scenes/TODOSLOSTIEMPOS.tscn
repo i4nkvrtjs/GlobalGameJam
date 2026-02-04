@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3wrgue5c5ye4"]
+[gd_scene load_steps=8 format=3 uid="uid://d3wrgue5c5ye4"]
 
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_qjwgc"]
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://scenes/mask_manager.tscn" id="2_dobs2"]
 [ext_resource type="PackedScene" uid="uid://cawpxoyhsp5fc" path="res://scenes/PRESENTE.tscn" id="3_vb607"]
+[ext_resource type="Material" uid="uid://brj0gf1si4c6w" path="res://Materiales/Outline.tres" id="4_dobs2"]
 [ext_resource type="PackedScene" uid="uid://bjvoium6413yf" path="res://scenes/pasado.tscn" id="4_kc4mv"]
+[ext_resource type="Material" uid="uid://b2rxfp8kcr53t" path="res://Materiales/perfect_outline_shader.tres" id="4_vb607"]
 [ext_resource type="PackedScene" uid="uid://cc5dksl388xcs" path="res://scenes/futuro.tscn" id="5_xl62j"]
 
 [node name="Todoslostiempos" type="Node3D"]
@@ -24,6 +26,16 @@ future_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/Puzzle3BManager
 [node name="WorldAnchor" type="Node3D" parent="."]
 
 [node name="PRESENTE" parent="WorldAnchor" instance=ExtResource("3_vb607")]
+
+[node name="Mesa" parent="WorldAnchor/PRESENTE/Templo/Mesa_ConPanel" index="0"]
+material_overlay = ExtResource("4_vb607")
+
+[node name="Boton de Resolucion" parent="WorldAnchor/PRESENTE/Templo/Mesa_ConPanel" index="14"]
+material_overlay = ExtResource("4_dobs2")
+
+[node name="CollisionShape3D" parent="WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzle2A/CheckButton" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288582, 0, 0)
+visible = false
 
 [node name="Puzzle3BManager" parent="WorldAnchor/PRESENTE/Templo/Puzzles" index="2"]
 buttons = Array[NodePath]([NodePath("../../Mesa_ConPanel/A1"), NodePath("../../Mesa_ConPanel/A2"), NodePath("../../Mesa_ConPanel/A3"), NodePath("../../Mesa_ConPanel/A4"), NodePath("../../Mesa_ConPanel/A5"), NodePath("../../Mesa_ConPanel/A6"), NodePath("../../Mesa_ConPanel/B1"), NodePath("../../Mesa_ConPanel/B2"), NodePath("../../Mesa_ConPanel/B3"), NodePath("../../Mesa_ConPanel/B4"), NodePath("../../Mesa_ConPanel/B5"), NodePath("../../Mesa_ConPanel/B6")])
