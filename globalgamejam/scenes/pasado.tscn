@@ -1,8 +1,9 @@
-[gd_scene load_steps=56 format=3 uid="uid://bjvoium6413yf"]
+[gd_scene load_steps=58 format=3 uid="uid://bjvoium6413yf"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Presente/Pedestales/Pedestal_Futuro.glb" id="2_lmlgj"]
 [ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_qxwao"]
+[ext_resource type="Material" uid="uid://b2rxfp8kcr53t" path="res://Materiales/perfect_outline_shader.tres" id="2_uly6a"]
 [ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Presente/Pedestales/Pedestal_Oculto.glb" id="3_0py83"]
 [ext_resource type="PackedScene" uid="uid://ca12uksg5ul76" path="res://Assets/Presente/Pedestales/PedestalAnimadoMascaraFuturo.glb" id="3_2b505"]
 [ext_resource type="PackedScene" uid="uid://dhgdskappuel8" path="res://Assets/Terrenos/Terreno_Pasdo_Plano.glb" id="4_7ob1l"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="5_pacsd"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="5_qxwao"]
 [ext_resource type="PackedScene" uid="uid://bhvkerbrigteu" path="res://scenes/mural_puzzle.tscn" id="5_r7dyh"]
+[ext_resource type="Material" uid="uid://brj0gf1si4c6w" path="res://Materiales/Outline.tres" id="5_tb2ff"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="6_sxv3u"]
 [ext_resource type="PackedScene" uid="uid://beabkghoklnjc" path="res://Assets/Terrain_Objects/Objetos_Clave/Mesa_Base.glb" id="7_kunhq"]
 [ext_resource type="Texture2D" uid="uid://cwkx73cqjf1vm" path="res://Assets/Terrain_Objects/Pistas/Mural_Pasado_Mural_Maya_PASADO_2.png" id="8_jtm12"]
@@ -169,6 +171,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 
 [node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_7ob1l")]
 
+[node name="Templo_Casita" parent="Templo/Templo_Tikal" index="0"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Base_Sol_001" parent="Templo/Templo_Tikal" index="1"]
+material_overlay = ExtResource("2_uly6a")
+
 [node name="Pedestal_Futuro" parent="Templo" instance=ExtResource("2_lmlgj")]
 transform = Transform3D(0.00034912, 0, -1, 0, 1, 0, 1, 0, 0.00034912, 4.69016, 43.7959, -0.57218)
 
@@ -183,8 +191,17 @@ visible = false
 
 [node name="PedestalAnimadoMascaraFuturo" parent="Templo/Pedestal_Futuro" instance=ExtResource("3_2b505")]
 
+[node name="Pedestal_Pasado_Izq" parent="Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo/Abrir" index="0"]
+material_overlay = ExtResource("5_tb2ff")
+
 [node name="AbrirDer" parent="Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo" index="1"]
 transform = Transform3D(0.999999, 0.00129445, 0, -0.00129445, 0.999999, 0, 0, 0, 1, 0.404217, 0.949965, 0)
+
+[node name="Pedestal_Pasado_Der" parent="Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo/AbrirDer" index="1"]
+material_overlay = ExtResource("5_tb2ff")
+
+[node name="Pedstal_Base" parent="Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo" index="2"]
+material_overlay = ExtResource("5_tb2ff")
 
 [node name="Mascara_Futuro2" parent="Templo/Pedestal_Futuro" instance=ExtResource("4_pacsd")]
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 0, 0.863121, 0)
@@ -204,11 +221,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0593621, 43.7959, -4.24907)
 [node name="Boton" parent="Templo/Pedestal_Oculto" index="0"]
 visible = false
 
+[node name="Pedstal_Base" parent="Templo/Pedestal_Oculto" index="1"]
+material_overlay = ExtResource("5_tb2ff")
+
+[node name="Pedestal_Tzolkin_Oculto" parent="Templo/Pedestal_Oculto" index="2"]
+material_overlay = ExtResource("5_tb2ff")
+
 [node name="Pedestal_Pasado" parent="Templo" instance=ExtResource("4_r37jq")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.7183, 43.7959, -0.57218)
 
+[node name="Pedestal_Tzolkin_Pasado" parent="Templo/Pedestal_Pasado" index="0"]
+material_overlay = ExtResource("5_tb2ff")
+
 [node name="Boton" parent="Templo/Pedestal_Pasado" index="1"]
 visible = false
+
+[node name="Pedstal_Base" parent="Templo/Pedestal_Pasado" index="2"]
+material_overlay = ExtResource("5_tb2ff")
 
 [node name="MuralPuzzle" parent="Templo" instance=ExtResource("5_r7dyh")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 7.10221, 44.5985, 1.23085)
@@ -504,6 +533,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6bfs0")
 [node name="Obstaculo_Pasillo_0012" parent="." instance=ExtResource("16_wys3b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.187587)
 
+[node name="Obstaculo_Pasillo_001" parent="Obstaculo_Pasillo_0012" index="0"]
+material_overlay = ExtResource("2_uly6a")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Obstaculo_Pasillo_0012"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstaculo_Pasillo_0012/StaticBody3D"]
@@ -512,6 +544,9 @@ shape = SubResource("BoxShape3D_tb2ff")
 
 [node name="Obstaculo_Pasillo_0022" parent="." instance=ExtResource("17_a2vwi")]
 transform = Transform3D(-0.194371, 0, 0.980928, 0, 1, 0, -0.980928, 0, -0.194371, -5.11158, 0.37167, 0.0744648)
+
+[node name="Obstaculo_Pasillo_002" parent="Obstaculo_Pasillo_0022" index="0"]
+material_overlay = ExtResource("2_uly6a")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Obstaculo_Pasillo_0022"]
 
@@ -572,6 +607,10 @@ shape = SubResource("BoxShape3D_pacsd")
 
 [node name="Enredaderas_Escalera" parent="." instance=ExtResource("19_r7dyh")]
 
+[node name="Obstaculo_Escalera_001" parent="Enredaderas_Escalera" index="0"]
+material_overlay = ExtResource("2_uly6a")
+
+[editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Pedestal_Futuro"]
 [editable path="Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo"]
 [editable path="Templo/Pedestal_Futuro/Mascara_Futuro2"]
@@ -582,3 +621,6 @@ shape = SubResource("BoxShape3D_pacsd")
 [editable path="Templo/Mural_Pasado"]
 [editable path="Mesa_Base"]
 [editable path="Cultivos2"]
+[editable path="Obstaculo_Pasillo_0012"]
+[editable path="Obstaculo_Pasillo_0022"]
+[editable path="Enredaderas_Escalera"]
