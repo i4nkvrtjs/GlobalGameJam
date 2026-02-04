@@ -2,7 +2,7 @@ extends StaticBody3D
 
 @export var press_depth := 0.05
 @export var press_time := 0.2
-
+@export var sfx_rocamoviendose : AudioStreamPlayer
 var pressed := false
 var start_position: Vector3
 
@@ -23,3 +23,5 @@ func _press_animation():
 	var BotonAnimado = get_child(2)
 	var AnimaciondelBoton = BotonAnimado.get_child(1)
 	AnimaciondelBoton.play("Cube_001Action_001")
+	sfx_rocamoviendose.play()
+	

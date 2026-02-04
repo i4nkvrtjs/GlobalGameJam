@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bqcnyvse47lp" path="res://Assets/Terrain_Objects/Objetos_Clave/Mesa_ConPanel.glb" id="2_iyyln"]
 [ext_resource type="Material" uid="uid://60hw13kilgta" path="res://Materiales/Outline_Objetos_Chicos.tres" id="3_mfqb6"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
-[ext_resource type="PackedScene" uid="uid://2viqo08a2ash" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
+[ext_resource type="PackedScene" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
 [ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrain_Objects/Pasado/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
 [ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Presente/Pedestales/Pedestal_Futuro.glb" id="6_u5kdj"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Presente/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
 [ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Presente/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
-[ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
+[ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
 [ext_resource type="PackedScene" uid="uid://dq8w3jf1gfsu0" path="res://Assets/Presente/Pedestales/PedestalAnimadoMascaraPasado.glb" id="11_81647"]
 [ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="12_w86e2"]
@@ -96,8 +96,9 @@ material_overlay = ExtResource("3_mfqb6")
 
 [node name="Puzzles" type="Node3D" parent="Templo"]
 
-[node name="ColorPuzzle2A" parent="Templo/Puzzles" instance=ExtResource("9_rlwvq")]
+[node name="ColorPuzzle2A" parent="Templo/Puzzles" node_paths=PackedStringArray("sfx_puzzle_resuelto") instance=ExtResource("9_rlwvq")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 45.3744, 0)
+sfx_puzzle_resuelto = NodePath("../../../Sfx_Puzzle_Resuelto")
 
 [node name="ColorSquare0" parent="Templo/Puzzles/ColorPuzzle2A" index="0"]
 transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.510874, 0.0289993, 0.832)
@@ -141,14 +142,18 @@ transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.313
 [node name="MeshInstance3D" parent="Templo/Puzzles/ColorPuzzle2A/CheckButton" index="0"]
 visible = false
 
-[node name="ColorPuzzleHidden" parent="Templo/Puzzles" instance=ExtResource("10_dn7ci")]
+[node name="ColorPuzzleHidden" parent="Templo/Puzzles" node_paths=PackedStringArray("sfx_puzzle_resuelto") instance=ExtResource("10_dn7ci")]
+sfx_puzzle_resuelto = NodePath("../../../Sfx_Puzzle_Resuelto")
 
-[node name="Puzzle3BManager" parent="Templo/Puzzles" instance=ExtResource("5_w86e2")]
+[node name="Puzzle3BManager" parent="Templo/Puzzles" node_paths=PackedStringArray("sfx_puzzle_resuelto") instance=ExtResource("5_w86e2")]
+check_button = NodePath("../ColorPuzzle2A/CheckButton")
+sfx_puzzle_resuelto = NodePath("../../../Sfx_Puzzle_Resuelto")
 
 [node name="Puzzle1" type="Node" parent="Templo"]
 
-[node name="ButtonPuzzleController" parent="Templo/Puzzle1" node_paths=PackedStringArray("buttons") instance=ExtResource("10_lh8va")]
+[node name="ButtonPuzzleController" parent="Templo/Puzzle1" node_paths=PackedStringArray("buttons", "sfx_puzzle_resuelto") instance=ExtResource("10_lh8va")]
 buttons = [NodePath("../Pedestal_Futuro/presesureButton"), NodePath("../Pedestal_Oculto/presesureButton"), NodePath("../Pedestal_Pasado/presesureButton")]
+sfx_puzzle_resuelto = NodePath("../../../Sfx_Puzzle_Resuelto")
 
 [node name="Pedestal_Futuro" parent="Templo/Puzzle1" instance=ExtResource("6_u5kdj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.69016, 43.7959, -0.57218)
@@ -156,8 +161,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.6901
 [node name="Boton" parent="Templo/Puzzle1/Pedestal_Futuro" index="0"]
 visible = false
 
-[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Futuro" instance=ExtResource("7_y4vcq")]
+[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Futuro" node_paths=PackedStringArray("sfx_rocamoviendose") instance=ExtResource("7_y4vcq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9407e-08, 0.605431, -0.555744)
+sfx_rocamoviendose = NodePath("../../../../RocaMoviendose")
 
 [node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Futuro/presesureButton" index="0"]
 visible = false
@@ -168,8 +174,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0593621, 43.7959, -4.24907)
 [node name="Boton" parent="Templo/Puzzle1/Pedestal_Oculto" index="0"]
 visible = false
 
-[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Oculto" instance=ExtResource("7_y4vcq")]
+[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Oculto" node_paths=PackedStringArray("sfx_rocamoviendose") instance=ExtResource("7_y4vcq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60186, -0.553983)
+sfx_rocamoviendose = NodePath("../../../../RocaMoviendose")
 
 [node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Oculto/presesureButton" index="0"]
 visible = false
@@ -186,8 +193,9 @@ visible = false
 [node name="Pedstal_Base" parent="Templo/Puzzle1/Pedestal_Pasado" index="2"]
 visible = false
 
-[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Pasado" instance=ExtResource("7_y4vcq")]
+[node name="presesureButton" parent="Templo/Puzzle1/Pedestal_Pasado" node_paths=PackedStringArray("sfx_rocamoviendose") instance=ExtResource("7_y4vcq")]
 transform = Transform3D(1, 0, 3.90799e-14, 0, 1, 0, -3.90799e-14, 0, 1, 0.00736965, 0.602097, -0.578064)
+sfx_rocamoviendose = NodePath("../../../../RocaMoviendose")
 
 [node name="MeshInstance3D" parent="Templo/Puzzle1/Pedestal_Pasado/presesureButton" index="0"]
 visible = false
@@ -411,6 +419,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.21137, 45.8523, -2.13617)
 shape = SubResource("BoxShape3D_anvkm")
 
 [node name="Enredaderas_Escalera" parent="." instance=ExtResource("28_xsu2r")]
+
+[node name="Sfx_Puzzle_Resuelto" type="AudioStreamPlayer" parent="."]
+
+[node name="RocaMoviendose" type="AudioStreamPlayer" parent="."]
 
 [editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Mesa_ConPanel"]

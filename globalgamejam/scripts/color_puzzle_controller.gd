@@ -19,7 +19,7 @@ extends Node3D
 
 @export var auto_resolve := true
 @onready var miraste_atras: Node3D = $"../../../Miraste_Atras"
-
+@export var sfx_puzzle_resuelto: AudioStreamPlayer
 
 var solved := false
 
@@ -46,6 +46,7 @@ func _solve():
 	solved = true
 	miraste_atras.visible = true
 	print("PUZZLE RESUELTO")
+	sfx_puzzle_resuelto.play()
 	
 	for button in buttons:
 		if button.has_method("show_temp_color"):

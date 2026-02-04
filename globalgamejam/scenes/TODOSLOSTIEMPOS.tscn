@@ -1,14 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3wrgue5c5ye4"]
+[gd_scene load_steps=17 format=3 uid="uid://d3wrgue5c5ye4"]
 
+[ext_resource type="PackedScene" uid="uid://btsiqbwtvw44w" path="res://scenes/message_ui.tscn" id="1_kc4mv"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_qjwgc"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_xl62j"]
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://scenes/mask_manager.tscn" id="2_dobs2"]
-[ext_resource type="PackedScene" uid="uid://cawpxoyhsp5fc" path="res://scenes/PRESENTE.tscn" id="3_vb607"]
+[ext_resource type="PackedScene" uid="uid://cawpxoyhsp5fc" path="res://scenes/presente.tscn" id="3_vb607"]
 [ext_resource type="Material" uid="uid://brj0gf1si4c6w" path="res://Materiales/Outline.tres" id="4_dobs2"]
 [ext_resource type="PackedScene" uid="uid://bjvoium6413yf" path="res://scenes/pasado.tscn" id="4_kc4mv"]
 [ext_resource type="Material" uid="uid://b2rxfp8kcr53t" path="res://Materiales/perfect_outline_shader.tres" id="4_vb607"]
+[ext_resource type="AudioStream" uid="uid://ctx4gaaaekyty" path="res://Music and SFX/sfx/SFX - cambiodetiempo.wav" id="5_ku0v2"]
 [ext_resource type="PackedScene" uid="uid://cc5dksl388xcs" path="res://scenes/futuro.tscn" id="5_xl62j"]
+[ext_resource type="AudioStream" uid="uid://d1kgf6hccf4lw" path="res://Music and SFX/sfx/SFX- puzzleresuelto.ogg" id="9_6x7g3"]
+[ext_resource type="AudioStream" uid="uid://caunedimu6icn" path="res://Music and SFX/sfx/SFX-Rock-moving-1seg.ogg" id="9_tj58d"]
+[ext_resource type="AudioStream" uid="uid://dudgu8qdyfu1d" path="res://Music and SFX/musica/3. Yax Mutul - Tema Principal (master) - Nikté.ogg" id="11_u5nte"]
+[ext_resource type="AudioStream" uid="uid://bvgvw8tc21crt" path="res://Music and SFX/musica/4. Yax Mutul - Tema del pasado (master) - Úuchben Nikté.ogg" id="12_tj58d"]
+[ext_resource type="AudioStream" uid="uid://d0vwteqlpsqr2" path="res://Music and SFX/musica/5. Yax Mutul - Tema del Futuro (master)- Sáamal Niktè.ogg" id="13_6x7g3"]
+[ext_resource type="AudioStream" uid="uid://bmb64j52g0hj1" path="res://Music and SFX/musica/2. Yax Mutul - Tema Menu (master).ogg" id="14_yjfk7"]
 
 [node name="Todoslostiempos" type="Node3D"]
+script = ExtResource("1_xl62j")
+
+[node name="MessageUI" parent="." instance=ExtResource("1_kc4mv")]
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawn_marker") instance=ExtResource("1_qjwgc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8969, 7.34461)
@@ -23,6 +35,9 @@ normal_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzle2A")
 hidden_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzleHidden")
 future_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/Puzzle3BManager")
 
+[node name="SFXCambiodetiempo" type="AudioStreamPlayer" parent="MaskManager"]
+stream = ExtResource("5_ku0v2")
+
 [node name="WorldAnchor" type="Node3D" parent="."]
 
 [node name="PRESENTE" parent="WorldAnchor" instance=ExtResource("3_vb607")]
@@ -30,8 +45,11 @@ future_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/Puzzle3BManager
 [node name="Mesa" parent="WorldAnchor/PRESENTE/Templo/Mesa_ConPanel" index="0"]
 material_overlay = ExtResource("4_vb607")
 
-[node name="Boton de Resolucion" parent="WorldAnchor/PRESENTE/Templo/Mesa_ConPanel" index="14"]
+[node name="Boton de Resolucion" parent="WorldAnchor/PRESENTE/Templo/Mesa_ConPanel" index="13"]
 material_overlay = ExtResource("4_dobs2")
+
+[node name="ColorPuzzle2A" parent="WorldAnchor/PRESENTE/Templo/Puzzles" index="0" node_paths=PackedStringArray("sfx_puzzle_resuelto")]
+sfx_puzzle_resuelto = NodePath("../../../../../SFXPuzzleResuelto")
 
 [node name="CollisionShape3D" parent="WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzle2A/CheckButton" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288582, 0, 0)
@@ -50,6 +68,12 @@ transform = Transform3D(0.999999, 0.00129445, 0, -0.00129445, 0.999999, 0, 0, 0,
 [node name="MaskFuturePickUp" parent="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado" index="5" node_paths=PackedStringArray("mask_manager")]
 mask_manager = NodePath("../../../../../../MaskManager")
 
+[node name="Sfx_Puzzle_Resuelto" parent="WorldAnchor/PRESENTE" index="16"]
+stream = ExtResource("9_6x7g3")
+
+[node name="RocaMoviendose" parent="WorldAnchor/PRESENTE" index="17"]
+stream = ExtResource("9_tj58d")
+
 [node name="PASADO" parent="WorldAnchor" instance=ExtResource("4_kc4mv")]
 process_mode = 4
 visible = false
@@ -60,6 +84,21 @@ mask_manager = NodePath("../../../../../../MaskManager")
 [node name="FUTURO" parent="WorldAnchor" instance=ExtResource("5_xl62j")]
 process_mode = 4
 visible = false
+
+[node name="SFXPuzzleResuelto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_6x7g3")
+
+[node name="MusicaPresente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_u5nte")
+
+[node name="MusicaPasado" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_tj58d")
+
+[node name="MusicaFuturo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6x7g3")
+
+[node name="MusicaOculto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_yjfk7")
 
 [editable path="Player"]
 [editable path="WorldAnchor/PRESENTE"]
@@ -76,9 +115,16 @@ visible = false
 [editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/presesureButton"]
 [editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado"]
 [editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp"]
+[editable path="WorldAnchor/PRESENTE/Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp/Mascara_Pasado2"]
 [editable path="WorldAnchor/PRESENTE/Templo_Jaguar"]
+[editable path="WorldAnchor/PRESENTE/Terreno"]
 [editable path="WorldAnchor/PRESENTE/Terreno_Montañas"]
+[editable path="WorldAnchor/PRESENTE/Presente Arboles"]
+[editable path="WorldAnchor/PRESENTE/Presente Carpas"]
+[editable path="WorldAnchor/PRESENTE/Maldicion"]
+[editable path="WorldAnchor/PRESENTE/Mirar_Pasado_Cartel"]
 [editable path="WorldAnchor/PASADO"]
+[editable path="WorldAnchor/PASADO/Templo/Templo_Tikal"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro/Mascara_Futuro2"]
@@ -89,6 +135,9 @@ visible = false
 [editable path="WorldAnchor/PASADO/Templo/Mural_Pasado"]
 [editable path="WorldAnchor/PASADO/Mesa_Base"]
 [editable path="WorldAnchor/PASADO/Cultivos2"]
+[editable path="WorldAnchor/PASADO/Obstaculo_Pasillo_0012"]
+[editable path="WorldAnchor/PASADO/Obstaculo_Pasillo_0022"]
+[editable path="WorldAnchor/PASADO/Enredaderas_Escalera"]
 [editable path="WorldAnchor/FUTURO"]
 [editable path="WorldAnchor/FUTURO/Templo_Jaguar"]
 [editable path="WorldAnchor/FUTURO/Futuro - Arboles"]

@@ -2,6 +2,7 @@ extends Node
 
 @export var buttons: Array[NodePath]
 @export var check_button: NodePath
+@export var sfx_puzzle_resuelto : AudioStreamPlayer
 
 const GREEN := 1
 const YELLOW := 2
@@ -53,3 +54,4 @@ func _reset_buttons():
 func _solve_puzzle():
 	phase = 4
 	print("PUZZLE RESUELTO")
+	sfx_puzzle_resuelto.play()

@@ -4,6 +4,13 @@ extends Node
 @onready var presente: Node3D = $"../WorldAnchor/PRESENTE"
 @onready var pasado: Node3D = $"../WorldAnchor/PASADO"
 @onready var futuro: Node3D = $"../WorldAnchor/FUTURO"
+@onready var sfx_cambiodetiempo: AudioStreamPlayer = $SFXCambiodetiempo
+@onready var musica_presente: AudioStreamPlayer =$"../MusicaPresente"
+@onready var musica_pasado: AudioStreamPlayer =$"../MusicaPasado"
+@onready var musica_futuro: AudioStreamPlayer = $"../MusicaFuturo"
+@onready var musica_oculto: AudioStreamPlayer =$"../MusicaOculto"
+
+
 
 enum MaskType {
 	NONE,
@@ -110,6 +117,11 @@ func _activate_past():
 	futuro.process_mode=Node.PROCESS_MODE_DISABLED
 	futuro.visible=false
 	print("Máscara del pasado activada")
+	sfx_cambiodetiempo.play()
+	musica_pasado.play()
+	musica_futuro.stop()
+	musica_presente.stop()
+	musica_oculto.stop()
 
 func _deactivate_past():
 	pasado.process_mode=Node.PROCESS_MODE_DISABLED
@@ -119,7 +131,11 @@ func _deactivate_past():
 	futuro.process_mode=Node.PROCESS_MODE_DISABLED
 	futuro.visible=false
 	print("Máscara del pasado desactivada")
-
+	sfx_cambiodetiempo.play()
+	musica_pasado.stop()
+	musica_futuro.stop()
+	musica_presente.play()
+	musica_oculto.stop()
 
 # ---------------- FUTURE ----------------
 
@@ -130,6 +146,11 @@ func _activate_future():
 	presente.visible=false
 	futuro.process_mode=Node.PROCESS_MODE_INHERIT
 	futuro.visible=true
+	sfx_cambiodetiempo.play()
+	musica_pasado.stop()
+	musica_futuro.play()
+	musica_presente.stop()
+	musica_oculto.stop()
 
 func _deactivate_future():
 	pasado.process_mode=Node.PROCESS_MODE_DISABLED
@@ -138,6 +159,11 @@ func _deactivate_future():
 	presente.visible=true
 	futuro.process_mode=Node.PROCESS_MODE_DISABLED
 	futuro.visible=false
+	sfx_cambiodetiempo.play()
+	musica_pasado.stop()
+	musica_futuro.stop()
+	musica_presente.play()
+	musica_oculto.stop()
 
 func _unlock_future_puzzle():
 	future_puzzle_unlocked = true

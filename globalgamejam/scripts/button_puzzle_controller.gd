@@ -3,6 +3,7 @@ extends Node3D
 @export var buttons: Array[Node]
 @onready var animacionpedestalpasado=$"../Pedestal_Pasado/PedestalMascaraPasado/AnimationPlayer"
 @onready var colisionmascaradelpasado=$"../Pedestal_Pasado/MaskFuturePickUp/CollisionShape3D"
+@export var sfx_puzzle_resuelto : AudioStreamPlayer
 var solved := false
 
 
@@ -26,3 +27,4 @@ func _solve():
 	animacionpedestalpasado.play("Animation")
 	colisionmascaradelpasado.disabled=false
 	print("PUZZLE DE BOTONES RESUELTO")
+	sfx_puzzle_resuelto.play()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dct2a73ydnc1e"
+path="res://.godot/imported/1. Yax Mutul - Tema Logo (master).ogg-9456ecbb02920be36b077603184dea6c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music and SFX/musica/1. Yax Mutul - Tema Logo (master).ogg"
+dest_files=["res://.godot/imported/1. Yax Mutul - Tema Logo (master).ogg-9456ecbb02920be36b077603184dea6c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

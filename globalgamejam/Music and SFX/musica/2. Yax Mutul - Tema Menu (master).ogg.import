@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmb64j52g0hj1"
+path="res://.godot/imported/2. Yax Mutul - Tema Menu (master).ogg-fa520d1712127e4fa3f202bdcea92f3b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music and SFX/musica/2. Yax Mutul - Tema Menu (master).ogg"
+dest_files=["res://.godot/imported/2. Yax Mutul - Tema Menu (master).ogg-fa520d1712127e4fa3f202bdcea92f3b.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

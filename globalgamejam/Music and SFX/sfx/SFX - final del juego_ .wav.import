@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://df41g2mev8q6y"
+path="res://.godot/imported/SFX - final del juego_ .wav-9428a4d77ba43bf270f21fe934f08f3e.sample"
+
+[deps]
+
+source_file="res://Music and SFX/sfx/SFX - final del juego_ .wav"
+dest_files=["res://.godot/imported/SFX - final del juego_ .wav-9428a4d77ba43bf270f21fe934f08f3e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

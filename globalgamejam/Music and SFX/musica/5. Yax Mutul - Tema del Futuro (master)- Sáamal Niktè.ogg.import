@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d0vwteqlpsqr2"
+path="res://.godot/imported/5. Yax Mutul - Tema del Futuro (master)- Sáamal Niktè.ogg-77ee817deebde45c5cd4ea4db4643d70.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music and SFX/musica/5. Yax Mutul - Tema del Futuro (master)- Sáamal Niktè.ogg"
+dest_files=["res://.godot/imported/5. Yax Mutul - Tema del Futuro (master)- Sáamal Niktè.ogg-77ee817deebde45c5cd4ea4db4643d70.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

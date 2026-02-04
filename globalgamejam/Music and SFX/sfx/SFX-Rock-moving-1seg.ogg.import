@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://caunedimu6icn"
+path="res://.godot/imported/SFX-Rock-moving-1seg.ogg-fe5a28f4a8a9d4137ed579b2ff0c9108.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music and SFX/sfx/SFX-Rock-moving-1seg.ogg"
+dest_files=["res://.godot/imported/SFX-Rock-moving-1seg.ogg-fe5a28f4a8a9d4137ed579b2ff0c9108.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

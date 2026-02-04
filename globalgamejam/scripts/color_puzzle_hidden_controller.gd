@@ -8,6 +8,7 @@ extends Node3D
 ]
 
 @export var auto_resolve := true
+@export var sfx_puzzle_resuelto : AudioStreamPlayer
 
 var solved := false
 

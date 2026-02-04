@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://clg6wk6uf0w3o"]
+[gd_scene load_steps=3 format=3 uid="uid://btsiqbwtvw44w"]
 
-[ext_resource type="Script" uid="uid://cymxc3g57dg63" path="res://scripts/message_ui.gd" id="1_jutt6"]
+[ext_resource type="Script" path="res://scripts/message_ui.gd" id="1_jutt6"]
 [ext_resource type="Texture2D" uid="uid://5jw2gf0ftkav" path="res://Assets/Yax_Mutul_-_GANASTE.png" id="2_b5lgu"]
 
 [node name="MessageUI" type="CanvasLayer"]
