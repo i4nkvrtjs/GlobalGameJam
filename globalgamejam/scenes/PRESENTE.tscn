@@ -1,12 +1,13 @@
-[gd_scene load_steps=42 format=3 uid="uid://cawpxoyhsp5fc"]
+[gd_scene load_steps=44 format=3 uid="uid://cawpxoyhsp5fc"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
 [ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_37n8p"]
-[ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrenos/Terreno.glb" id="2_527ci"]
+[ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrain_Objects/Pasado/Terrenos/Terreno.glb" id="2_527ci"]
 [ext_resource type="PackedScene" uid="uid://bqcnyvse47lp" path="res://Assets/Terrain_Objects/Objetos_Clave/Mesa_ConPanel.glb" id="2_iyyln"]
+[ext_resource type="Material" uid="uid://60hw13kilgta" path="res://Materiales/Outline_Objetos_Chicos.tres" id="3_mfqb6"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
 [ext_resource type="PackedScene" uid="uid://2viqo08a2ash" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
-[ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
+[ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrain_Objects/Pasado/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
 [ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Presente/Pedestales/Pedestal_Futuro.glb" id="6_u5kdj"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
 [ext_resource type="PackedScene" uid="uid://xy4p3bkc4m7k" path="res://scenes/presesure_button.tscn" id="7_y4vcq"]
@@ -18,16 +19,17 @@
 [ext_resource type="PackedScene" uid="uid://dq8w3jf1gfsu0" path="res://Assets/Presente/Pedestales/PedestalAnimadoMascaraPasado.glb" id="11_81647"]
 [ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="12_w86e2"]
 [ext_resource type="PackedScene" uid="uid://dvovs73wka2te" path="res://Assets/Terrain_Objects/Mascaras/Mascara_Pasado.glb" id="13_tlxmo"]
-[ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Arboles_Montaña.glb" id="16_mmms4"]
-[ext_resource type="PackedScene" uid="uid://m5tkoiyu6rvr" path="res://Assets/Presente Arboles.glb" id="17_kfotx"]
-[ext_resource type="PackedScene" uid="uid://cata06da5jpg5" path="res://Assets/Terrain_Objects/Presente Carpas.glb" id="18_vyrum"]
-[ext_resource type="PackedScene" uid="uid://ciio5ojraef3m" path="res://Assets/Terrain_Objects/Presente Arboles Montaña Templo.glb" id="19_vyrum"]
+[ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Terrain_Enviroment/Arboles/Arboles_Montaña.glb" id="16_mmms4"]
+[ext_resource type="PackedScene" uid="uid://m5tkoiyu6rvr" path="res://Assets/Terrain_Enviroment/Arboles/Presente/Presente Arboles.glb" id="17_kfotx"]
+[ext_resource type="Material" uid="uid://b2rxfp8kcr53t" path="res://Materiales/perfect_outline_shader.tres" id="18_e420u"]
+[ext_resource type="PackedScene" uid="uid://cata06da5jpg5" path="res://Assets/Terrain_Objects/Decoraciones/Presente/Presente Carpas.glb" id="18_vyrum"]
+[ext_resource type="PackedScene" uid="uid://ciio5ojraef3m" path="res://Assets/Terrain_Enviroment/Arboles/Presente/Presente Arboles Montaña Templo.glb" id="19_vyrum"]
 [ext_resource type="PackedScene" uid="uid://bwgb7h5hsu7lv" path="res://Assets/Terrain_Objects/Pistas/Maldicion.glb" id="20_difdc"]
 [ext_resource type="PackedScene" uid="uid://vs8emnkbno1j" path="res://Assets/Terrain_Objects/Pistas/Mirar_Pasado_Cartel.glb" id="21_b460h"]
 [ext_resource type="PackedScene" uid="uid://dcrd3066eh83o" path="res://Assets/Terrain_Objects/Pistas/Miraste_Atras.glb" id="22_hh7j3"]
-[ext_resource type="PackedScene" uid="uid://c0cw75pawskj" path="res://Assets/Terrain_Objects/Obstaculos/Obstaculo_Pasillo.001.glb" id="23_2xilg"]
-[ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Terrain_Objects/Obstaculos/Obstaculo_Pasillo.002.glb" id="24_hnikr"]
-[ext_resource type="PackedScene" uid="uid://djjtvivsgfpvm" path="res://Assets/Terrain_Objects/Obstaculos/Enredaderas_Escalera.glb" id="28_xsu2r"]
+[ext_resource type="PackedScene" uid="uid://c0cw75pawskj" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Obstaculo_Pasillo.001.glb" id="23_2xilg"]
+[ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Obstaculo_Pasillo.002.glb" id="24_hnikr"]
+[ext_resource type="PackedScene" uid="uid://djjtvivsgfpvm" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Enredaderas_Escalera.glb" id="28_xsu2r"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
 
@@ -85,6 +87,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 
 [node name="Mesa_ConPanel" parent="Templo" instance=ExtResource("2_iyyln")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.483)
+
+[node name="Mesa" parent="Templo/Mesa_ConPanel" index="0"]
+material_overlay = ExtResource("3_mfqb6")
+
+[node name="Panel_Trasero" parent="Templo/Mesa_ConPanel" index="14"]
+material_overlay = ExtResource("3_mfqb6")
 
 [node name="Puzzles" type="Node3D" parent="Templo"]
 
@@ -212,6 +220,9 @@ disabled = true
 [node name="Mascara_Pasado2" parent="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp" instance=ExtResource("13_tlxmo")]
 transform = Transform3D(-6.55671e-08, -1.5, -6.55671e-08, 0, -6.55671e-08, 1.5, -1.5, 6.55671e-08, 2.86603e-15, 0.0490537, -0.174824, 0.00400305)
 
+[node name="Mascara_Pasado" parent="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp/Mascara_Pasado2" index="0"]
+material_overlay = ExtResource("3_mfqb6")
+
 [node name="Colisiones" type="StaticBody3D" parent="Templo"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Templo/Colisiones"]
@@ -273,6 +284,60 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.9
 [node name="Terreno" parent="." instance=ExtResource("2_527ci")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.0306625, 0.107914, -0.136238)
 
+[node name="Plane" parent="Terreno" index="0"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_007" parent="Terreno" index="1"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_009" parent="Terreno" index="2"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_004" parent="Terreno" index="3"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_001" parent="Terreno" index="4"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_002" parent="Terreno" index="5"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_010" parent="Terreno" index="6"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_006" parent="Terreno" index="7"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_005" parent="Terreno" index="8"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_003" parent="Terreno" index="9"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_017" parent="Terreno" index="10"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_014" parent="Terreno" index="11"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_012" parent="Terreno" index="12"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_015" parent="Terreno" index="13"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_008" parent="Terreno" index="14"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_011" parent="Terreno" index="15"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_016" parent="Terreno" index="16"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Retopo_Landscape_018" parent="Terreno" index="17"]
+material_overlay = ExtResource("18_e420u")
+
 [node name="Terreno_Montañas" parent="." instance=ExtResource("6_2sfii")]
 transform = Transform3D(1.48979, 0, -0.174694, 0, 1.5, 0, 0.174694, 0, 1.48979, 313.488, -28.011, 268.277)
 
@@ -284,6 +349,7 @@ transform = Transform3D(-0.587291, 0, 0.809376, 0, 0.999999, 0, -0.809376, 0, -0
 
 [node name="Retopo_Landscape_016" parent="Terreno_Montañas" index="3"]
 transform = Transform3D(-0.148833, 0, 0.9937, 0, 1.23447, 0, -1.15574, 0, -0.127966, -121.702, 15.5316, -166.845)
+material_overlay = ExtResource("18_e420u")
 
 [node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("7_4iy1q")]
 transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 137.324, 0.380493, -3.1496)
@@ -294,13 +360,25 @@ transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 13
 
 [node name="Presente Carpas" parent="." instance=ExtResource("18_vyrum")]
 
+[node name="Carpas" parent="Presente Carpas" index="0"]
+material_overlay = ExtResource("18_e420u")
+
 [node name="Presente Arboles Montaña Templo" parent="." instance=ExtResource("19_vyrum")]
 
 [node name="Maldicion" parent="." instance=ExtResource("20_difdc")]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0.000148535, 45.861, -6.09325)
 
+[node name="Cartel_Maya" parent="Maldicion" index="0"]
+material_overlay = ExtResource("3_mfqb6")
+
+[node name="Cartel_Maya_001" parent="Maldicion" index="1"]
+material_overlay = ExtResource("3_mfqb6")
+
 [node name="Mirar_Pasado_Cartel" parent="." instance=ExtResource("21_b460h")]
 transform = Transform3D(-1.56501e-07, 0, 3.58032, 0, 3.58032, 0, -3.58032, 0, -1.56501e-07, -6.58512, 45.821, -0.643312)
+
+[node name="Cube_001" parent="Mirar_Pasado_Cartel" index="0"]
+material_overlay = ExtResource("3_mfqb6")
 
 [node name="Miraste_Atras" parent="." instance=ExtResource("22_hh7j3")]
 transform = Transform3D(-1.5299e-07, 0, -3.5, 0, 3.5, 0, 3.5, 0, -1.5299e-07, 6.55812, 45.8319, -0.382623)
@@ -335,6 +413,7 @@ shape = SubResource("BoxShape3D_anvkm")
 [node name="Enredaderas_Escalera" parent="." instance=ExtResource("28_xsu2r")]
 
 [editable path="Templo/Templo_Tikal"]
+[editable path="Templo/Mesa_ConPanel"]
 [editable path="Templo/Puzzles/ColorPuzzle2A"]
 [editable path="Templo/Puzzle1/ButtonPuzzleController"]
 [editable path="Templo/Puzzle1/Pedestal_Futuro"]
@@ -346,5 +425,11 @@ shape = SubResource("BoxShape3D_anvkm")
 [editable path="Templo/Puzzle1/Pedestal_Pasado/presesureButton"]
 [editable path="Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado"]
 [editable path="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp"]
+[editable path="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp/Mascara_Pasado2"]
 [editable path="Templo_Jaguar"]
+[editable path="Terreno"]
 [editable path="Terreno_Montañas"]
+[editable path="Presente Arboles"]
+[editable path="Presente Carpas"]
+[editable path="Maldicion"]
+[editable path="Mirar_Pasado_Cartel"]
