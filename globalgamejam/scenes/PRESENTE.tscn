@@ -136,8 +136,10 @@ transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 
 [node name="ColorSquare11" parent="Templo/Puzzles/ColorPuzzle2A" index="11"]
 transform = Transform3D(-8.63665e-08, 1.5, 1.03673e-07, -1.97583, -6.55671e-08, 1.15543e-07, 8.58615e-08, -5.8487e-08, 2.65886, -0.511, -0.236874, -0.843871)
 
-[node name="CheckButton" parent="Templo/Puzzles/ColorPuzzle2A" index="12"]
+[node name="CheckButton" parent="Templo/Puzzles/ColorPuzzle2A" index="12" node_paths=PackedStringArray("roca_moviendose")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.313556, -0.217937, 8.44755e-09)
+future_puzzle_path = NodePath("../../Puzzle3BManager")
+roca_moviendose = NodePath("../../../../RocaMoviendose")
 
 [node name="MeshInstance3D" parent="Templo/Puzzles/ColorPuzzle2A/CheckButton" index="0"]
 visible = false
@@ -272,6 +274,67 @@ shape = SubResource("BoxShape3D_tlxmo")
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="Templo/Colisiones"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0132141, 47.3436, -6.3892)
 shape = SubResource("BoxShape3D_6wrqp")
+
+[node name="Luces" type="Node" parent="Templo"]
+
+[node name="AntorchaPasado1" type="OmniLight3D" parent="Templo/Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95345, 47.8766, 2.47144)
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.758
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
+
+[node name="AntorchaPasado2" type="OmniLight3D" parent="Templo/Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95345, 47.8766, -3.59454)
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.758
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
+
+[node name="AntorchaFuturo1" type="OmniLight3D" parent="Templo/Luces"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.60267, 46.9501, 2.30126)
+visible = false
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.758
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
+
+[node name="AntorchaFuturo2" type="OmniLight3D" parent="Templo/Luces"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.60267, 46.9501, -3.76471)
+visible = false
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.758
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
+
+[node name="AntorchaMaldicion1" type="OmniLight3D" parent="Templo/Luces"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.44782, 47.5366, -4.78542)
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.758
+light_size = 0.616
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
+
+[node name="AntorchaMaldicion2" type="OmniLight3D" parent="Templo/Luces"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.50555, 47.2547, -5.49275)
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.758
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
+
+[node name="AntorchaMaldicion3" type="OmniLight3D" parent="Templo/Luces"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0836658, 49.5133, -5.72618)
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.758
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
 
 [node name="TemploDelSol" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
