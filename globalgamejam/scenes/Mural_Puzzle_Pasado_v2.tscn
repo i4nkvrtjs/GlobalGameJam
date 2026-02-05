@@ -1,0 +1,2239 @@
+[gd_scene load_steps=152 format=4 uid="uid://b3icjbfig6fg3"]
+
+[ext_resource type="Script" path="res://scripts/mural_tile.gd" id="1_g1n6c"]
+[ext_resource type="Texture2D" uid="uid://cofludgr52nv3" path="res://Assets/Terrain_Objects/Pistas/Mural_Pasado-colv2_Mural_Interior_albedo000.png" id="2_boq5g"]
+[ext_resource type="Texture2D" uid="uid://2kfrmxrqe85e" path="res://Assets/Terrain_Objects/Pistas/Mural_Pasado-colv2_Maldito_Borde_albedo000.png" id="3_j1bd5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtsj4"]
+resource_name = "Mural_Interior"
+cull_mode = 2
+albedo_texture = ExtResource("2_boq5g")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lgs5e"]
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cknd5"]
+resource_name = "Mural_Pasado-colv2_Mesh_4"
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("8hcVRBYDFUTyF/sFFgP7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lgs5e")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3lbf7"]
+data = PackedVector3Array(-0.751068, 0.521984, -0.0478516, -0.90106, 0.521984, -0.0478516, -0.751065, 0.650364, -0.0478516, -0.751065, 0.650364, -0.0478516, -0.90106, 0.521984, -0.0478516, -0.90106, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lo75l"]
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tv74y"]
+resource_name = "Mural_Pasado-colv2_Mesh_28"
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("zywVRPIXFUTPLPsF8hf7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lo75l")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_msbvr"]
+data = PackedVector3Array(-0.601071, 0.521984, -0.0478516, -0.751066, 0.521984, -0.0478516, -0.601071, 0.650364, -0.0478516, -0.601071, 0.650364, -0.0478516, -0.751066, 0.521984, -0.0478516, -0.751066, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qw8ny"]
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t5jih"]
+resource_name = "Mural_Pasado-colv2_Mesh_27"
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("rEEVRM8sFUSsQfsFzyz7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qw8ny")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v71mg"]
+data = PackedVector3Array(-0.451076, 0.521984, -0.0478516, -0.601071, 0.521984, -0.0478516, -0.451076, 0.650364, -0.0478516, -0.451076, 0.650364, -0.0478516, -0.601071, 0.521984, -0.0478516, -0.601071, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wm7t5"]
+_surfaces = [{
+"aabb": AABB(-0.451076, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ygrk1"]
+resource_name = "Mural_Pasado-colv2_Mesh_26"
+_surfaces = [{
+"aabb": AABB(-0.451076, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("iFYVRKxBFUSIVvsFrEH7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wm7t5")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2wumx"]
+data = PackedVector3Array(-0.301082, 0.521984, -0.0478516, -0.451076, 0.521984, -0.0478516, -0.301082, 0.650364, -0.0478516, -0.301082, 0.650364, -0.0478516, -0.451076, 0.521984, -0.0478516, -0.451076, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u0f15"]
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jsrmg"]
+resource_name = "Mural_Pasado-colv2_Mesh_25"
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("ZWsVRIhWFURla/sFiFb7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_u0f15")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o268j"]
+data = PackedVector3Array(-0.151087, 0.521984, -0.0478516, -0.301082, 0.521984, -0.0478516, -0.151087, 0.650364, -0.0478516, -0.151087, 0.650364, -0.0478516, -0.301082, 0.521984, -0.0478516, -0.301082, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t5k6i"]
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6aw62"]
+resource_name = "Mural_Pasado-colv2_Mesh_24"
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("QYAVRGVrFURBgPsFZWv7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_t5k6i")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d2dxr"]
+data = PackedVector3Array(-0.00109279, 0.521984, -0.0478516, -0.151087, 0.521984, -0.0478516, -0.00109279, 0.650364, -0.0478516, -0.00109279, 0.650364, -0.0478516, -0.151087, 0.521984, -0.0478516, -0.151087, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y871x"]
+_surfaces = [{
+"aabb": AABB(-0.00109279, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cutwd"]
+resource_name = "Mural_Pasado-colv2_Mesh_23"
+_surfaces = [{
+"aabb": AABB(-0.00109279, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("HpUVREGAFUQelfsFQYD7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_y871x")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_n08t4"]
+data = PackedVector3Array(0.148902, 0.521984, -0.0478516, -0.00109279, 0.521984, -0.0478516, 0.148902, 0.650364, -0.0478516, 0.148902, 0.650364, -0.0478516, -0.00109279, 0.521984, -0.0478516, -0.00109279, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7efh2"]
+_surfaces = [{
+"aabb": AABB(0.148902, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_heyyt"]
+resource_name = "Mural_Pasado-colv2_Mesh_22"
+_surfaces = [{
+"aabb": AABB(0.148902, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("+qkVRB6VFUT6qfsFHpX7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7efh2")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dmhsn"]
+data = PackedVector3Array(0.298896, 0.521984, -0.0478516, 0.148902, 0.521984, -0.0478516, 0.298896, 0.650364, -0.0478516, 0.298896, 0.650364, -0.0478516, 0.148902, 0.521984, -0.0478516, 0.148902, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hqk2v"]
+_surfaces = [{
+"aabb": AABB(0.298896, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1l51k"]
+resource_name = "Mural_Pasado-colv2_Mesh_21"
+_surfaces = [{
+"aabb": AABB(0.298896, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("174VRPqpFUTXvvsF+qn7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hqk2v")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qcvo3"]
+data = PackedVector3Array(0.448891, 0.521984, -0.0478516, 0.298896, 0.521984, -0.0478516, 0.448891, 0.650364, -0.0478516, 0.448891, 0.650364, -0.0478516, 0.298896, 0.521984, -0.0478516, 0.298896, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bdsh6"]
+_surfaces = [{
+"aabb": AABB(0.448891, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_suvvk"]
+resource_name = "Mural_Pasado-colv2_Mesh_20"
+_surfaces = [{
+"aabb": AABB(0.448891, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("s9MVRNe+FUSz0/sF1777BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bdsh6")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_m1uyw"]
+data = PackedVector3Array(0.598885, 0.521984, -0.0478516, 0.448891, 0.521984, -0.0478516, 0.598885, 0.650364, -0.0478516, 0.598885, 0.650364, -0.0478516, 0.448891, 0.521984, -0.0478516, 0.448891, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rr1ve"]
+_surfaces = [{
+"aabb": AABB(0.598885, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k2ql2"]
+resource_name = "Mural_Pasado-colv2_Mesh_19"
+_surfaces = [{
+"aabb": AABB(0.598885, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("kOgVRLPTFUSQ6PsFs9P7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rr1ve")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vnxsm"]
+data = PackedVector3Array(0.74888, 0.521984, -0.0478516, 0.598885, 0.521984, -0.0478516, 0.74888, 0.650364, -0.0478516, 0.74888, 0.650364, -0.0478516, 0.598885, 0.521984, -0.0478516, 0.598885, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c16cs"]
+_surfaces = [{
+"aabb": AABB(0.74888, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e6j5v"]
+resource_name = "Mural_Pasado-colv2_Mesh_3"
+_surfaces = [{
+"aabb": AABB(0.74888, 0.521984, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("bP0VRJDoFURs/fsFkOj7BQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c16cs")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3aylx"]
+data = PackedVector3Array(0.898875, 0.521984, -0.0478516, 0.74888, 0.521984, -0.0478516, 0.898875, 0.650364, -0.0478516, 0.898875, 0.650364, -0.0478516, 0.74888, 0.521984, -0.0478516, 0.74888, 0.650364, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pehbk"]
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_577ym"]
+resource_name = "Mural_Pasado-colv2_Mesh_8"
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("8hcughYDLoLyFxVEFgMVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pehbk")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5thuw"]
+data = PackedVector3Array(-0.751068, 0.393604, -0.0478516, -0.90106, 0.393604, -0.0478516, -0.751066, 0.521984, -0.0478516, -0.751066, 0.521984, -0.0478516, -0.90106, 0.393604, -0.0478516, -0.90106, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_67mrr"]
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yrl68"]
+resource_name = "Mural_Pasado-colv2_Mesh_39"
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("zywugvIXLoLPLBVE8hcVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_67mrr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_c7wdf"]
+data = PackedVector3Array(-0.601073, 0.393604, -0.0478516, -0.751066, 0.393604, -0.0478516, -0.601071, 0.521984, -0.0478516, -0.601071, 0.521984, -0.0478516, -0.751066, 0.393604, -0.0478516, -0.751066, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_65y5p"]
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y0c2m"]
+resource_name = "Mural_Pasado-colv2_Mesh_47"
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("rEEugs8sLoKsQRVEzywVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_65y5p")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_42lx4"]
+data = PackedVector3Array(-0.451079, 0.393604, -0.0478516, -0.601071, 0.393604, -0.0478516, -0.451076, 0.521984, -0.0478516, -0.451076, 0.521984, -0.0478516, -0.601071, 0.393604, -0.0478516, -0.601071, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hdgt3"]
+_surfaces = [{
+"aabb": AABB(-0.451077, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ohkam"]
+resource_name = "Mural_Pasado-colv2_Mesh_46"
+_surfaces = [{
+"aabb": AABB(-0.451077, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("iFYugqxBLoKIVhVErEEVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hdgt3")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fb0vg"]
+data = PackedVector3Array(-0.301084, 0.393604, -0.0478516, -0.451077, 0.393604, -0.0478516, -0.301082, 0.521984, -0.0478516, -0.301082, 0.521984, -0.0478516, -0.451077, 0.393604, -0.0478516, -0.451077, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3c1fg"]
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2c7q7"]
+resource_name = "Mural_Pasado-colv2_Mesh_45"
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("ZWsugohWLoJlaxVEiFYVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3c1fg")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_al8vh"]
+data = PackedVector3Array(-0.15109, 0.393604, -0.0478516, -0.301082, 0.393604, -0.0478516, -0.151087, 0.521984, -0.0478516, -0.151087, 0.521984, -0.0478516, -0.301082, 0.393604, -0.0478516, -0.301082, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0miat"]
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_32vaj"]
+resource_name = "Mural_Pasado-colv2_Mesh_44"
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("QYAugmVrLoJBgBVEZWsVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0miat")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8q5ir"]
+data = PackedVector3Array(-0.00109509, 0.393604, -0.0478516, -0.151087, 0.393604, -0.0478516, -0.00109279, 0.521984, -0.0478516, -0.00109279, 0.521984, -0.0478516, -0.151087, 0.393604, -0.0478516, -0.151087, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ead6h"]
+_surfaces = [{
+"aabb": AABB(-0.00109285, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rnbii"]
+resource_name = "Mural_Pasado-colv2_Mesh_43"
+_surfaces = [{
+"aabb": AABB(-0.00109285, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("HpUugkGALoIelRVEQYAVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ead6h")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_c2ngw"]
+data = PackedVector3Array(0.148899, 0.393604, -0.0478516, -0.00109285, 0.393604, -0.0478516, 0.148902, 0.521984, -0.0478516, 0.148902, 0.521984, -0.0478516, -0.00109285, 0.393604, -0.0478516, -0.00109285, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6st2q"]
+_surfaces = [{
+"aabb": AABB(0.148902, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ha2m1"]
+resource_name = "Mural_Pasado-colv2_Mesh_42"
+_surfaces = [{
+"aabb": AABB(0.148902, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("+qkugh6VLoL6qRVEHpUVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6st2q")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_quhst"]
+data = PackedVector3Array(0.298894, 0.393604, -0.0478516, 0.148902, 0.393604, -0.0478516, 0.298896, 0.521984, -0.0478516, 0.298896, 0.521984, -0.0478516, 0.148902, 0.393604, -0.0478516, 0.148902, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_adqhq"]
+_surfaces = [{
+"aabb": AABB(0.298896, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n88vs"]
+resource_name = "Mural_Pasado-colv2_Mesh_41"
+_surfaces = [{
+"aabb": AABB(0.298896, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("174ugvqpLoLXvhVE+qkVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_adqhq")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nsk8s"]
+data = PackedVector3Array(0.448889, 0.393604, -0.0478516, 0.298896, 0.393604, -0.0478516, 0.448891, 0.521984, -0.0478516, 0.448891, 0.521984, -0.0478516, 0.298896, 0.393604, -0.0478516, 0.298896, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w7b76"]
+_surfaces = [{
+"aabb": AABB(0.448891, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2hs7i"]
+resource_name = "Mural_Pasado-colv2_Mesh_40"
+_surfaces = [{
+"aabb": AABB(0.448891, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("s9Mugte+LoKz0xVE174VRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_w7b76")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ruxrq"]
+size = Vector3(0.099646, 0.0933594, 0.1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dvatq"]
+_surfaces = [{
+"aabb": AABB(0.598885, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q6t53"]
+resource_name = "Mural_Pasado-colv2_Mesh_48"
+_surfaces = [{
+"aabb": AABB(0.598885, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("kOgugrPTLoKQ6BVEs9MVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dvatq")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_04ta8"]
+data = PackedVector3Array(0.748878, 0.393604, -0.0478516, 0.598885, 0.393604, -0.0478516, 0.74888, 0.521984, -0.0478516, 0.74888, 0.521984, -0.0478516, 0.598885, 0.393604, -0.0478516, 0.598885, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xgwfg"]
+_surfaces = [{
+"aabb": AABB(0.74888, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_71dho"]
+resource_name = "Mural_Pasado-colv2_Mesh_5"
+_surfaces = [{
+"aabb": AABB(0.74888, 0.393604, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("bP0ugpDoLoJs/RVEkOgVRA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xgwfg")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fsgkg"]
+data = PackedVector3Array(0.898872, 0.393604, -0.0478516, 0.74888, 0.393604, -0.0478516, 0.898875, 0.521984, -0.0478516, 0.898875, 0.521984, -0.0478516, 0.74888, 0.393604, -0.0478516, 0.74888, 0.521984, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v4ckk"]
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.265224, -0.0478516, 0.149994, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jgrxb"]
+resource_name = "Mural_Pasado-colv2_Mesh_7"
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.265224, -0.0478516, 0.149994, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("8hdIwBYDSMDyFy6CFgMugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_v4ckk")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mpt35"]
+data = PackedVector3Array(-0.751066, 0.265224, -0.0478516, -0.90106, 0.265224, -0.0478516, -0.751066, 0.393604, -0.0478516, -0.751066, 0.393604, -0.0478516, -0.90106, 0.265224, -0.0478516, -0.90106, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e8j8k"]
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP///f8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_akw05"]
+resource_name = "Mural_Pasado-colv2_Mesh_38"
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("zyxIwPIXSMDPLC6C8hcugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP///f8AAACAAAD//wAAAID/f////3//f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e8j8k")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pcxvt"]
+data = PackedVector3Array(-0.601071, 0.265224, -0.0478516, -0.751066, 0.265224, -0.0478516, -0.601071, 0.393602, -0.0478516, -0.601071, 0.393602, -0.0478516, -0.751066, 0.265224, -0.0478516, -0.751066, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s2voh"]
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n0rln"]
+resource_name = "Mural_Pasado-colv2_Mesh_37"
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("rEFIwM8sSMCsQS6Czywugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s2voh")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7iw3t"]
+data = PackedVector3Array(-0.451077, 0.265224, -0.0478516, -0.601071, 0.265224, -0.0478516, -0.451077, 0.393604, -0.0478516, -0.451077, 0.393604, -0.0478516, -0.601071, 0.265224, -0.0478516, -0.601071, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7rm1p"]
+_surfaces = [{
+"aabb": AABB(-0.451077, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l57g7"]
+resource_name = "Mural_Pasado-colv2_Mesh_36"
+_surfaces = [{
+"aabb": AABB(-0.451077, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("iFZIwKxBSMCIVi6CrEEugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7rm1p")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_p3l5f"]
+data = PackedVector3Array(-0.301082, 0.265224, -0.0478516, -0.451077, 0.265224, -0.0478516, -0.301082, 0.393604, -0.0478516, -0.301082, 0.393604, -0.0478516, -0.451077, 0.265224, -0.0478516, -0.451077, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hygv4"]
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vrxg3"]
+resource_name = "Mural_Pasado-colv2_Mesh_35"
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("ZWtIwIhWSMBlay6CiFYugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hygv4")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_41641"]
+data = PackedVector3Array(-0.15109, 0.265224, -0.0478516, -0.301082, 0.265224, -0.0478516, -0.151087, 0.393604, -0.0478516, -0.151087, 0.393604, -0.0478516, -0.301082, 0.265224, -0.0478516, -0.301082, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_al7lr"]
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dec86"]
+resource_name = "Mural_Pasado-colv2_Mesh_34"
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("QYBIwGVrSMBBgC6CZWsugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_al7lr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s2wps"]
+data = PackedVector3Array(-0.00109515, 0.265224, -0.0478516, -0.151087, 0.265224, -0.0478516, -0.00109285, 0.393604, -0.0478516, -0.00109285, 0.393604, -0.0478516, -0.151087, 0.265224, -0.0478516, -0.151087, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7eiq8"]
+_surfaces = [{
+"aabb": AABB(-0.0010929, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_voaep"]
+resource_name = "Mural_Pasado-colv2_Mesh_33"
+_surfaces = [{
+"aabb": AABB(-0.0010929, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("HpVIwEGASMAelS6CQYAugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7eiq8")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jqw81"]
+data = PackedVector3Array(0.148899, 0.265224, -0.0478516, -0.0010929, 0.265224, -0.0478516, 0.148902, 0.393604, -0.0478516, 0.148902, 0.393604, -0.0478516, -0.0010929, 0.265224, -0.0478516, -0.0010929, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n0r0t"]
+_surfaces = [{
+"aabb": AABB(0.148902, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dyxys"]
+resource_name = "Mural_Pasado-colv2_Mesh_32"
+_surfaces = [{
+"aabb": AABB(0.148902, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("+qlIwB6VSMD6qS6CHpUugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n0r0t")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1q0i8"]
+data = PackedVector3Array(0.298894, 0.265224, -0.0478516, 0.148902, 0.265224, -0.0478516, 0.298896, 0.393604, -0.0478516, 0.298896, 0.393604, -0.0478516, 0.148902, 0.265224, -0.0478516, 0.148902, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ooxqx"]
+_surfaces = [{
+"aabb": AABB(0.298896, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s2nd0"]
+resource_name = "Mural_Pasado-colv2_Mesh_31"
+_surfaces = [{
+"aabb": AABB(0.298896, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("175IwPqpSMDXvi6C+qkugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ooxqx")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_elttt"]
+data = PackedVector3Array(0.448889, 0.265224, -0.0478516, 0.298896, 0.265224, -0.0478516, 0.448891, 0.393604, -0.0478516, 0.448891, 0.393604, -0.0478516, 0.298896, 0.265224, -0.0478516, 0.298896, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6khe4"]
+_surfaces = [{
+"aabb": AABB(0.448891, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p464y"]
+resource_name = "Mural_Pasado-colv2_Mesh_30"
+_surfaces = [{
+"aabb": AABB(0.448891, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("s9NIwNe+SMCz0y6C174ugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6khe4")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y4sij"]
+data = PackedVector3Array(0.598883, 0.265224, -0.0478516, 0.448891, 0.265224, -0.0478516, 0.598885, 0.393604, -0.0478516, 0.598885, 0.393604, -0.0478516, 0.448891, 0.265224, -0.0478516, 0.448891, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lyqdj"]
+_surfaces = [{
+"aabb": AABB(0.598885, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5yuoe"]
+resource_name = "Mural_Pasado-colv2_Mesh_29"
+_surfaces = [{
+"aabb": AABB(0.598885, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("kOhIwLPTSMCQ6C6Cs9Mugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lyqdj")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_t7i4t"]
+data = PackedVector3Array(0.748878, 0.265224, -0.0478516, 0.598885, 0.265224, -0.0478516, 0.74888, 0.393604, -0.0478516, 0.74888, 0.393604, -0.0478516, 0.598885, 0.265224, -0.0478516, 0.598885, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o7b5a"]
+_surfaces = [{
+"aabb": AABB(0.74888, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b73d6"]
+resource_name = "Mural_Pasado-colv2_Mesh_6"
+_surfaces = [{
+"aabb": AABB(0.74888, 0.265224, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("bP1IwJDoSMBs/S6CkOgugg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/f8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o7b5a")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_j07fx"]
+data = PackedVector3Array(0.898872, 0.265224, -0.0478516, 0.74888, 0.265224, -0.0478516, 0.898874, 0.393604, -0.0478516, 0.898874, 0.393604, -0.0478516, 0.74888, 0.265224, -0.0478516, 0.74888, 0.393604, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qme80"]
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.136844, -0.0478516, 0.149994, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0r8vb"]
+resource_name = "Mural_Pasado-colv2_Mesh_1"
+_surfaces = [{
+"aabb": AABB(-0.90106, 0.136844, -0.0478516, 0.149994, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("8hdi/hYDYv7yF0jAFgNIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qme80")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_b2642"]
+data = PackedVector3Array(-0.751066, 0.136844, -0.0478516, -0.90106, 0.136844, -0.0478516, -0.751066, 0.265224, -0.0478516, -0.751066, 0.265224, -0.0478516, -0.90106, 0.136844, -0.0478516, -0.90106, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e6mjr"]
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cnapn"]
+resource_name = "Mural_Pasado-colv2_Mesh_18"
+_surfaces = [{
+"aabb": AABB(-0.751066, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("zyxi/vIXYv7PLEjA8hdIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e6mjr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0b4ru"]
+data = PackedVector3Array(-0.601071, 0.136844, -0.0478516, -0.751066, 0.136844, -0.0478516, -0.601071, 0.265224, -0.0478516, -0.601071, 0.265224, -0.0478516, -0.751066, 0.136844, -0.0478516, -0.751066, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qvs51"]
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h7kn7"]
+resource_name = "Mural_Pasado-colv2_Mesh_17"
+_surfaces = [{
+"aabb": AABB(-0.601071, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("rEFi/s8sYv6sQUjAzyxIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qvs51")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dxlcn"]
+data = PackedVector3Array(-0.451077, 0.136844, -0.0478516, -0.601071, 0.136844, -0.0478516, -0.451077, 0.265224, -0.0478516, -0.451077, 0.265224, -0.0478516, -0.601071, 0.136844, -0.0478516, -0.601071, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_401a7"]
+_surfaces = [{
+"aabb": AABB(-0.451077, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2030s"]
+resource_name = "Mural_Pasado-colv2_Mesh_16"
+_surfaces = [{
+"aabb": AABB(-0.451077, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("iFZi/qxBYv6IVkjArEFIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_401a7")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2i4cv"]
+data = PackedVector3Array(-0.301082, 0.136844, -0.0478516, -0.451077, 0.136844, -0.0478516, -0.301082, 0.265224, -0.0478516, -0.301082, 0.265224, -0.0478516, -0.451077, 0.136844, -0.0478516, -0.451077, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lhbrc"]
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f7x0q"]
+resource_name = "Mural_Pasado-colv2_Mesh_15"
+_surfaces = [{
+"aabb": AABB(-0.301082, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("ZWti/ohWYv5la0jAiFZIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lhbrc")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_atlwa"]
+data = PackedVector3Array(-0.151087, 0.136844, -0.0478516, -0.301082, 0.136844, -0.0478516, -0.151087, 0.265224, -0.0478516, -0.151087, 0.265224, -0.0478516, -0.301082, 0.136844, -0.0478516, -0.301082, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s6d6v"]
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_554fl"]
+resource_name = "Mural_Pasado-colv2_Mesh_14"
+_surfaces = [{
+"aabb": AABB(-0.151087, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("QYBi/mVrYv5BgEjAZWtIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s6d6v")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_14p4f"]
+data = PackedVector3Array(-0.0010929, 0.136844, -0.0478516, -0.151087, 0.136844, -0.0478516, -0.0010929, 0.265224, -0.0478516, -0.0010929, 0.265224, -0.0478516, -0.151087, 0.136844, -0.0478516, -0.151087, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o3ptf"]
+_surfaces = [{
+"aabb": AABB(-0.0010929, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ugjip"]
+resource_name = "Mural_Pasado-colv2_Mesh_13"
+_surfaces = [{
+"aabb": AABB(-0.0010929, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("HpVi/kGAYv4elUjAQYBIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o3ptf")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_anu1t"]
+data = PackedVector3Array(0.148902, 0.136844, -0.0478516, -0.0010929, 0.136844, -0.0478516, 0.148902, 0.265224, -0.0478516, 0.148902, 0.265224, -0.0478516, -0.0010929, 0.136844, -0.0478516, -0.0010929, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vj1ko"]
+_surfaces = [{
+"aabb": AABB(0.148902, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jxmdx"]
+resource_name = "Mural_Pasado-colv2_Mesh_12"
+_surfaces = [{
+"aabb": AABB(0.148902, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("+qli/h6VYv76qUjAHpVIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vj1ko")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ajpck"]
+data = PackedVector3Array(0.298896, 0.136844, -0.0478516, 0.148902, 0.136844, -0.0478516, 0.298896, 0.265224, -0.0478516, 0.298896, 0.265224, -0.0478516, 0.148902, 0.136844, -0.0478516, 0.148902, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5lca0"]
+_surfaces = [{
+"aabb": AABB(0.298896, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q82ho"]
+resource_name = "Mural_Pasado-colv2_Mesh_11"
+_surfaces = [{
+"aabb": AABB(0.298896, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("175i/vqpYv7XvkjA+qlIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5lca0")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gqmy0"]
+data = PackedVector3Array(0.448891, 0.136844, -0.0478516, 0.298896, 0.136844, -0.0478516, 0.448891, 0.265224, -0.0478516, 0.448891, 0.265224, -0.0478516, 0.298896, 0.136844, -0.0478516, 0.298896, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_blmem"]
+_surfaces = [{
+"aabb": AABB(0.448891, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nw3mc"]
+resource_name = "Mural_Pasado-colv2_Mesh_10"
+_surfaces = [{
+"aabb": AABB(0.448891, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("s9Ni/te+Yv6z00jA175IwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_blmem")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6m4ur"]
+data = PackedVector3Array(0.598885, 0.136844, -0.0478516, 0.448891, 0.136844, -0.0478516, 0.598885, 0.265224, -0.0478516, 0.598885, 0.265224, -0.0478516, 0.448891, 0.136844, -0.0478516, 0.448891, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jj4is"]
+_surfaces = [{
+"aabb": AABB(0.598885, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cxip0"]
+resource_name = "Mural_Pasado-colv2_Mesh_9"
+_surfaces = [{
+"aabb": AABB(0.598885, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("kOhi/rPTYv6Q6EjAs9NIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jj4is")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_p6jsv"]
+data = PackedVector3Array(0.74888, 0.136844, -0.0478516, 0.598885, 0.136844, -0.0478516, 0.74888, 0.265224, -0.0478516, 0.74888, 0.265224, -0.0478516, 0.598885, 0.136844, -0.0478516, 0.598885, 0.265224, -0.0478516)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_71oaw"]
+_surfaces = [{
+"aabb": AABB(0.74888, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_giryk"]
+resource_name = "Mural_Pasado-colv2_Mesh_2"
+_surfaces = [{
+"aabb": AABB(0.74888, 0.136844, -0.0478516, 0.149995, 0.12838, 1e-05),
+"attribute_data": PackedByteArray("bP1i/pDoYv5s/UjAkOhIwA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_vtsj4"),
+"name": "Mural_Interior",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAIAAAAAAAAAAgP////8AAACAAAD//wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_71oaw")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vwu8x"]
+data = PackedVector3Array(0.898874, 0.136844, -0.0478516, 0.74888, 0.136844, -0.0478516, 0.898874, 0.265224, -0.0478516, 0.898874, 0.265224, -0.0478516, 0.74888, 0.136844, -0.0478516, 0.74888, 0.265224, -0.0478516)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmv7s"]
+resource_name = "Maldito_Borde"
+cull_mode = 2
+albedo_texture = ExtResource("3_j1bd5")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ss7hg"]
+_surfaces = [{
+"aabb": AABB(-1.02037, 0.00349261, -0.0478516, 2.04074, 0.780358, 0.0508983),
+"format": 34896613377,
+"index_count": 180,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAwAAAAQABQABAAMAAAAGAAQABAAGAAcABgAAACAABgAgAAcAIAAAAAIABwAgAAgAIAAhAAgAIAACACEACAAhAAkACQAhAAoACgAhACIACgAiAAsACwAiAAwACwAMAA0ADQAMAA4AIgAOAAwADQAOAA8AIQAQACIAEAAOACIADwAOABEAEAARAA4ADwARABIAIwAQACEAIQACACMAEwAQACMAIwACABMAFQAQABMAEwACABQAFQAZABAAGQARABAAGgAZABUAAgAWABQAFAAWABcAAgABABYAEgARABsAGQAbABEAEgAbABwAHAAbACQAJAAbABkAHAAkAB0AAQAfABYAHwABAAUAHgAfAAUAHQAkACUAJgAfAB4AHQAmAB4AFgAfACYAJQAmAB0AFgAmACcAJwAmACUAJQAkACcAJwAkABkAFgAnABcAGgAnABkAFwAnABgAGAAnABoA"),
+"lods": [0.000174381, PackedByteArray("AAABAAIAAQAAAAMAAwAAAAQABQABAAMAAAAGAAQABgAAAAIABAAGAAcABwAGAAgACAAGAAkACQAGAAoACgAGAAsACwAGAAwACwAMAA0ADQAMAA4ABgAOAAwADQAOAA8AEAAOAAYABgACABAADwAOABEAEAARAA4ADwARABIAEAACABMAEwACABQAFQAQABMAAgAWABQAFAAWABcAFwAWABgAAgABABYAFQAZABAAGQARABAAGgAZABUAGAAWABoAGgAWABkAGQAbABEAFgAbABkAEgARABsAEgAbABwAHAAbAB0AHQAbAB4AFgAfABsAGwAfAB4AAQAfABYAHgAfAAUAHwABAAUA")],
+"name": "Maldito_Borde",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("//801P//AAD//74r//8AAAfxNNT//wAA//++KwAAAAD//zTUAAAAAP//AAAAAAAA////////AAD/////AAAAAAfx//8AAAAA/n///wAAAAD2Dv//AAAAAAAA//8AAAAAAAD/////AAAAADTUAAAAAAAANNT//wAAAAC+KwAAAAD2DjTU//8AAAAAviv//wAAAAAAAAAAAAD+fzTUAAAAAAfxNNQAAAAA9g401AAAAAAH8b4r//8AAAfxvisAAAAA/n++KwAAAAD2Dr4r//8AAPYOvisAAAAAAAAAAP//AAD2DgAAAAAAAP5/AAAAAAAAB/EAAAAAAAD//wAA//8AAAfx/////wAA/n//////AAD2Dv////8AAP5/NNT//wAA9g4AAP//AAD+fwAA//8AAAfxAAD//wAA/n++K///AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tg167"]
+resource_name = "Mural_Pasado-colv2_Mesh_0"
+_surfaces = [{
+"aabb": AABB(-1.02037, 0.00349261, -0.0478516, 2.04074, 0.780358, 0.0508983),
+"attribute_data": PackedByteArray("14sBj9eLDbOygwGPsoMNs+aH+eZxgIzvcYD55on4+eb//4zv///55sz/avfM////V/j//7SH/v8+gP7/PoBq90ScmrIflJqyRJyOjh+Ujo5R8Z+N7e6fjRHvkI3t7pCNH/CQjS3xkI1R8ZCNr/aDj2z25Yoh93yPMvevkMD2tpDe9t6KWvaxicz2qon/9BaH3ucWh27utIbe57SG//S0hnD4IYpw+EySpvchiqb3TJLe53iH3ucWh27ueIf/9HiH//QWh6/2g4899oqPbPbkik72vZDA9raQ+vXrilr2sYno9biJEe+fjVHxr43t7p+N7e6vjR/wn40t8Z+NUfGfjTn5TJJw+EySOfkhinD4IYrmh4zvOMD55jjAjO+J+IzvV/hq9wXAavcFwP//tIdq9xHvn40R75CNEe+fjR/wn40t8Z+Nbu4Wh27uFocR76+NH/CvjS3xr40="),
+"format": 34896613399,
+"index_count": 180,
+"index_data": PackedByteArray("AAABAAIAAgABAAMARAAFAAQABAAFAAYARQBEAAQARgBEAEUARQBHAEYABwBHAEUABwAIAEcACQAIAAcACgALAEgASAALAAwASAAMAEkASQAMAEoASgANAEkASQANAEsADQAOAEsASwAOAA8AEAARABIAEgARABMATAAVAE0ATQAVABcAGABOABYATwBOABgAGABQAE8AGQBQABgAGQAUAFAAGgAUABkAGwAcAB0AHgAbAB0AHwAbAB4AHQAcACAAHAAhACAAIAAhACIAUQAkACUAJQAkACYAJQAjAFEAJwAjACUAKAApACoAKgApACsALQBSACwALABSAC4ALgBSAC8ALwBSADAAMQAyADMAMQA0ADIANQA0ADEAMwAyADYAMwA2ADcANwA2ADgAOQBTADsAOwBTADwAOQBUAFMAPQBUADkAPgBUAD0AVQBUAD4APwBVAD4AOgBVAD8AQABBAEIAQgBBAEMA"),
+"lods": [0.000174381, PackedByteArray("AAABAAIAAgABAAMABAAFAAYABwAFAAQABwAIAAUACQAIAAcACgALAAwACgAMAA0ADQAOAAoACgAOAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAUABYAGQAUABgAGgAUABkAGwAcAB0AHgAbAB0AHwAbAB4AHQAcACAAHAAhACAAIAAhACIAIwAkACUAJQAkACYAJwAjACUAKAApACoAKgApACsALAAtAC4ALgAtAC8ALwAtADAAMQAyADMAMQA0ADIANQA0ADEAMwAyADYAMwA2ADcANwA2ADgAOQA6ADsAOwA6ADwAPQA6ADkAPgA6AD0APwA6AD4AQABBAEIAQgBBAEMA")],
+"material": SubResource("StandardMaterial3D_vmv7s"),
+"name": "Maldito_Borde",
+"primitive": 3,
+"uv_scale": Vector4(2.00483, 1.94925, 0, 0),
+"vertex_count": 86,
+"vertex_data": PackedByteArray("//801P//AID//74r//8AgAfxNNT//wCAB/G+K///AID2Dr4r//8AgAAAAAD//wCAAAC+K///AIAH8b4r//8AgP//AAD//wCA//++K///AID///////8AgP//NNT//wCAB/E01P//AID2DjTU//8AgAAANNT//wCAAAD/////AID2Dr4r//8AgAAAviv//wCA9g401P//AIAAADTU//8AgAAAAAD///////8AAP////8H8QAAAAD/////AAAAAP///n8AAAAA///2DgAAAAD//wAAAAAAAP////++K///CMD//zTU//8IwP//visAAAjA//8AAAAACMD//wAA//8IwP//NNQAAAjA////////CMD/////AAAIwPYONNT/////B/E01P/////+fzTUAAD//wfxNNQAAP//9g401AAA//8H8TTU////vwfxviv///+/B/E01AAA/78H8b4rAAD/vwfxvisAAP//B/G+K//////+f74rAAD///YOvisAAP//9g6+K/////8AADTUAABG/gAANNT//0b+AAC+KwAAR/4AAP////9G/gAA//8AAEb+AAC+K///R/4AAAAAAABH/gAAAAD//0f+9g7//wAA/7//////////vwAA//8AAP+/AAD//////7/+f///AAD/vwfx//8AAP+//////wAA/7/2Dr4rAAD/v/YOviv///+/9g401AAA/7/2DjTU////v/YOAAD//wCA/n++K///AID+fwAA//8AgAfxAAD//wCAB/H/////AID+f/////8AgP5/NNT//wCA9g7/////AIAH8QAA/////wfxAAAAAP//B/EAAP/////+fwAA//////YOAAD//////n801P/////+f74r//////YO//////+//n///////78H8f//////v/9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3//P/y/////f/8//L////9//z//f/8//3//P5qDNgeZgzMHmoM2B5qDNQeagzUHmYMzB5iDMQeYgzEH/3//P/9//z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//78d/vDAHf7wwB3+8MAc/vDAHP7wwB3+8MAd/vDAHf7wwP///3////9/////f////3////9/////f////3//fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9///////////////9////8v////L////9//z//f/8//3//P/9//z//f/+/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ss7hg")
+
+[node name="Mural_Pasado-colv2" type="Node3D"]
+
+[node name="Mural_Pasado-col" type="Node3D" parent="."]
+transform = Transform3D(-1.41856e-07, 0, 0.999088, 0, 3.71619, 0, -3.2453, 0, -4.36715e-08, -3.59505, -1.3993, -5.30277)
+
+[node name="Tile0" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -2.84217e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A1" type="MeshInstance3D" parent="Mural_Pasado-col/Tile0"]
+mesh = SubResource("ArrayMesh_cknd5")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile0"]
+shape = SubResource("ConcavePolygonShape3D_3lbf7")
+
+[node name="Tile1" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile1"]
+mesh = SubResource("ArrayMesh_tv74y")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile1"]
+shape = SubResource("ConcavePolygonShape3D_msbvr")
+
+[node name="Tile2" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile2"]
+mesh = SubResource("ArrayMesh_t5jih")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile2"]
+shape = SubResource("ConcavePolygonShape3D_v71mg")
+
+[node name="Tile3" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile3"]
+mesh = SubResource("ArrayMesh_ygrk1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile3"]
+shape = SubResource("ConcavePolygonShape3D_2wumx")
+
+[node name="Tile4" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile4"]
+mesh = SubResource("ArrayMesh_jsrmg")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile4"]
+shape = SubResource("ConcavePolygonShape3D_o268j")
+
+[node name="Tile5" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile5"]
+mesh = SubResource("ArrayMesh_6aw62")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile5"]
+shape = SubResource("ConcavePolygonShape3D_d2dxr")
+
+[node name="Tile6" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile6"]
+mesh = SubResource("ArrayMesh_cutwd")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile6"]
+shape = SubResource("ConcavePolygonShape3D_n08t4")
+
+[node name="Tile7" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile7"]
+mesh = SubResource("ArrayMesh_heyyt")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile7"]
+shape = SubResource("ConcavePolygonShape3D_dmhsn")
+
+[node name="Tile8" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile8"]
+mesh = SubResource("ArrayMesh_1l51k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile8"]
+shape = SubResource("ConcavePolygonShape3D_qcvo3")
+
+[node name="Tile9" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile9"]
+mesh = SubResource("ArrayMesh_suvvk")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile9"]
+shape = SubResource("ConcavePolygonShape3D_m1uyw")
+
+[node name="Tile10" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile10"]
+mesh = SubResource("ArrayMesh_k2ql2")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile10"]
+shape = SubResource("ConcavePolygonShape3D_vnxsm")
+
+[node name="Tile11" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="A12" type="MeshInstance3D" parent="Mural_Pasado-col/Tile11"]
+mesh = SubResource("ArrayMesh_e6j5v")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile11"]
+shape = SubResource("ConcavePolygonShape3D_3aylx")
+
+[node name="Tile12" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="B1" type="MeshInstance3D" parent="Mural_Pasado-col/Tile12"]
+mesh = SubResource("ArrayMesh_577ym")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile12"]
+shape = SubResource("ConcavePolygonShape3D_5thuw")
+
+[node name="Tile13" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="B2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile13"]
+mesh = SubResource("ArrayMesh_yrl68")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile13"]
+shape = SubResource("ConcavePolygonShape3D_c7wdf")
+
+[node name="Tile14" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="B3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile14"]
+mesh = SubResource("ArrayMesh_y0c2m")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile14"]
+shape = SubResource("ConcavePolygonShape3D_42lx4")
+
+[node name="Tile15" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="B4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile15"]
+mesh = SubResource("ArrayMesh_ohkam")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile15"]
+shape = SubResource("ConcavePolygonShape3D_fb0vg")
+
+[node name="Tile16" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -2.66454e-15, 0, 1, 0, -4.26326e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+
+[node name="B5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile16"]
+mesh = SubResource("ArrayMesh_2c7q7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile16"]
+shape = SubResource("ConcavePolygonShape3D_al8vh")
+
+[node name="Tile17" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="B6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile17"]
+mesh = SubResource("ArrayMesh_32vaj")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile17"]
+shape = SubResource("ConcavePolygonShape3D_8q5ir")
+
+[node name="Tile18" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="B7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile18"]
+mesh = SubResource("ArrayMesh_rnbii")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile18"]
+shape = SubResource("ConcavePolygonShape3D_c2ngw")
+
+[node name="Tile19" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="B8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile19"]
+mesh = SubResource("ArrayMesh_ha2m1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile19"]
+shape = SubResource("ConcavePolygonShape3D_quhst")
+
+[node name="Tile20" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="B9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile20"]
+mesh = SubResource("ArrayMesh_n88vs")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile20"]
+shape = SubResource("ConcavePolygonShape3D_nsk8s")
+
+[node name="Tile21" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -2.66454e-15, 0, 1, 0, -2.84217e-14, 0, 1, 0, 0, 0)
+
+[node name="Mural_Interior_039" type="MeshInstance3D" parent="Mural_Pasado-col/Tile21"]
+mesh = SubResource("ArrayMesh_2hs7i")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile21"]
+transform = Transform3D(1.48163, 0, -8.88178e-16, 0, 1.32828, 0, 0, 0, 1, 0.523822, 0.457787, -0.0964594)
+shape = SubResource("BoxShape3D_ruxrq")
+
+[node name="Tile22" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="B11" type="MeshInstance3D" parent="Mural_Pasado-col/Tile22"]
+mesh = SubResource("ArrayMesh_q6t53")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile22"]
+shape = SubResource("ConcavePolygonShape3D_04ta8")
+
+[node name="Tile23" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="Tile23" type="MeshInstance3D" parent="Mural_Pasado-col/Tile23"]
+mesh = SubResource("ArrayMesh_71dho")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile23"]
+shape = SubResource("ConcavePolygonShape3D_fsgkg")
+
+[node name="Tile24" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="C1" type="MeshInstance3D" parent="Mural_Pasado-col/Tile24"]
+mesh = SubResource("ArrayMesh_jgrxb")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile24"]
+shape = SubResource("ConcavePolygonShape3D_mpt35")
+
+[node name="Tile25" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile25"]
+mesh = SubResource("ArrayMesh_akw05")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile25"]
+shape = SubResource("ConcavePolygonShape3D_pcxvt")
+
+[node name="Tile26" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile26"]
+mesh = SubResource("ArrayMesh_n0rln")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile26"]
+shape = SubResource("ConcavePolygonShape3D_7iw3t")
+
+[node name="Tile27" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile27"]
+mesh = SubResource("ArrayMesh_l57g7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile27"]
+shape = SubResource("ConcavePolygonShape3D_p3l5f")
+
+[node name="Tile28" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile28"]
+mesh = SubResource("ArrayMesh_vrxg3")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile28"]
+shape = SubResource("ConcavePolygonShape3D_41641")
+
+[node name="Tile29" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile29"]
+mesh = SubResource("ArrayMesh_dec86")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile29"]
+shape = SubResource("ConcavePolygonShape3D_s2wps")
+
+[node name="Tile30" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile30"]
+mesh = SubResource("ArrayMesh_voaep")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile30"]
+shape = SubResource("ConcavePolygonShape3D_jqw81")
+
+[node name="Tile31" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile31"]
+mesh = SubResource("ArrayMesh_dyxys")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile31"]
+shape = SubResource("ConcavePolygonShape3D_1q0i8")
+
+[node name="Tile32" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile32"]
+mesh = SubResource("ArrayMesh_s2nd0")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile32"]
+shape = SubResource("ConcavePolygonShape3D_elttt")
+
+[node name="Tile33" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile33"]
+mesh = SubResource("ArrayMesh_p464y")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile33"]
+shape = SubResource("ConcavePolygonShape3D_y4sij")
+
+[node name="Tile34" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="C11" type="MeshInstance3D" parent="Mural_Pasado-col/Tile34"]
+mesh = SubResource("ArrayMesh_5yuoe")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile34"]
+shape = SubResource("ConcavePolygonShape3D_t7i4t")
+
+[node name="Tile35" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="C12" type="MeshInstance3D" parent="Mural_Pasado-col/Tile35"]
+mesh = SubResource("ArrayMesh_b73d6")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile35"]
+shape = SubResource("ConcavePolygonShape3D_j07fx")
+
+[node name="Tile36" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="D1" type="MeshInstance3D" parent="Mural_Pasado-col/Tile36"]
+mesh = SubResource("ArrayMesh_0r8vb")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile36"]
+shape = SubResource("ConcavePolygonShape3D_b2642")
+
+[node name="Tile37" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile37"]
+mesh = SubResource("ArrayMesh_cnapn")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile37"]
+shape = SubResource("ConcavePolygonShape3D_0b4ru")
+
+[node name="Tile38" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile38"]
+mesh = SubResource("ArrayMesh_h7kn7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile38"]
+shape = SubResource("ConcavePolygonShape3D_dxlcn")
+
+[node name="Tile39" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile39"]
+mesh = SubResource("ArrayMesh_2030s")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile39"]
+shape = SubResource("ConcavePolygonShape3D_2i4cv")
+
+[node name="Tile40" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile40"]
+mesh = SubResource("ArrayMesh_f7x0q")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile40"]
+shape = SubResource("ConcavePolygonShape3D_atlwa")
+
+[node name="Tile41" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile41"]
+mesh = SubResource("ArrayMesh_554fl")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile41"]
+shape = SubResource("ConcavePolygonShape3D_14p4f")
+
+[node name="Tile42" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile42"]
+mesh = SubResource("ArrayMesh_ugjip")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile42"]
+shape = SubResource("ConcavePolygonShape3D_anu1t")
+
+[node name="Tile43" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile43"]
+mesh = SubResource("ArrayMesh_jxmdx")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile43"]
+shape = SubResource("ConcavePolygonShape3D_ajpck")
+
+[node name="Tile44" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile44"]
+mesh = SubResource("ArrayMesh_q82ho")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile44"]
+shape = SubResource("ConcavePolygonShape3D_gqmy0")
+
+[node name="Tile45" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile45"]
+mesh = SubResource("ArrayMesh_nw3mc")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile45"]
+shape = SubResource("ConcavePolygonShape3D_6m4ur")
+
+[node name="Tile46" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="D11" type="MeshInstance3D" parent="Mural_Pasado-col/Tile46"]
+mesh = SubResource("ArrayMesh_cxip0")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile46"]
+shape = SubResource("ConcavePolygonShape3D_p6jsv")
+
+[node name="Tile47" type="StaticBody3D" parent="Mural_Pasado-col"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="D12" type="MeshInstance3D" parent="Mural_Pasado-col/Tile47"]
+mesh = SubResource("ArrayMesh_giryk")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mural_Pasado-col/Tile47"]
+shape = SubResource("ConcavePolygonShape3D_vwu8x")
+
+[node name="Mural_Guarda" type="MeshInstance3D" parent="Mural_Pasado-col"]
+visible = false
+mesh = SubResource("ArrayMesh_tg167")
+skeleton = NodePath("")
