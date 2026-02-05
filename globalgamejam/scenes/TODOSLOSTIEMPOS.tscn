@@ -109,6 +109,10 @@ visible = false
 [node name="MaskFuturePickUp" parent="WorldAnchor/PASADO/Templo/Pedestal_Futuro/Mascara_Futuro2" index="1" node_paths=PackedStringArray("mask_manager")]
 mask_manager = NodePath("../../../../../../MaskManager")
 
+[node name="Mural_Pasado-col" parent="WorldAnchor/PASADO/Templo/Mural_Pasado-colv2" index="0" node_paths=PackedStringArray("animacionpedestalfuturo", "collisionmascaradelfuturo")]
+animacionpedestalfuturo = NodePath("../../Pedestal_Futuro/PedestalAnimadoMascaraFuturo/AnimationPlayer")
+collisionmascaradelfuturo = NodePath("../../Pedestal_Futuro/Mascara_Futuro2/MaskFuturePickUp/CollisionShape3D")
+
 [node name="FUTURO" parent="WorldAnchor" instance=ExtResource("5_xl62j")]
 process_mode = 4
 visible = false
@@ -189,8 +193,7 @@ script = ExtResource("20_4vwko")
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Futuro/Mascara_Futuro2/MaskFuturePickUp"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Oculto"]
 [editable path="WorldAnchor/PASADO/Templo/Pedestal_Pasado"]
-[editable path="WorldAnchor/PASADO/Templo/MuralPuzzle"]
-[editable path="WorldAnchor/PASADO/Templo/Mural_Pasado"]
+[editable path="WorldAnchor/PASADO/Templo/Mural_Pasado-colv2"]
 [editable path="WorldAnchor/PASADO/Mesa_Base"]
 [editable path="WorldAnchor/PASADO/Cultivos2"]
 [editable path="WorldAnchor/PASADO/Obstaculo_Pasillo_0012"]

@@ -1,13 +1,14 @@
-[gd_scene load_steps=152 format=4 uid="uid://b3icjbfig6fg3"]
+[gd_scene load_steps=153 format=4 uid="uid://b50gbkeddey3"]
 
-[ext_resource type="Script" path="res://scripts/mural_tile.gd" id="1_g1n6c"]
-[ext_resource type="Texture2D" uid="uid://cofludgr52nv3" path="res://Assets/Terrain_Objects/Pistas/Mural_Pasado-colv2_Mural_Interior_albedo000.png" id="2_boq5g"]
+[ext_resource type="Script" uid="uid://dh4itfa6mnrih" path="res://scripts/mural_puzzle.gd" id="1_boq5g"]
+[ext_resource type="Script" uid="uid://c7gfl3kq33vln" path="res://scripts/mural_tile.gd" id="1_g1n6c"]
+[ext_resource type="Texture2D" uid="uid://dix3s1vndgb83" path="res://Assets/Texturas/Puzzle_Panel_TEX_v3.png" id="3_boq5g"]
 [ext_resource type="Texture2D" uid="uid://2kfrmxrqe85e" path="res://Assets/Terrain_Objects/Pistas/Mural_Pasado-colv2_Maldito_Borde_albedo000.png" id="3_j1bd5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtsj4"]
 resource_name = "Mural_Interior"
 cull_mode = 2
-albedo_texture = ExtResource("2_boq5g")
+albedo_texture = ExtResource("3_boq5g")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lgs5e"]
@@ -1734,6 +1735,7 @@ shadow_mesh = SubResource("ArrayMesh_ss7hg")
 
 [node name="Mural_Pasado-col" type="Node3D" parent="."]
 transform = Transform3D(-1.41856e-07, 0, 0.999088, 0, 3.71619, 0, -3.2453, 0, -4.36715e-08, -3.59505, -1.3993, -5.30277)
+script = ExtResource("1_boq5g")
 
 [node name="Tile0" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -2.84217e-14, 0, 1, 0, 0, 0)
@@ -1749,6 +1751,7 @@ shape = SubResource("ConcavePolygonShape3D_3lbf7")
 [node name="Tile1" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 1
 
 [node name="A2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile1"]
 mesh = SubResource("ArrayMesh_tv74y")
@@ -1760,6 +1763,7 @@ shape = SubResource("ConcavePolygonShape3D_msbvr")
 [node name="Tile2" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 2
 
 [node name="A3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile2"]
 mesh = SubResource("ArrayMesh_t5jih")
@@ -1771,6 +1775,7 @@ shape = SubResource("ConcavePolygonShape3D_v71mg")
 [node name="Tile3" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 3
 
 [node name="A4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile3"]
 mesh = SubResource("ArrayMesh_ygrk1")
@@ -1782,6 +1787,7 @@ shape = SubResource("ConcavePolygonShape3D_2wumx")
 [node name="Tile4" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 4
 
 [node name="A5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile4"]
 mesh = SubResource("ArrayMesh_jsrmg")
@@ -1793,6 +1799,7 @@ shape = SubResource("ConcavePolygonShape3D_o268j")
 [node name="Tile5" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 5
 
 [node name="A6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile5"]
 mesh = SubResource("ArrayMesh_6aw62")
@@ -1804,6 +1811,7 @@ shape = SubResource("ConcavePolygonShape3D_d2dxr")
 [node name="Tile6" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 6
 
 [node name="A7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile6"]
 mesh = SubResource("ArrayMesh_cutwd")
@@ -1815,6 +1823,7 @@ shape = SubResource("ConcavePolygonShape3D_n08t4")
 [node name="Tile7" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 7
 
 [node name="A8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile7"]
 mesh = SubResource("ArrayMesh_heyyt")
@@ -1826,6 +1835,7 @@ shape = SubResource("ConcavePolygonShape3D_dmhsn")
 [node name="Tile8" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 8
 
 [node name="A9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile8"]
 mesh = SubResource("ArrayMesh_1l51k")
@@ -1837,6 +1847,7 @@ shape = SubResource("ConcavePolygonShape3D_qcvo3")
 [node name="Tile9" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 9
 
 [node name="A10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile9"]
 mesh = SubResource("ArrayMesh_suvvk")
@@ -1848,6 +1859,7 @@ shape = SubResource("ConcavePolygonShape3D_m1uyw")
 [node name="Tile10" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 10
 
 [node name="A10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile10"]
 mesh = SubResource("ArrayMesh_k2ql2")
@@ -1859,6 +1871,7 @@ shape = SubResource("ConcavePolygonShape3D_vnxsm")
 [node name="Tile11" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 11
 
 [node name="A12" type="MeshInstance3D" parent="Mural_Pasado-col/Tile11"]
 mesh = SubResource("ArrayMesh_e6j5v")
@@ -1870,6 +1883,7 @@ shape = SubResource("ConcavePolygonShape3D_3aylx")
 [node name="Tile12" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 12
 
 [node name="B1" type="MeshInstance3D" parent="Mural_Pasado-col/Tile12"]
 mesh = SubResource("ArrayMesh_577ym")
@@ -1881,6 +1895,7 @@ shape = SubResource("ConcavePolygonShape3D_5thuw")
 [node name="Tile13" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 13
 
 [node name="B2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile13"]
 mesh = SubResource("ArrayMesh_yrl68")
@@ -1892,6 +1907,7 @@ shape = SubResource("ConcavePolygonShape3D_c7wdf")
 [node name="Tile14" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 14
 
 [node name="B3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile14"]
 mesh = SubResource("ArrayMesh_y0c2m")
@@ -1903,6 +1919,7 @@ shape = SubResource("ConcavePolygonShape3D_42lx4")
 [node name="Tile15" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 15
 
 [node name="B4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile15"]
 mesh = SubResource("ArrayMesh_ohkam")
@@ -1914,6 +1931,7 @@ shape = SubResource("ConcavePolygonShape3D_fb0vg")
 [node name="Tile16" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -2.66454e-15, 0, 1, 0, -4.26326e-14, 0, 1, 0, 0, 0)
 script = ExtResource("1_g1n6c")
+tile_index = 16
 
 [node name="B5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile16"]
 mesh = SubResource("ArrayMesh_2c7q7")
@@ -1924,6 +1942,8 @@ shape = SubResource("ConcavePolygonShape3D_al8vh")
 
 [node name="Tile17" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 17
 
 [node name="B6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile17"]
 mesh = SubResource("ArrayMesh_32vaj")
@@ -1934,6 +1954,8 @@ shape = SubResource("ConcavePolygonShape3D_8q5ir")
 
 [node name="Tile18" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 18
 
 [node name="B7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile18"]
 mesh = SubResource("ArrayMesh_rnbii")
@@ -1944,6 +1966,8 @@ shape = SubResource("ConcavePolygonShape3D_c2ngw")
 
 [node name="Tile19" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 19
 
 [node name="B8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile19"]
 mesh = SubResource("ArrayMesh_ha2m1")
@@ -1954,6 +1978,8 @@ shape = SubResource("ConcavePolygonShape3D_quhst")
 
 [node name="Tile20" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 20
 
 [node name="B9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile20"]
 mesh = SubResource("ArrayMesh_n88vs")
@@ -1964,6 +1990,8 @@ shape = SubResource("ConcavePolygonShape3D_nsk8s")
 
 [node name="Tile21" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -2.66454e-15, 0, 1, 0, -2.84217e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 21
 
 [node name="Mural_Interior_039" type="MeshInstance3D" parent="Mural_Pasado-col/Tile21"]
 mesh = SubResource("ArrayMesh_2hs7i")
@@ -1975,6 +2003,8 @@ shape = SubResource("BoxShape3D_ruxrq")
 
 [node name="Tile22" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -1.77636e-15, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 22
 
 [node name="B11" type="MeshInstance3D" parent="Mural_Pasado-col/Tile22"]
 mesh = SubResource("ArrayMesh_q6t53")
@@ -1985,6 +2015,8 @@ shape = SubResource("ConcavePolygonShape3D_04ta8")
 
 [node name="Tile23" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 23
 
 [node name="Tile23" type="MeshInstance3D" parent="Mural_Pasado-col/Tile23"]
 mesh = SubResource("ArrayMesh_71dho")
@@ -1995,6 +2027,8 @@ shape = SubResource("ConcavePolygonShape3D_fsgkg")
 
 [node name="Tile24" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 24
 
 [node name="C1" type="MeshInstance3D" parent="Mural_Pasado-col/Tile24"]
 mesh = SubResource("ArrayMesh_jgrxb")
@@ -2005,6 +2039,8 @@ shape = SubResource("ConcavePolygonShape3D_mpt35")
 
 [node name="Tile25" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 25
 
 [node name="C2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile25"]
 mesh = SubResource("ArrayMesh_akw05")
@@ -2015,6 +2051,8 @@ shape = SubResource("ConcavePolygonShape3D_pcxvt")
 
 [node name="Tile26" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 26
 
 [node name="C3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile26"]
 mesh = SubResource("ArrayMesh_n0rln")
@@ -2025,6 +2063,8 @@ shape = SubResource("ConcavePolygonShape3D_7iw3t")
 
 [node name="Tile27" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 27
 
 [node name="C4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile27"]
 mesh = SubResource("ArrayMesh_l57g7")
@@ -2035,6 +2075,8 @@ shape = SubResource("ConcavePolygonShape3D_p3l5f")
 
 [node name="Tile28" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 28
 
 [node name="C5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile28"]
 mesh = SubResource("ArrayMesh_vrxg3")
@@ -2045,6 +2087,8 @@ shape = SubResource("ConcavePolygonShape3D_41641")
 
 [node name="Tile29" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 29
 
 [node name="C6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile29"]
 mesh = SubResource("ArrayMesh_dec86")
@@ -2055,6 +2099,8 @@ shape = SubResource("ConcavePolygonShape3D_s2wps")
 
 [node name="Tile30" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 30
 
 [node name="C7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile30"]
 mesh = SubResource("ArrayMesh_voaep")
@@ -2065,6 +2111,8 @@ shape = SubResource("ConcavePolygonShape3D_jqw81")
 
 [node name="Tile31" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 31
 
 [node name="C8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile31"]
 mesh = SubResource("ArrayMesh_dyxys")
@@ -2075,6 +2123,8 @@ shape = SubResource("ConcavePolygonShape3D_1q0i8")
 
 [node name="Tile32" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 32
 
 [node name="C9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile32"]
 mesh = SubResource("ArrayMesh_s2nd0")
@@ -2085,6 +2135,8 @@ shape = SubResource("ConcavePolygonShape3D_elttt")
 
 [node name="Tile33" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 33
 
 [node name="C10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile33"]
 mesh = SubResource("ArrayMesh_p464y")
@@ -2095,6 +2147,8 @@ shape = SubResource("ConcavePolygonShape3D_y4sij")
 
 [node name="Tile34" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 34
 
 [node name="C11" type="MeshInstance3D" parent="Mural_Pasado-col/Tile34"]
 mesh = SubResource("ArrayMesh_5yuoe")
@@ -2105,6 +2159,8 @@ shape = SubResource("ConcavePolygonShape3D_t7i4t")
 
 [node name="Tile35" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 35
 
 [node name="C12" type="MeshInstance3D" parent="Mural_Pasado-col/Tile35"]
 mesh = SubResource("ArrayMesh_b73d6")
@@ -2115,6 +2171,8 @@ shape = SubResource("ConcavePolygonShape3D_j07fx")
 
 [node name="Tile36" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 36
 
 [node name="D1" type="MeshInstance3D" parent="Mural_Pasado-col/Tile36"]
 mesh = SubResource("ArrayMesh_0r8vb")
@@ -2125,6 +2183,8 @@ shape = SubResource("ConcavePolygonShape3D_b2642")
 
 [node name="Tile37" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 37
 
 [node name="D2" type="MeshInstance3D" parent="Mural_Pasado-col/Tile37"]
 mesh = SubResource("ArrayMesh_cnapn")
@@ -2135,6 +2195,8 @@ shape = SubResource("ConcavePolygonShape3D_0b4ru")
 
 [node name="Tile38" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 38
 
 [node name="D3" type="MeshInstance3D" parent="Mural_Pasado-col/Tile38"]
 mesh = SubResource("ArrayMesh_h7kn7")
@@ -2145,6 +2207,8 @@ shape = SubResource("ConcavePolygonShape3D_dxlcn")
 
 [node name="Tile39" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 39
 
 [node name="D4" type="MeshInstance3D" parent="Mural_Pasado-col/Tile39"]
 mesh = SubResource("ArrayMesh_2030s")
@@ -2155,6 +2219,8 @@ shape = SubResource("ConcavePolygonShape3D_2i4cv")
 
 [node name="Tile40" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 40
 
 [node name="D5" type="MeshInstance3D" parent="Mural_Pasado-col/Tile40"]
 mesh = SubResource("ArrayMesh_f7x0q")
@@ -2165,6 +2231,8 @@ shape = SubResource("ConcavePolygonShape3D_atlwa")
 
 [node name="Tile41" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 41
 
 [node name="D6" type="MeshInstance3D" parent="Mural_Pasado-col/Tile41"]
 mesh = SubResource("ArrayMesh_554fl")
@@ -2175,6 +2243,8 @@ shape = SubResource("ConcavePolygonShape3D_14p4f")
 
 [node name="Tile42" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 42
 
 [node name="D7" type="MeshInstance3D" parent="Mural_Pasado-col/Tile42"]
 mesh = SubResource("ArrayMesh_ugjip")
@@ -2185,6 +2255,8 @@ shape = SubResource("ConcavePolygonShape3D_anu1t")
 
 [node name="Tile43" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 43
 
 [node name="D8" type="MeshInstance3D" parent="Mural_Pasado-col/Tile43"]
 mesh = SubResource("ArrayMesh_jxmdx")
@@ -2195,6 +2267,8 @@ shape = SubResource("ConcavePolygonShape3D_ajpck")
 
 [node name="Tile44" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 44
 
 [node name="D9" type="MeshInstance3D" parent="Mural_Pasado-col/Tile44"]
 mesh = SubResource("ArrayMesh_q82ho")
@@ -2205,6 +2279,8 @@ shape = SubResource("ConcavePolygonShape3D_gqmy0")
 
 [node name="Tile45" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 45
 
 [node name="D10" type="MeshInstance3D" parent="Mural_Pasado-col/Tile45"]
 mesh = SubResource("ArrayMesh_nw3mc")
@@ -2215,6 +2291,8 @@ shape = SubResource("ConcavePolygonShape3D_6m4ur")
 
 [node name="Tile46" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 46
 
 [node name="D11" type="MeshInstance3D" parent="Mural_Pasado-col/Tile46"]
 mesh = SubResource("ArrayMesh_cxip0")
@@ -2225,6 +2303,8 @@ shape = SubResource("ConcavePolygonShape3D_p6jsv")
 
 [node name="Tile47" type="StaticBody3D" parent="Mural_Pasado-col"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
+script = ExtResource("1_g1n6c")
+tile_index = 47
 
 [node name="D12" type="MeshInstance3D" parent="Mural_Pasado-col/Tile47"]
 mesh = SubResource("ArrayMesh_giryk")
@@ -2234,6 +2314,5 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_vwu8x")
 
 [node name="Mural_Guarda" type="MeshInstance3D" parent="Mural_Pasado-col"]
-visible = false
 mesh = SubResource("ArrayMesh_tg167")
 skeleton = NodePath("")

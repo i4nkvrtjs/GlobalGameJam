@@ -1,8 +1,8 @@
 extends Node3D
 
 @export var columns := 12
-@onready var animacionpedestalfuturo: AnimationPlayer = $"../Pedestal_Futuro/PedestalAnimadoMascaraFuturo/AnimationPlayer"
-@onready var collisionmascaradelfuturo: CollisionShape3D = $"../Pedestal_Futuro/Mascara_Futuro2/MaskFuturePickUp/CollisionShape3D"
+@export var animacionpedestalfuturo: AnimationPlayer
+@export var collisionmascaradelfuturo: CollisionShape3D
 
 var correct_sequence := [1, 9, 5, 1]
 var pressed_tiles: Array[int] = []
