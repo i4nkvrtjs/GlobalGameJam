@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=3 uid="uid://bio64k4j3ulx4"]
+
+[ext_resource type="PackedScene" uid="uid://uir627e61nnn" path="res://Assets/Terrain_Objects/Decoraciones/Presente/Antorcha.glb" id="1_ql56p"]
+
+[sub_resource type="Animation" id="Animation_anvkm"]
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 0.966667, 1.43333, 2, 2.46667, 2.96667, 3.46667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.937, 2.285, 1.411, 2.198, 2.373, 1.761, 2.285, 2.46, 1.937]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.466667, 0.966667, 1.43333, 2, 2.96667, 3.46667, 4.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.139, 3.3, 0.052), Vector3(1.1, 3.2, 0.052), Vector3(1.139, 3.2, 0.052), Vector3(1.144, 3.2, -0.098), Vector3(1.1, 3.2, -0.098), Vector3(1.066, 3.3, -0.044), Vector3(1.094, 3.2, -0.064), Vector3(1.139, 3.3, 0.052)]
+}
+
+[sub_resource type="Animation" id="Animation_d61pw"]
+resource_name = "fire"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.03333, 1.48, 1.96667, 2.46667, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1.07177, 1, 1, 1, 1),
+"update": 0,
+"values": [3.772, 2.198, 1.411, 3.335, 2.286, 4.122, 1.062, 2.081, 2.868]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rw8db"]
+_data = {
+&"RESET": SubResource("Animation_anvkm"),
+&"fire": SubResource("Animation_d61pw")
+}
+
+[sub_resource type="Gradient" id="Gradient_ql56p"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3yimf"]
+gradient = SubResource("Gradient_ql56p")
+
+[sub_resource type="Curve" id="Curve_5sr84"]
+_data = [Vector2(0.103571, 0.0427098), 0.0, 0.0, 0, 0, Vector2(0.185714, 1), 0.0, 0.0, 0, 0, Vector2(0.335714, 0.607511), -0.579549, -0.579549, 0, 0, Vector2(0.967857, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_wxyjw"]
+curve = SubResource("Curve_5sr84")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dhdgn"]
+emission_shape = 1
+emission_sphere_radius = 0.4
+spread = 0.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 100.0
+gravity = Vector3(0, 3, 0)
+scale_min = 0.3
+scale_curve = SubResource("CurveTexture_wxyjw")
+color_ramp = SubResource("GradientTexture1D_3yimf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfos5"]
+blend_mode = 1
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_e7bbs"]
+material = SubResource("StandardMaterial3D_sfos5")
+size = Vector2(0.5, 0.5)
+
+[node name="Antorcha" instance=ExtResource("1_ql56p")]
+
+[node name="Antorcha_Cuertpo" parent="." index="0"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0)
+
+[node name="Antoccha_Cabeza" parent="." index="1"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0)
+
+[node name="Antorcha_Gancho" parent="." index="2"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0)
+
+[node name="Luz" type="OmniLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.139, 3.3, 0.052)
+light_color = Color(0.887316, 0.424662, 0.179404, 1)
+light_energy = 1.937
+shadow_enabled = true
+omni_range = 4.197
+omni_attenuation = -0.578
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Luz" index="0"]
+libraries = {
+&"": SubResource("AnimationLibrary_rw8db")
+}
+autoplay = "RESET"
+
+[node name="Flame" type="GPUParticles3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231682, 1.66122, 0)
+amount = 30
+lifetime = 0.7
+trail_enabled = true
+trail_lifetime = 0.16
+process_material = SubResource("ParticleProcessMaterial_dhdgn")
+draw_pass_1 = SubResource("QuadMesh_e7bbs")

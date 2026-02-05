@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cawpxoyhsp5fc"]
+[gd_scene load_steps=45 format=3 uid="uid://cawpxoyhsp5fc"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_jmayt"]
 [ext_resource type="PackedScene" uid="uid://ckqseiaicmb4c" path="res://Assets/Templos/Templo_Sol.glb" id="2_37n8p"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bqcnyvse47lp" path="res://Assets/Terrain_Objects/Objetos_Clave/Mesa_ConPanel.glb" id="2_iyyln"]
 [ext_resource type="Material" uid="uid://60hw13kilgta" path="res://Materiales/Outline_Objetos_Chicos.tres" id="3_mfqb6"]
 [ext_resource type="PackedScene" uid="uid://dfhdt76ce7sl2" path="res://Assets/Templos/Templo_Jaguar.glb" id="5_0fuvb"]
-[ext_resource type="PackedScene" uid="uid://2viqo08a2ash" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
+[ext_resource type="PackedScene" path="res://scenes/puzzle_3b_manager.tscn" id="5_w86e2"]
 [ext_resource type="PackedScene" uid="uid://djmr6kbsfsq4f" path="res://Assets/Terrain_Objects/Pasado/Terrenos/Terreno_Montañas.glb" id="6_2sfii"]
 [ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Presente/Pedestales/Pedestal_Futuro.glb" id="6_u5kdj"]
 [ext_resource type="PackedScene" uid="uid://dsrv4emi18rq2" path="res://Assets/Templos/Templo_Serpiente_Bicefala.glb" id="7_4iy1q"]
@@ -14,11 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://b0u2qsv5i80he" path="res://Assets/Presente/Pedestales/Pedestal_Oculto.glb" id="8_6c6hh"]
 [ext_resource type="PackedScene" uid="uid://j2oxo2tthbqj" path="res://Assets/Presente/Pedestales/Pedestal_Pasado.glb" id="9_8jlby"]
 [ext_resource type="PackedScene" uid="uid://be2u13dmp3ous" path="res://scenes/color_puzzle.tscn" id="9_rlwvq"]
-[ext_resource type="PackedScene" uid="uid://bmklb1okwmagx" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
+[ext_resource type="PackedScene" path="res://scenes/color_puzzle_hidden.tscn" id="10_dn7ci"]
 [ext_resource type="PackedScene" uid="uid://cbrx13oubiy2d" path="res://scenes/button_puzzle_controller.tscn" id="10_lh8va"]
 [ext_resource type="PackedScene" uid="uid://dq8w3jf1gfsu0" path="res://Assets/Presente/Pedestales/PedestalAnimadoMascaraPasado.glb" id="11_81647"]
 [ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="12_w86e2"]
 [ext_resource type="PackedScene" uid="uid://dvovs73wka2te" path="res://Assets/Terrain_Objects/Mascaras/Mascara_Pasado.glb" id="13_tlxmo"]
+[ext_resource type="PackedScene" uid="uid://bio64k4j3ulx4" path="res://antorcha.tscn" id="15_anvkm"]
 [ext_resource type="PackedScene" uid="uid://2qvdp825dw1h" path="res://Assets/Terrain_Enviroment/Arboles/Arboles_Montaña.glb" id="16_mmms4"]
 [ext_resource type="PackedScene" uid="uid://m5tkoiyu6rvr" path="res://Assets/Terrain_Enviroment/Arboles/Presente/Presente Arboles.glb" id="17_kfotx"]
 [ext_resource type="Material" uid="uid://b2rxfp8kcr53t" path="res://Materiales/perfect_outline_shader.tres" id="18_e420u"]
@@ -30,7 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://c0cw75pawskj" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Obstaculo_Pasillo.001.glb" id="23_2xilg"]
 [ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Obstaculo_Pasillo.002.glb" id="24_hnikr"]
 [ext_resource type="PackedScene" uid="uid://djjtvivsgfpvm" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Enredaderas_Escalera.glb" id="28_xsu2r"]
-[ext_resource type="PackedScene" uid="uid://uir627e61nnn" path="res://Assets/Terrain_Objects/Decoraciones/Presente/Antorcha.glb" id="31_mmmtq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
 
@@ -58,83 +58,6 @@ size = Vector3(0.511841, 6.95209, 11.7081)
 [sub_resource type="BoxShape3D" id="BoxShape3D_6wrqp"]
 size = Vector3(13.784, 6.87064, 0.566406)
 
-[sub_resource type="Animation" id="Animation_anvkm"]
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667, 0.966667, 1.43333, 2, 2.46667, 2.96667, 3.46667, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [1.937, 2.285, 1.411, 2.198, 2.373, 1.761, 2.285, 2.46, 1.937]
-}
-
-[sub_resource type="Animation" id="Animation_d61pw"]
-resource_name = "fire"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.03333, 1.48, 1.96667, 2.46667, 3, 3.5, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1.07177, 1, 1, 1, 1),
-"update": 0,
-"values": [3.772, 2.198, 1.411, 3.335, 2.286, 4.122, 1.062, 2.081, 2.868]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rw8db"]
-_data = {
-&"RESET": SubResource("Animation_anvkm"),
-&"fire": SubResource("Animation_d61pw")
-}
-
-[sub_resource type="Animation" id="Animation_lqxtx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.758]
-}
-
-[sub_resource type="Animation" id="Animation_rw8db"]
-resource_name = "fire"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.533333, 1.2, 1.76667, 2.43333, 2.96667, 3.53333, 3.96667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [1.758, 3.157, 2.545, 0.971, 2.108, 1.758, 2.02, 1.758]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1a4n0"]
-_data = {
-&"RESET": SubResource("Animation_lqxtx"),
-&"fire": SubResource("Animation_rw8db")
-}
-
 [sub_resource type="BoxMesh" id="BoxMesh_37n8p"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0fuvb"]
@@ -145,17 +68,6 @@ size = Vector3(5.00293, 5.68137, 5.53979)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_anvkm"]
 size = Vector3(4.56213, 5.32758, 3.39795)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cidh6"]
-albedo_color = Color(0.35083, 0.142786, 0.00110949, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rgxs"]
-albedo_color = Color(0.720047, 0.209646, 0.147526, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mnen"]
-albedo_color = Color(0.20871, 0.20871, 0.20871, 1)
-metallic = 0.65
-metallic_specular = 1.0
 
 [node name="PRESENTE" type="Node3D"]
 
@@ -366,106 +278,35 @@ shape = SubResource("BoxShape3D_6wrqp")
 
 [node name="Luces" type="Node" parent="Templo"]
 
-[node name="AntorchaPasado1" type="OmniLight3D" parent="Templo/Luces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95345, 47.8766, 2.47144)
-light_color = Color(0.887316, 0.424662, 0.179404, 1)
-light_energy = 1.937
-shadow_enabled = true
-omni_range = 4.197
-omni_attenuation = -0.578
+[node name="AntorchaPasado1" parent="Templo/Luces" instance=ExtResource("15_anvkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.362, 45.2, 2.47)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Templo/Luces/AntorchaPasado1"]
-libraries = {
-&"": SubResource("AnimationLibrary_rw8db")
-}
-autoplay = "fire"
+[node name="AntorchaPasado2" parent="Templo/Luces" instance=ExtResource("15_anvkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.435, 45.2, -3.818)
 
-[node name="AntorchaPasado2" type="OmniLight3D" parent="Templo/Luces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95345, 47.8766, -3.75874)
-light_color = Color(0.887316, 0.424662, 0.179404, 1)
-light_energy = 1.937
-shadow_enabled = true
-omni_range = 4.197
-omni_attenuation = -0.578
+[node name="AntorchaMaldicion1" parent="Templo/Luces" instance=ExtResource("15_anvkm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.883, 45, -6.018)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Templo/Luces/AntorchaPasado2"]
-libraries = {
-&"": SubResource("AnimationLibrary_rw8db")
-}
-autoplay = "RESET"
+[node name="AntorchaMaldicion2" parent="Templo/Luces" instance=ExtResource("15_anvkm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.987, 45, -6.102)
 
-[node name="AntorchaFuturo1" type="OmniLight3D" parent="Templo/Luces"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.60267, 46.9501, 2.30126)
+[node name="AntorchaFuturo1" parent="Templo/Luces" instance=ExtResource("15_anvkm")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.33554, 45.2, -3.77027)
+
+[node name="Luz" parent="Templo/Luces/AntorchaFuturo1" index="3"]
 visible = false
-light_color = Color(0.887316, 0.424662, 0.179404, 1)
-light_energy = 1.758
-shadow_enabled = true
-omni_range = 4.197
-omni_attenuation = -0.578
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Templo/Luces/AntorchaFuturo1"]
-libraries = {
-&"": SubResource("AnimationLibrary_1a4n0")
-}
-autoplay = "fire"
-
-[node name="AntorchaFuturo2" type="OmniLight3D" parent="Templo/Luces"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.60267, 46.9501, -3.76471)
+[node name="Flame" parent="Templo/Luces/AntorchaFuturo1" index="4"]
 visible = false
-light_color = Color(0.887316, 0.424662, 0.179404, 1)
-light_energy = 1.937
-shadow_enabled = true
-omni_range = 4.197
-omni_attenuation = -0.578
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Templo/Luces/AntorchaFuturo2"]
-libraries = {
-&"": SubResource("AnimationLibrary_rw8db")
-}
-autoplay = "RESET"
+[node name="AntorchaFuturo2" parent="Templo/Luces" instance=ExtResource("15_anvkm")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.43272, 45.2, 2.47)
 
-[node name="AntorchaMaldicion1" type="OmniLight3D" parent="Templo/Luces"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.44782, 47.5366, -4.78542)
-light_color = Color(0.887316, 0.424662, 0.179404, 1)
-light_energy = 1.937
-light_size = 0.616
-shadow_enabled = true
-omni_range = 4.197
-omni_attenuation = -0.578
+[node name="Luz" parent="Templo/Luces/AntorchaFuturo2" index="3"]
+visible = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Templo/Luces/AntorchaMaldicion1"]
-libraries = {
-&"": SubResource("AnimationLibrary_rw8db")
-}
-autoplay = "RESET"
-
-[node name="AntorchaMaldicion2" type="OmniLight3D" parent="Templo/Luces"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.50555, 47.2547, -5.49275)
-light_color = Color(0.887316, 0.424662, 0.179404, 1)
-light_energy = 1.937
-shadow_enabled = true
-omni_range = 4.197
-omni_attenuation = -0.578
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Templo/Luces/AntorchaMaldicion2"]
-libraries = {
-&"": SubResource("AnimationLibrary_rw8db")
-}
-autoplay = "RESET"
-
-[node name="AntorchaMaldicion3" type="OmniLight3D" parent="Templo/Luces"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0836658, 49.5133, -5.72618)
-light_color = Color(0.887316, 0.424662, 0.179404, 1)
-light_energy = 1.937
-shadow_enabled = true
-omni_range = 4.197
-omni_attenuation = -0.578
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Templo/Luces/AntorchaMaldicion3"]
-libraries = {
-&"": SubResource("AnimationLibrary_rw8db")
-}
-autoplay = "fire"
+[node name="Flame" parent="Templo/Luces/AntorchaFuturo2" index="4"]
+visible = false
 
 [node name="TemploDelSol" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00809, 1.72927, -133.509)
@@ -618,18 +459,6 @@ shape = SubResource("BoxShape3D_anvkm")
 
 [node name="RocaMoviendose" type="AudioStreamPlayer" parent="."]
 
-[node name="Antorcha" parent="." instance=ExtResource("31_mmmtq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.43437, 47.332, 3.5049)
-
-[node name="Antorcha_Cuertpo" parent="Antorcha" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_cidh6")
-
-[node name="Antoccha_Cabeza" parent="Antorcha" index="1"]
-surface_material_override/0 = SubResource("StandardMaterial3D_1rgxs")
-
-[node name="Antorcha_Gancho" parent="Antorcha" index="2"]
-surface_material_override/0 = SubResource("StandardMaterial3D_6mnen")
-
 [editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Mesa_ConPanel"]
 [editable path="Templo/Puzzles/ColorPuzzle2A"]
@@ -644,6 +473,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6mnen")
 [editable path="Templo/Puzzle1/Pedestal_Pasado/PedestalMascaraPasado"]
 [editable path="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp"]
 [editable path="Templo/Puzzle1/Pedestal_Pasado/MaskFuturePickUp/Mascara_Pasado2"]
+[editable path="Templo/Luces/AntorchaFuturo1"]
+[editable path="Templo/Luces/AntorchaFuturo2"]
 [editable path="Templo_Jaguar"]
 [editable path="Terreno"]
 [editable path="Terreno_Montañas"]
@@ -651,4 +482,3 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6mnen")
 [editable path="Presente Carpas"]
 [editable path="Maldicion"]
 [editable path="Mirar_Pasado_Cartel"]
-[editable path="Antorcha"]

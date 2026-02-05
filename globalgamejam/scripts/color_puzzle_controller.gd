@@ -19,8 +19,10 @@ extends Node3D
 
 @export var auto_resolve := true
 @onready var miraste_atras: Node3D = $"../../../Miraste_Atras"
-@onready var antorcha_futuro_1: OmniLight3D = $"../../Luces/AntorchaFuturo1"
-@onready var antorcha_futuro_2: OmniLight3D = $"../../Luces/AntorchaFuturo2"
+@onready var antorcha_futuro_1luz:OmniLight3D = $"../../Luces/AntorchaFuturo1/Luz"
+@onready var flame1: GPUParticles3D = $"../../Luces/AntorchaFuturo1/Flame"
+@onready var antorcha_futuro_2luz:OmniLight3D = $"../../Luces/AntorchaFuturo2/Luz"
+@onready var flame2: GPUParticles3D = $"../../Luces/AntorchaFuturo2/Flame"
 @export var sfx_puzzle_resuelto: AudioStreamPlayer
 
 var solved := false
@@ -47,8 +49,10 @@ func check_solution():
 func _solve():
 	solved = true
 	miraste_atras.visible = true
-	antorcha_futuro_1.visible = true
-	antorcha_futuro_2.visible = true
+	antorcha_futuro_1luz.visible = true
+	flame1.visible = true
+	antorcha_futuro_2luz.visible = true
+	flame2.visible = true
 	print("PUZZLE RESUELTO")
 	sfx_puzzle_resuelto.play()
 	
