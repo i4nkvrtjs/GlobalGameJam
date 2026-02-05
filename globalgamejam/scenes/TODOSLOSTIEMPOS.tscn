@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://d3wrgue5c5ye4"]
+[gd_scene load_steps=23 format=3 uid="uid://d3wrgue5c5ye4"]
 
 [ext_resource type="PackedScene" uid="uid://btsiqbwtvw44w" path="res://scenes/message_ui.tscn" id="1_kc4mv"]
 [ext_resource type="PackedScene" uid="uid://bxkaf8dcdkegd" path="res://scenes/player.tscn" id="1_qjwgc"]
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_xl62j"]
+[ext_resource type="Script" uid="uid://7ycjdygyc7jg" path="res://scripts/GameManager.gd" id="1_xl62j"]
 [ext_resource type="PackedScene" uid="uid://b2japg316rkry" path="res://scenes/mask_manager.tscn" id="2_dobs2"]
-[ext_resource type="PackedScene" uid="uid://cawpxoyhsp5fc" path="res://scenes/presente.tscn" id="3_vb607"]
+[ext_resource type="PackedScene" uid="uid://cawpxoyhsp5fc" path="res://scenes/PRESENTE.tscn" id="3_vb607"]
 [ext_resource type="Material" uid="uid://brj0gf1si4c6w" path="res://Materiales/Outline.tres" id="4_dobs2"]
 [ext_resource type="PackedScene" uid="uid://bjvoium6413yf" path="res://scenes/pasado.tscn" id="4_kc4mv"]
 [ext_resource type="Material" uid="uid://b2rxfp8kcr53t" path="res://Materiales/perfect_outline_shader.tres" id="4_vb607"]
@@ -13,10 +13,21 @@
 [ext_resource type="AudioStream" uid="uid://d1kgf6hccf4lw" path="res://Music and SFX/sfx/SFX- puzzleresuelto.ogg" id="9_6x7g3"]
 [ext_resource type="AudioStream" uid="uid://caunedimu6icn" path="res://Music and SFX/sfx/SFX-Rock-moving-1seg.ogg" id="9_tj58d"]
 [ext_resource type="Material" uid="uid://60hw13kilgta" path="res://Materiales/Outline_Objetos_Chicos.tres" id="9_yjfk7"]
-[ext_resource type="AudioStream" uid="uid://dudgu8qdyfu1d" path="res://Music and SFX/musica/3. Yax Mutul - Tema Principal (master) - Nikté.ogg" id="11_u5nte"]
-[ext_resource type="AudioStream" uid="uid://bvgvw8tc21crt" path="res://Music and SFX/musica/4. Yax Mutul - Tema del pasado (master) - Úuchben Nikté.ogg" id="12_tj58d"]
-[ext_resource type="AudioStream" uid="uid://d0vwteqlpsqr2" path="res://Music and SFX/musica/5. Yax Mutul - Tema del Futuro (master)- Sáamal Niktè.ogg" id="13_6x7g3"]
+[ext_resource type="AudioStream" uid="uid://dudgu8qdyfu1d" path="res://Music and SFX/musica/3. Yax Mutul - Tema Principal (master) - Nikté.ogg" id="11_u5nte"]
+[ext_resource type="AudioStream" uid="uid://bvgvw8tc21crt" path="res://Music and SFX/musica/4. Yax Mutul - Tema del pasado (master) - Úuchben Nikté.ogg" id="12_tj58d"]
+[ext_resource type="AudioStream" uid="uid://d0vwteqlpsqr2" path="res://Music and SFX/musica/5. Yax Mutul - Tema del Futuro (master)- Sáamal Niktè.ogg" id="13_6x7g3"]
 [ext_resource type="AudioStream" uid="uid://bmb64j52g0hj1" path="res://Music and SFX/musica/2. Yax Mutul - Tema Menu (master).ogg" id="14_yjfk7"]
+[ext_resource type="Shader" uid="uid://be8q4iv8mrg0f" path="res://Shader/Distortion.gdshader" id="18_2exi1"]
+[ext_resource type="Script" uid="uid://d2kipll2y3we3" path="res://scripts/distortion_rect.gd" id="19_4vwko"]
+[ext_resource type="Script" uid="uid://bged2djjs3hdb" path="res://scripts/time_color_rect.gd" id="20_4vwko"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4d8ar"]
+shader = ExtResource("18_2exi1")
+shader_parameter/strength = 0.0
+shader_parameter/time_speed = 2.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4d8ar"]
+blend_mode = 3
 
 [node name="Todoslostiempos" type="Node3D"]
 script = ExtResource("1_xl62j")
@@ -31,10 +42,12 @@ respawn_marker = NodePath("../Marker3D")
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0320691, 44.8468, 7.58652)
 
-[node name="MaskManager" parent="." node_paths=PackedStringArray("normal_puzzle", "hidden_puzzle", "future_puzzle") instance=ExtResource("2_dobs2")]
+[node name="MaskManager" parent="." node_paths=PackedStringArray("normal_puzzle", "hidden_puzzle", "future_puzzle", "distortion", "time_filter") instance=ExtResource("2_dobs2")]
 normal_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzle2A")
 hidden_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/ColorPuzzleHidden")
 future_puzzle = NodePath("../WorldAnchor/PRESENTE/Templo/Puzzles/Puzzle3BManager")
+distortion = NodePath("../DistortionLayer/DistortionRect")
+time_filter = NodePath("../TimeFilterLayer/TimeColorRect")
 
 [node name="SFXCambiodetiempo" type="AudioStreamPlayer" parent="MaskManager"]
 stream = ExtResource("5_ku0v2")
@@ -87,6 +100,7 @@ stream = ExtResource("9_6x7g3")
 
 [node name="RocaMoviendose" parent="WorldAnchor/PRESENTE" index="17"]
 stream = ExtResource("9_tj58d")
+volume_db = -6.0
 
 [node name="PASADO" parent="WorldAnchor" instance=ExtResource("4_kc4mv")]
 process_mode = 4
@@ -113,6 +127,33 @@ stream = ExtResource("13_6x7g3")
 
 [node name="MusicaOculto" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_yjfk7")
+
+[node name="DistortionLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="DistortionRect" type="ColorRect" parent="DistortionLayer"]
+visible = false
+material = SubResource("ShaderMaterial_4d8ar")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("19_4vwko")
+
+[node name="TimeFilterLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="TimeColorRect" type="ColorRect" parent="TimeFilterLayer"]
+visible = false
+material = SubResource("CanvasItemMaterial_4d8ar")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("20_4vwko")
 
 [editable path="Player"]
 [editable path="WorldAnchor/PRESENTE"]

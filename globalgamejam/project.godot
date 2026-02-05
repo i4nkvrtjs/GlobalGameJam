@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="globalGameJam"
-run/main_scene="uid://r3e1gimtxubc"
+run/main_scene="uid://d3wrgue5c5ye4"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

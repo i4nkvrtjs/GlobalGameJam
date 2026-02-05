@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://btws0yy8tnkda" path="res://scenes/pilar.tscn" id="17_lsyt0"]
 [ext_resource type="PackedScene" uid="uid://cvw15wp3e7ffw" path="res://scenes/mask_pick_up.tscn" id="18_lsyt0"]
 [ext_resource type="PackedScene" uid="uid://2viqo08a2ash" path="res://scenes/puzzle_3b_manager.tscn" id="19_5d6yd"]
-[ext_resource type="PackedScene" uid="uid://clg6wk6uf0w3o" path="res://scenes/message_ui.tscn" id="21_3054u"]
+[ext_resource type="PackedScene" uid="uid://btsiqbwtvw44w" path="res://scenes/message_ui.tscn" id="21_3054u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hx1ia"]
 size = Vector3(2, 0.01, 2)

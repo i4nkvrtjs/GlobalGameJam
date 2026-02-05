@@ -10,8 +10,6 @@ extends Node
 @onready var musica_futuro: AudioStreamPlayer = $"../MusicaFuturo"
 @onready var musica_oculto: AudioStreamPlayer =$"../MusicaOculto"
 
-
-
 enum MaskType {
 	NONE,
 	PAST,
@@ -31,6 +29,8 @@ var future_puzzle_unlocked := false
 @export var normal_puzzle: Node3D
 @export var hidden_puzzle: Node3D
 @export var future_puzzle: Node
+@export var distortion: ColorRect
+@export var time_filter: ColorRect
 
 func _ready():
 	_clear_mask()
@@ -80,6 +80,9 @@ func toggle_mask(mask: MaskType):
 # ---------------- SET / CLEAR ----------------
 
 func _set_mask(mask: MaskType):
+	if distortion:
+		distortion.play()
+	
 	_clear_mask()
 	current_mask = mask
 
@@ -95,7 +98,10 @@ func _set_mask(mask: MaskType):
 func _clear_mask():
 	if current_mask == MaskType.NONE:
 		return
-
+	
+	if distortion:
+		distortion.play()
+	
 	match current_mask:
 		MaskType.PAST:
 			_deactivate_past()
@@ -122,6 +128,9 @@ func _activate_past():
 	musica_futuro.stop()
 	musica_presente.stop()
 	musica_oculto.stop()
+	
+	if time_filter:
+		time_filter.set_time_color(Color(1.0, 0.85, 0.7), 0.18)
 
 func _deactivate_past():
 	pasado.process_mode=Node.PROCESS_MODE_DISABLED
@@ -136,7 +145,7 @@ func _deactivate_past():
 	musica_futuro.stop()
 	musica_presente.play()
 	musica_oculto.stop()
-
+	time_filter.clear()
 # ---------------- FUTURE ----------------
 
 func _activate_future():
@@ -152,6 +161,9 @@ func _activate_future():
 	musica_presente.stop()
 	musica_oculto.stop()
 
+	if time_filter:
+		time_filter.set_time_color(Color(0.7, 0.85, 1.0), 0.18)
+
 func _deactivate_future():
 	pasado.process_mode=Node.PROCESS_MODE_DISABLED
 	pasado.visible=false
@@ -164,6 +176,7 @@ func _deactivate_future():
 	musica_futuro.stop()
 	musica_presente.play()
 	musica_oculto.stop()
+	time_filter.clear()
 
 func _unlock_future_puzzle():
 	future_puzzle_unlocked = true
