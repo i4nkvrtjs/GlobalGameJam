@@ -75,6 +75,7 @@ size = Vector3(2.60925, 1.00391, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myd5o"]
 albedo_color = Color(1, 0.65098, 0.152941, 1)
+metallic_specular = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3vfec"]
 material = SubResource("StandardMaterial3D_myd5o")
@@ -100,15 +101,18 @@ albedo_texture = ExtResource("12_cumfr")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctp4p"]
 albedo_color = Color(0.336608, 0.336608, 0.336608, 1)
 albedo_texture = ExtResource("12_cumfr")
+metallic_specular = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wys3b"]
 albedo_texture = ExtResource("12_cumfr")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cumfr"]
 albedo_texture = ExtResource("12_cumfr")
+metallic_specular = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2vwi"]
 albedo_texture = ExtResource("12_cumfr")
+metallic_specular = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gu8yi"]
 albedo_texture = ExtResource("12_cumfr")
