@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://bjvoium6413yf"]
+[gd_scene load_steps=67 format=3 uid="uid://bjvoium6413yf"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Presente/Pedestales/Pedestal_Futuro.glb" id="2_lmlgj"]
@@ -24,6 +24,14 @@
 [ext_resource type="PackedScene" uid="uid://dktxgsna2ebtv" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Obstaculo_Pasillo.002.glb" id="17_a2vwi"]
 [ext_resource type="PackedScene" uid="uid://4et1m5tm03no" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Obstaculo_Estatua.glb" id="18_a2vwi"]
 [ext_resource type="PackedScene" uid="uid://djjtvivsgfpvm" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Enredaderas_Escalera.glb" id="19_r7dyh"]
+[ext_resource type="PackedScene" uid="uid://b3vetuhuple4q" path="res://Assets/Templos/Templo_Tikal_v2.glb" id="25_7b7wi"]
+[ext_resource type="Texture2D" uid="uid://c16xegr6lwv4t" path="res://Assets/Templos/Templov2_BASE_TEX.png" id="26_3be0e"]
+[ext_resource type="Texture2D" uid="uid://bbtittmub35xu" path="res://Assets/Templos/Templov2_CASITA_TEX.png" id="27_amawt"]
+[ext_resource type="Texture2D" uid="uid://cw8exdrxhevpk" path="res://Assets/Templos/Templov2_BLOQUES_TEX.png" id="28_m8jfw"]
+[ext_resource type="Texture2D" uid="uid://cktcy7kw8bbv4" path="res://Assets/Templos/Templov2_ESCALERAS_TEX.png" id="29_r64d6"]
+[ext_resource type="PackedScene" uid="uid://11gvbebgnksx" path="res://Assets/Templos/Templo_Bicefala_v2.glb" id="30_m8jfw"]
+[ext_resource type="PackedScene" uid="uid://dnhqynm77lrb" path="res://Assets/Templos/Templo_Jaguar_v2.glb" id="31_r64d6"]
+[ext_resource type="PackedScene" uid="uid://cu3uvt4xr63o2" path="res://Assets/Templos/Templo_Sol_v2.glb" id="32_gf7sh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rbtr0"]
 
@@ -95,6 +103,9 @@ size = Vector3(5.08325, 5.44165, 5.83276)
 [sub_resource type="BoxShape3D" id="BoxShape3D_uly6a"]
 size = Vector3(5.06345, 5.51019, 3.95508)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7b7wi"]
+albedo_color = Color(0.362829, 0.362829, 0.362829, 1)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jtm12"]
 size = Vector3(5.1106, 5.13831, 2.09131)
 
@@ -116,6 +127,21 @@ size = Vector3(0.511841, 6.95209, 11.7081)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pacsd"]
 size = Vector3(13.784, 6.87064, 0.566406)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gf7sh"]
+albedo_texture = ExtResource("26_3be0e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va20t"]
+albedo_texture = ExtResource("27_amawt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7pfj"]
+albedo_texture = ExtResource("28_m8jfw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqlmd"]
+albedo_texture = ExtResource("29_r64d6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mh8t"]
+albedo_color = Color(0.303233, 0.303233, 0.303233, 1)
+
 [node name="PASADO" type="Node3D"]
 
 [node name="Templo" type="StaticBody3D" parent="."]
@@ -134,8 +160,10 @@ shape = SubResource("ConcavePolygonShape3D_s2tf8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 
 [node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_7ob1l")]
+visible = false
 
 [node name="Templo_Casita" parent="Templo/Templo_Tikal" index="0"]
+visible = false
 material_overlay = ExtResource("2_uly6a")
 
 [node name="Templo_Base_Sol_001" parent="Templo/Templo_Tikal" index="1"]
@@ -219,14 +247,23 @@ shape = SubResource("ConcavePolygonShape3D_s2tf8")
 
 [node name="Templo_Sol" parent="TemploDelSol" instance=ExtResource("2_qxwao")]
 
+[node name="Templo_Base_Sol" parent="TemploDelSol/Templo_Sol" index="2"]
+visible = false
+
 [node name="Terreno_Pasdo_Plano" parent="." instance=ExtResource("4_7ob1l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("5_qxwao")]
 transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 137.324, 0.380493, -3.1496)
 
+[node name="Templo_Base_Serpiente_Bicefala" parent="Templo_Serpiente_Bicefala" index="0"]
+visible = false
+
 [node name="Templo_Jaguar" parent="." instance=ExtResource("6_sxv3u")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
+
+[node name="Templo_Base_Jaguar" parent="Templo_Jaguar" index="1"]
+visible = false
 
 [node name="Mesa_Base" parent="." instance=ExtResource("7_kunhq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.48329)
@@ -343,7 +380,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6bfs0")
 [node name="Pasado - Arboles" parent="." instance=ExtResource("15_gu8yi")]
 
 [node name="Obstaculo_Pasillo_0012" parent="." instance=ExtResource("16_wys3b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.187587)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64687, 0, 1.78552)
 
 [node name="Obstaculo_Pasillo_001" parent="Obstaculo_Pasillo_0012" index="0"]
 material_overlay = ExtResource("2_uly6a")
@@ -355,7 +392,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.54647, 46.4904, 8.24022)
 shape = SubResource("BoxShape3D_tb2ff")
 
 [node name="Obstaculo_Pasillo_0022" parent="." instance=ExtResource("17_a2vwi")]
-transform = Transform3D(-0.194371, 0, 0.980928, 0, 1, 0, -0.980928, 0, -0.194371, -5.11158, 0.37167, 0.0744648)
+transform = Transform3D(-0.194371, 0, 0.980928, 0, 1, 0, -0.980928, 0, -0.194371, -6.77664, 0.37167, 0.0744648)
 
 [node name="Obstaculo_Pasillo_002" parent="Obstaculo_Pasillo_0022" index="0"]
 material_overlay = ExtResource("2_uly6a")
@@ -367,7 +404,10 @@ transform = Transform3D(1, 0, -2.38419e-07, 0, 1, 0, 2.38419e-07, 0, 1, 9.2725, 
 shape = SubResource("BoxShape3D_uly6a")
 
 [node name="Obstaculo_Estatua" parent="." instance=ExtResource("18_a2vwi")]
-transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 1, 9.138, 46.61, -4.76387)
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 1, 11.0862, 46.61, -4.76387)
+
+[node name="Obstaculo_Estatia" parent="Obstaculo_Estatua" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7b7wi")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Obstaculo_Estatua"]
 
@@ -422,6 +462,70 @@ shape = SubResource("BoxShape3D_pacsd")
 [node name="Obstaculo_Escalera_001" parent="Enredaderas_Escalera" index="0"]
 material_overlay = ExtResource("2_uly6a")
 
+[node name="Templo_Tikal_v2" parent="." instance=ExtResource("25_7b7wi")]
+
+[node name="Cube_001" parent="Templo_Tikal_v2" index="0"]
+material_overlay = ExtResource("2_uly6a")
+surface_material_override/0 = SubResource("StandardMaterial3D_gf7sh")
+
+[node name="Cube_002" parent="Templo_Tikal_v2" index="1"]
+material_overlay = ExtResource("2_uly6a")
+surface_material_override/0 = SubResource("StandardMaterial3D_va20t")
+
+[node name="Cube_003" parent="Templo_Tikal_v2" index="2"]
+material_overlay = ExtResource("2_uly6a")
+surface_material_override/0 = SubResource("StandardMaterial3D_v7pfj")
+
+[node name="Cube_004" parent="Templo_Tikal_v2" index="3"]
+material_overlay = ExtResource("2_uly6a")
+surface_material_override/0 = SubResource("StandardMaterial3D_vqlmd")
+
+[node name="Cube_005" parent="Templo_Tikal_v2" index="4"]
+material_overlay = ExtResource("2_uly6a")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mh8t")
+
+[node name="Templo_Bicefala_v2" parent="." instance=ExtResource("30_m8jfw")]
+
+[node name="Templo_Bicefala_v2_BASE" parent="Templo_Bicefala_v2" index="0"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Bicefala_v2_BLOQUES" parent="Templo_Bicefala_v2" index="1"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Bicefala_v2_ESCALERA" parent="Templo_Bicefala_v2" index="2"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Bicefala_v2_PISO" parent="Templo_Bicefala_v2" index="3"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Jaguar_v2" parent="." instance=ExtResource("31_r64d6")]
+
+[node name="Templo_Jaguar_v2_BASE" parent="Templo_Jaguar_v2" index="0"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Jaguar_v2_BLOQUES" parent="Templo_Jaguar_v2" index="1"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Jaguar_ESCALERAS" parent="Templo_Jaguar_v2" index="2"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Jaguar_v2_PISO" parent="Templo_Jaguar_v2" index="3"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Sol_v2" parent="." instance=ExtResource("32_gf7sh")]
+
+[node name="Templo_Sol_v2_BASE" parent="Templo_Sol_v2" index="0"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Sol_v2_BLOQUES" parent="Templo_Sol_v2" index="1"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Sol_v2_ESCALERAS" parent="Templo_Sol_v2" index="2"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Sol_v2_PISO" parent="Templo_Sol_v2" index="3"]
+material_overlay = ExtResource("2_uly6a")
+
 [editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Pedestal_Futuro"]
 [editable path="Templo/Pedestal_Futuro/PedestalAnimadoMascaraFuturo"]
@@ -430,8 +534,16 @@ material_overlay = ExtResource("2_uly6a")
 [editable path="Templo/Pedestal_Oculto"]
 [editable path="Templo/Pedestal_Pasado"]
 [editable path="Templo/Mural_Pasado-colv2"]
+[editable path="TemploDelSol/Templo_Sol"]
+[editable path="Templo_Serpiente_Bicefala"]
+[editable path="Templo_Jaguar"]
 [editable path="Mesa_Base"]
 [editable path="Cultivos2"]
 [editable path="Obstaculo_Pasillo_0012"]
 [editable path="Obstaculo_Pasillo_0022"]
+[editable path="Obstaculo_Estatua"]
 [editable path="Enredaderas_Escalera"]
+[editable path="Templo_Tikal_v2"]
+[editable path="Templo_Bicefala_v2"]
+[editable path="Templo_Jaguar_v2"]
+[editable path="Templo_Sol_v2"]
