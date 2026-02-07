@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cc5dksl388xcs"]
+[gd_scene load_steps=42 format=3 uid="uid://cc5dksl388xcs"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrain_Objects/Pasado/Terrenos/Terreno.glb" id="2_awhkr"]
@@ -17,34 +17,58 @@
 [ext_resource type="PackedScene" uid="uid://bkkydpl8wfq5t" path="res://Assets/Terrain_Objects/Pistas/Mural_Presente.glb" id="16_7yqjh"]
 [ext_resource type="PackedScene" uid="uid://djjtvivsgfpvm" path="res://Assets/Terrain_Enviroment/Obstaculos/Presente/Enredaderas_Escalera.glb" id="17_2pefn"]
 [ext_resource type="PackedScene" uid="uid://bbdy2xx8y3tgm" path="res://Assets/Futuro/Infografias/Info_Mural.glb" id="17_oky4b"]
+[ext_resource type="PackedScene" uid="uid://11gvbebgnksx" path="res://Assets/Templos/Templo_Bicefala_v2.glb" id="18_qcquo"]
+[ext_resource type="Material" uid="uid://b2rxfp8kcr53t" path="res://Materiales/perfect_outline_shader.tres" id="19_jmc7j"]
+[ext_resource type="PackedScene" uid="uid://dnhqynm77lrb" path="res://Assets/Templos/Templo_Jaguar_v2.glb" id="20_usjce"]
+[ext_resource type="PackedScene" uid="uid://cu3uvt4xr63o2" path="res://Assets/Templos/Templo_Sol_v2.glb" id="21_6mnnn"]
+[ext_resource type="PackedScene" uid="uid://b3vetuhuple4q" path="res://Assets/Templos/Templo_Tikal_v2.glb" id="22_2d1g0"]
+[ext_resource type="Texture2D" uid="uid://c16xegr6lwv4t" path="res://Assets/Templos/Templov2_BASE_TEX.png" id="23_ul1sw"]
+[ext_resource type="Texture2D" uid="uid://bbtittmub35xu" path="res://Assets/Templos/Templov2_CASITA_TEX.png" id="24_qpom7"]
+[ext_resource type="Texture2D" uid="uid://cw8exdrxhevpk" path="res://Assets/Templos/Templov2_BLOQUES_TEX.png" id="25_7njsl"]
+[ext_resource type="Texture2D" uid="uid://cktcy7kw8bbv4" path="res://Assets/Templos/Templov2_ESCALERAS_TEX.png" id="26_2ebu4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0fuvb"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2sfii"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2d1g0"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_oky4b"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_2d1g0"]
 size = Vector3(13.796, 1, 3.08386)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2pefn"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ul1sw"]
 size = Vector3(2.65259, 1.5675, 24.0396)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kc2xm"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_qpom7"]
 size = Vector3(23.6967, 1.77917, 2.67676)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2onni"]
-size = Vector3(5.29395, 7.15295, 0.553467)
+[sub_resource type="BoxShape3D" id="BoxShape3D_7njsl"]
+size = Vector3(6.5791, 7.15295, 0.981323)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qcquo"]
-size = Vector3(0.511841, 6.95209, 11.7081)
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ebu4"]
+size = Vector3(0.963928, 6.95209, 17.1635)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jmc7j"]
-size = Vector3(13.784, 6.87064, 0.566406)
+[sub_resource type="BoxShape3D" id="BoxShape3D_deb7h"]
+size = Vector3(16.1203, 6.87064, 0.921387)
 
 [sub_resource type="BoxMesh" id="BoxMesh_37n8p"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0fuvb"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_deb7h"]
+albedo_texture = ExtResource("23_ul1sw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a0gr"]
+albedo_texture = ExtResource("24_qpom7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v81qa"]
+albedo_texture = ExtResource("25_7njsl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmq1o"]
+albedo_texture = ExtResource("26_2ebu4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e4tl3"]
+albedo_color = Color(0.303233, 0.303233, 0.303233, 1)
 
 [node name="FUTURO" type="Node3D"]
 
@@ -55,13 +79,19 @@ transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 12.9181,
 mesh = SubResource("BoxMesh_0fuvb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Templo"]
-transform = Transform3D(24.1219, 0, 0, 0, 24.1219, 0, 0, 0, 24.1219, 0, 31.7334, 0)
-shape = SubResource("ConcavePolygonShape3D_2sfii")
+transform = Transform3D(692.569, 0, 0, 0, 581.866, 0, 0, 0, 1370.51, 0, 778.388, 0)
+shape = SubResource("ConcavePolygonShape3D_2d1g0")
 
 [node name="Marker3D" type="Marker3D" parent="Templo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7135, 10.5321)
 
 [node name="Templo_Tikal" parent="Templo" instance=ExtResource("1_paovc")]
+
+[node name="Templo_Casita" parent="Templo/Templo_Tikal" index="0"]
+visible = false
+
+[node name="Templo_Base_Sol_001" parent="Templo/Templo_Tikal" index="1"]
+visible = false
 
 [node name="Mesa_Base" parent="Templo" instance=ExtResource("2_exmyc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.483)
@@ -78,44 +108,44 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7183, 43.7959, -0.57218)
 [node name="Colisiones" type="StaticBody3D" parent="Templo"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.49539, 44.5378, 10.4583)
-shape = SubResource("BoxShape3D_oky4b")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.49539, 44.5378, 14.3699)
+shape = SubResource("BoxShape3D_2d1g0")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27936, 44.5378, 10.4583)
-shape = SubResource("BoxShape3D_oky4b")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27936, 44.5378, 14.5497)
+shape = SubResource("BoxShape3D_2d1g0")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9077, 44.8595, 0.106287)
-shape = SubResource("BoxShape3D_2pefn")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5227, 44.8595, 0.106287)
+shape = SubResource("BoxShape3D_ul1sw")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7812, 44.8595, 0.106287)
-shape = SubResource("BoxShape3D_2pefn")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2439, 44.8595, 0.106287)
+shape = SubResource("BoxShape3D_ul1sw")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0900574, 44.8042, -10.8182)
-shape = SubResource("BoxShape3D_kc2xm")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0900574, 44.8042, -14.1436)
+shape = SubResource("BoxShape3D_qpom7")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25271, 47.2428, 4.82885)
-shape = SubResource("BoxShape3D_2onni")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.89529, 47.2428, 8.65296)
+shape = SubResource("BoxShape3D_7njsl")
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.26228, 47.2428, 4.82885)
-shape = SubResource("BoxShape3D_2onni")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92997, 47.2428, 8.71631)
+shape = SubResource("BoxShape3D_7njsl")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.66334, 47.3234, -0.766998)
-shape = SubResource("BoxShape3D_qcquo")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.50814, 47.3234, 0.00752646)
+shape = SubResource("BoxShape3D_2ebu4")
 
 [node name="CollisionShape3D9" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67093, 47.3234, -0.766998)
-shape = SubResource("BoxShape3D_qcquo")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.65815, 47.3234, -0.440038)
+shape = SubResource("BoxShape3D_2ebu4")
 
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="Templo/Colisiones"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0132141, 47.3436, -6.3892)
-shape = SubResource("BoxShape3D_jmc7j")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115303, 47.3436, -8.69379)
+shape = SubResource("BoxShape3D_deb7h")
 
 [node name="Terreno" parent="." instance=ExtResource("2_awhkr")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -133,11 +163,20 @@ shape = SubResource("ConcavePolygonShape3D_0fuvb")
 
 [node name="Templo_Sol_PistaIntervenido" parent="TemploDelSol" instance=ExtResource("4_sl4s5")]
 
+[node name="Templo_Base_Serpiente_001" parent="TemploDelSol/Templo_Sol_PistaIntervenido" index="0"]
+visible = false
+
 [node name="Templo_Jaguar" parent="." instance=ExtResource("5_sp6jf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
 
+[node name="Templo_Base_Jaguar" parent="Templo_Jaguar" index="1"]
+visible = false
+
 [node name="Templo_Serpiente_Bicefala" parent="." instance=ExtResource("6_sp6jf")]
 transform = Transform3D(0.284132, 0, -0.958785, 0, 1, 0, 0.958785, 0, 0.284132, 137.324, 0.380493, -3.1496)
+
+[node name="Templo_Base_Serpiente_Bicefala" parent="Templo_Serpiente_Bicefala" index="0"]
+visible = false
 
 [node name="Futuro_Estacionamiento" parent="." instance=ExtResource("11_u11dy")]
 
@@ -152,15 +191,86 @@ transform = Transform3D(-5.00025e-08, -0.419452, 5.00025e-08, 0, -5.00025e-08, -
 [node name="Arboles_Montaña" parent="." instance=ExtResource("14_nuqfr")]
 
 [node name="Futuro_Cartel_Info_Cultivo" parent="." instance=ExtResource("15_e2u8t")]
-transform = Transform3D(1.16671, 0, -0.942759, 0, 1.5, 0, 0.942759, 0, 1.16671, 3.06323, 41.6694, -2.98511)
+transform = Transform3D(1.16671, 0, -0.942759, 0, 1.5, 0, 0.942759, 0, 1.16671, 6.37366, 41.9225, -6.87149)
 
 [node name="Mural_Presente" parent="." instance=ExtResource("16_7yqjh")]
-transform = Transform3D(-1.14305e-07, 0, 2.615, 0, 2.615, 0, -2.615, 0, -1.14305e-07, 7.107, 45.072, 0.727)
+transform = Transform3D(-1.14305e-07, 0, 2.615, 0, 2.615, 0, -2.615, 0, -1.14305e-07, 9.34276, 45.072, 0.727)
 
 [node name="Info_Mural" parent="." instance=ExtResource("17_oky4b")]
-transform = Transform3D(0.0237861, 0, 0.599528, 0, 0.6, 0, -0.599528, 0, 0.0237861, 6.94363, 43.7494, 4.29704)
+transform = Transform3D(0.0237861, 0, 0.599528, 0, 0.6, 0, -0.599528, 0, 0.0237861, 9.40014, 43.7494, 4.56282)
 
 [node name="Enredaderas_Escalera" parent="." instance=ExtResource("17_2pefn")]
 
+[node name="Templo_Bicefala_v2" parent="." instance=ExtResource("18_qcquo")]
+
+[node name="Templo_Bicefala_v2_BASE" parent="Templo_Bicefala_v2" index="0"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Bicefala_v2_BLOQUES" parent="Templo_Bicefala_v2" index="1"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Bicefala_v2_ESCALERA" parent="Templo_Bicefala_v2" index="2"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Bicefala_v2_PISO" parent="Templo_Bicefala_v2" index="3"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Jaguar_v2" parent="." instance=ExtResource("20_usjce")]
+
+[node name="Templo_Jaguar_v2_BASE" parent="Templo_Jaguar_v2" index="0"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Jaguar_v2_BLOQUES" parent="Templo_Jaguar_v2" index="1"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Jaguar_ESCALERAS" parent="Templo_Jaguar_v2" index="2"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Jaguar_v2_PISO" parent="Templo_Jaguar_v2" index="3"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Sol_v2" parent="." instance=ExtResource("21_6mnnn")]
+
+[node name="Templo_Sol_v2_BASE" parent="Templo_Sol_v2" index="0"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Sol_v2_BLOQUES" parent="Templo_Sol_v2" index="1"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Sol_v2_ESCALERAS" parent="Templo_Sol_v2" index="2"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Sol_v2_PISO" parent="Templo_Sol_v2" index="3"]
+material_overlay = ExtResource("19_jmc7j")
+
+[node name="Templo_Tikal_v2" parent="." instance=ExtResource("22_2d1g0")]
+
+[node name="Cube_001" parent="Templo_Tikal_v2" index="0"]
+material_overlay = ExtResource("19_jmc7j")
+surface_material_override/0 = SubResource("StandardMaterial3D_deb7h")
+
+[node name="Cube_002" parent="Templo_Tikal_v2" index="1"]
+material_overlay = ExtResource("19_jmc7j")
+surface_material_override/0 = SubResource("StandardMaterial3D_6a0gr")
+
+[node name="Cube_003" parent="Templo_Tikal_v2" index="2"]
+material_overlay = ExtResource("19_jmc7j")
+surface_material_override/0 = SubResource("StandardMaterial3D_v81qa")
+
+[node name="Cube_004" parent="Templo_Tikal_v2" index="3"]
+material_overlay = ExtResource("19_jmc7j")
+surface_material_override/0 = SubResource("StandardMaterial3D_mmq1o")
+
+[node name="Cube_005" parent="Templo_Tikal_v2" index="4"]
+material_overlay = ExtResource("19_jmc7j")
+surface_material_override/0 = SubResource("StandardMaterial3D_e4tl3")
+
+[editable path="Templo/Templo_Tikal"]
+[editable path="TemploDelSol/Templo_Sol_PistaIntervenido"]
 [editable path="Templo_Jaguar"]
+[editable path="Templo_Serpiente_Bicefala"]
 [editable path="Futuro - Arboles"]
+[editable path="Templo_Bicefala_v2"]
+[editable path="Templo_Jaguar_v2"]
+[editable path="Templo_Sol_v2"]
+[editable path="Templo_Tikal_v2"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=153 format=4 uid="uid://b50gbkeddey3"]
 
 [ext_resource type="Script" uid="uid://dh4itfa6mnrih" path="res://scripts/mural_puzzle.gd" id="1_boq5g"]
-[ext_resource type="Script" uid="uid://c7gfl3kq33vln" path="res://scripts/mural_tile.gd" id="1_g1n6c"]
+[ext_resource type="Script" path="res://scripts/mural_tile.gd" id="1_g1n6c"]
 [ext_resource type="Texture2D" uid="uid://dix3s1vndgb83" path="res://Assets/Texturas/Puzzle_Panel_TEX_v3.png" id="3_boq5g"]
 [ext_resource type="Texture2D" uid="uid://2kfrmxrqe85e" path="res://Assets/Terrain_Objects/Pistas/Mural_Pasado-colv2_Maldito_Borde_albedo000.png" id="3_j1bd5"]
 
