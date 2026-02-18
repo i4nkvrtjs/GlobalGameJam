@@ -90,3 +90,7 @@ wind_direction={
 "type": "vec3",
 "value": Vector3(0, 0, 1)
 }
+wind_noise={
+"type": "sampler2D",
+"value": ""
+}
