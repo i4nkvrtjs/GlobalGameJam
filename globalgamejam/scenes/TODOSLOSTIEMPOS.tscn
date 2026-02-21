@@ -225,7 +225,6 @@ script = ExtResource("20_4vwko")
 [editable path="WorldAnchor/FUTURO/TemploDelSol/Templo_Sol_PistaIntervenido"]
 [editable path="WorldAnchor/FUTURO/Templo_Jaguar"]
 [editable path="WorldAnchor/FUTURO/Templo_Serpiente_Bicefala"]
-[editable path="WorldAnchor/FUTURO/Futuro - Arboles"]
 [editable path="WorldAnchor/FUTURO/Templo_Bicefala_v2"]
 [editable path="WorldAnchor/FUTURO/Templo_Jaguar_v2"]
 [editable path="WorldAnchor/FUTURO/Templo_Sol_v2"]

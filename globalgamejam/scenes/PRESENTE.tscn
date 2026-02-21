@@ -619,6 +619,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.21137, 45.8523, -2.13617)
 shape = SubResource("BoxShape3D_anvkm")
 
 [node name="Enredaderas_Escalera" parent="." instance=ExtResource("28_xsu2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74235, 2.75813)
 
 [node name="Sfx_Puzzle_Resuelto" type="AudioStreamPlayer" parent="."]
 
