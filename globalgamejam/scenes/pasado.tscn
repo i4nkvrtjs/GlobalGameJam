@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://bjvoium6413yf"]
+[gd_scene load_steps=75 format=3 uid="uid://bjvoium6413yf"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_7ob1l"]
 [ext_resource type="PackedScene" uid="uid://opkuhi0milmu" path="res://Assets/Presente/Pedestales/Pedestal_Futuro.glb" id="2_lmlgj"]
@@ -162,6 +162,21 @@ shader_parameter/color_texture = ExtResource("35_v7pfj")
 shader_parameter/uv_scale = Vector2(1, 1)
 shader_parameter/outline_mask = 1.0
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_va20t"]
+sky_top_color = Color(0.574758, 0.943237, 0.953163, 1)
+sky_horizon_color = Color(0.755548, 0.901949, 0.997779, 1)
+sky_curve = 0.060919
+ground_bottom_color = Color(0.329412, 0.501961, 0.270588, 1)
+ground_horizon_color = Color(0.512272, 0.73903, 0.436029, 1)
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_v7pfj"]
+sky_material = SubResource("ProceduralSkyMaterial_va20t")
+
+[sub_resource type="Environment" id="Environment_vqlmd"]
+background_mode = 2
+sky = SubResource("Sky_v7pfj")
+
 [node name="PASADO" type="Node3D"]
 
 [node name="Templo" type="StaticBody3D" parent="."]
@@ -253,6 +268,12 @@ shape = SubResource("ConcavePolygonShape3D_s2tf8")
 
 [node name="Templo_Sol" parent="TemploDelSol" instance=ExtResource("2_qxwao")]
 
+[node name="Templo_Sol_Luna" parent="TemploDelSol/Templo_Sol" index="0"]
+material_overlay = ExtResource("2_uly6a")
+
+[node name="Templo_Sol_Sol" parent="TemploDelSol/Templo_Sol" index="1"]
+material_overlay = ExtResource("2_uly6a")
+
 [node name="Templo_Base_Sol" parent="TemploDelSol/Templo_Sol" index="2"]
 visible = false
 
@@ -265,8 +286,14 @@ transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 13
 [node name="Templo_Base_Serpiente_Bicefala" parent="Templo_Serpiente_Bicefala" index="0"]
 visible = false
 
+[node name="Templo_Serpiente_Bicefala_Estatua" parent="Templo_Serpiente_Bicefala" index="1"]
+material_overlay = ExtResource("2_uly6a")
+
 [node name="Templo_Jaguar" parent="." instance=ExtResource("6_sxv3u")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
+
+[node name="Templo_Estatua_Jaguar" parent="Templo_Jaguar" index="0"]
+material_overlay = ExtResource("2_uly6a")
 
 [node name="Templo_Base_Jaguar" parent="Templo_Jaguar" index="1"]
 visible = false
@@ -20333,6 +20360,12 @@ surface_material_override/0 = SubResource("ShaderMaterial_va20t")
 
 [node name="Tronco_6602" parent="Arboles_Pasado_v5" index="6599"]
 surface_material_override/0 = SubResource("ShaderMaterial_vqlmd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.844075, -0.536224, 0, 0.536224, -0.844075, 0, 119.663, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vqlmd")
 
 [editable path="Templo/Templo_Tikal"]
 [editable path="Templo/Pedestal_Futuro"]

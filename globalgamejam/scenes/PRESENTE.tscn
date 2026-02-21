@@ -112,12 +112,12 @@ ground_bottom_color = Color(0.329412, 0.501961, 0.270588, 1)
 ground_horizon_color = Color(0.512272, 0.73903, 0.436029, 1)
 sun_angle_max = 0.0
 
-[sub_resource type="Sky" id="Sky_ch78y"]
+[sub_resource type="Sky" id="Sky_o50oc"]
 sky_material = SubResource("ProceduralSkyMaterial_ch78y")
 
 [sub_resource type="Environment" id="Environment_eecyr"]
 background_mode = 2
-sky = SubResource("Sky_ch78y")
+sky = SubResource("Sky_o50oc")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wm05y"]
 render_priority = 0
@@ -453,11 +453,20 @@ shape = SubResource("ConcavePolygonShape3D_0fuvb")
 
 [node name="Templo_Sol" parent="TemploDelSol" instance=ExtResource("2_37n8p")]
 
+[node name="Templo_Sol_Luna" parent="TemploDelSol/Templo_Sol" index="0"]
+material_overlay = ExtResource("18_e420u")
+
+[node name="Templo_Sol_Sol" parent="TemploDelSol/Templo_Sol" index="1"]
+material_overlay = ExtResource("18_e420u")
+
 [node name="Templo_Base_Sol" parent="TemploDelSol/Templo_Sol" index="2"]
 visible = false
 
 [node name="Templo_Jaguar" parent="." instance=ExtResource("5_0fuvb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -105.911, 0, 0)
+
+[node name="Templo_Estatua_Jaguar" parent="Templo_Jaguar" index="0"]
+material_overlay = ExtResource("18_e420u")
 
 [node name="Templo_Base_Jaguar" parent="Templo_Jaguar" index="1"]
 visible = false
@@ -537,6 +546,9 @@ transform = Transform3D(0.284015, 0, -0.95882, 0, 1, 0, 0.95882, 0, 0.284015, 13
 
 [node name="Templo_Base_Serpiente_Bicefala" parent="Templo_Serpiente_Bicefala" index="0"]
 visible = false
+
+[node name="Templo_Serpiente_Bicefala_Estatua" parent="Templo_Serpiente_Bicefala" index="1"]
+material_overlay = ExtResource("18_e420u")
 
 [node name="Arboles_Montaña" parent="." instance=ExtResource("16_mmms4")]
 visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cc5dksl388xcs"]
+[gd_scene load_steps=50 format=3 uid="uid://cc5dksl388xcs"]
 
 [ext_resource type="PackedScene" uid="uid://bf22lik13b5jh" path="res://Assets/Templos/Templo_Tikal.glb" id="1_paovc"]
 [ext_resource type="PackedScene" uid="uid://cn6hvghxniy44" path="res://Assets/Terrain_Objects/Pasado/Terrenos/Terreno.glb" id="2_awhkr"]
@@ -89,6 +89,21 @@ shader_parameter/light_steps = 3.0
 shader_parameter/color_texture = ExtResource("28_7njsl")
 shader_parameter/uv_scale = Vector2(1, 1)
 shader_parameter/outline_mask = 1.0
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7njsl"]
+sky_top_color = Color(0.574758, 0.943237, 0.953163, 1)
+sky_horizon_color = Color(0.755548, 0.901949, 0.997779, 1)
+sky_curve = 0.060919
+ground_bottom_color = Color(0.329412, 0.501961, 0.270588, 1)
+ground_horizon_color = Color(0.512272, 0.73903, 0.436029, 1)
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_ch78y"]
+sky_material = SubResource("ProceduralSkyMaterial_7njsl")
+
+[sub_resource type="Environment" id="Environment_2ebu4"]
+background_mode = 2
+sky = SubResource("Sky_ch78y")
 
 [node name="FUTURO" type="Node3D"]
 
@@ -20079,6 +20094,12 @@ surface_material_override/0 = SubResource("ShaderMaterial_ul1sw")
 
 [node name="Tronco_7902" parent="Arboles_Futuro_v5" index="6599"]
 surface_material_override/0 = SubResource("ShaderMaterial_2ebu4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.942408, 0.334464, 0, -0.334464, 0.942408, 0, 119.663, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2ebu4")
 
 [editable path="Templo/Templo_Tikal"]
 [editable path="TemploDelSol/Templo_Sol_PistaIntervenido"]
